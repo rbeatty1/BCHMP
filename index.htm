@@ -1,0 +1,81 @@
+<!-- DOCTYPE html -->
+<html lang ="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="Robert Beatty">
+  <meta name="keywords" content="Planning, DVRPC, Sustainable, Green, Urban Planning, DVRPC, Delaware Valley Regional Planning Commission, Burlington County, Highway Master Plan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TBD">
+
+  <!-- Necessary Things -->
+  <title>Burlington County Highway Master Plan</title>
+
+  <!-- Load things -->
+
+    <!-- Local files for development -->
+      <!-- CSS-->
+        <link rel="stylesheet" type="text/css" href="dev/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="dev/css/leaflet-1.2.css">
+        <link rel="stylesheet" type="text/css" href="lib/css/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+      <!-- Javascript -->
+
+        <script type="text/javascript" src="dev/js/leaflet.js"></script>
+
+
+    <!-- CSS CDNs for hosted app -->
+      <!-- CSS -->
+
+
+      <!-- Javascript -->
+      <script src="https://unpkg.com/esri-leaflet@2.1.1"></script>
+<!--       <script src="https://cdn.jsdelivr.net/leaflet.esri.webmap/0.4.0/esri-leaflet-webmap.js"></script> -->
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-lg-1 panel-inactive" id="bchmp-conditions">
+                <h1 class="title">CONDITIONS</h1>
+            </div>
+
+            <div class="col-lg-1 panel-inactive" id="bchmp-resources">
+                <h1 class="title">RESOURCES</h1>
+            </div>
+            <div class="col-lg-1 panel-inactive" id="bchmp-strategies">
+                <h1 class="title">STRATEGIES</h1>
+            </div>
+        <div class="col-lg-9" id="map"></div>
+        <div class="navbar navbar-fixed-top navbar-right">
+            <a id="drop-options" href="#" class="navbar-button dropdown-toggle title-text" data-toggle="dropdown">Learn More   <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                    <li>
+                        <a href="#modal-about" class="body-text">Project Overview</a>
+                    </li>
+                    <li>
+                        <a href="#modal-how" class="body-text">How To Use</a>
+                    </li>
+                    <li>
+                        <a href="http://www.co.burlington.nj.us/" target="_blank" class="body-text">Burlington County Website</a>
+                    </li>
+                    <li>
+                        <a href="#modal-contact" class="body-text">Contact</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="dev/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="dev/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/js/plugins.js"></script>
+<script type="text/javascript" src="lib/js/app.js"></script>
+<script type="text/javascript" src="lib/js/map.js"></script>
+
+
+</body>

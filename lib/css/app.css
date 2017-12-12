@@ -1,0 +1,55 @@
+body{
+	width: 100%;
+	height: 100%;
+}
+#map{
+	position: relative;
+	height: 100%;
+}
+
+.panel-inactive{
+	background-color: #66a6b5;
+	color: white;
+	border: 2px solid white;
+	height: 100%;
+}
+
+.panel-inactive>.title{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	text-orientation: sideways;
+	writing-mode: vertical-rl;
+	text-align: center;
+}
+
+.panel-active{
+	background-color: #c2dbe1;
+	color: #005b9c;
+	border: 0px;
+	height: 100%;
+}
+
+.panel-active>.title{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	text-align: left;
+	padding-top: 1em;
+	font-weight: 700;
+}
+
+
+#drop-options {
+    background-color: #c2dbe1;
+    font-family: "Open Sans", sans-serif;
+    color: #005b9c;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+    margin: 2em 2em 0px 0px;
+    border: 2px solid white;
+    min-width: 160px;
+    text-align: center;
+
+}
