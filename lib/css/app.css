@@ -51,5 +51,29 @@ body{
     border: 2px solid white;
     min-width: 160px;
     text-align: center;
-
 }
+
+/* sidebar */
+	.legend-box{
+		display: none;
+		background-color: #e1e1e1;
+		border: 1.5px white solid;
+		margin-top: 5em;
+		padding: 10px 10px;
+		box-shadow: 7px 7px 5px #66a6b5;
+	}
+
+	.legend-item{
+		font-family: "Open Sans", sans-serif;
+		color: #969696;
+		font-size:14px;
+	}
+	.legend-items>a{
+		font-family: "Open Sans", sans-serif;
+		font-color: #969696;
+		font-size:14px;
+	}
+	.legend-items{
+		list-style-type: none;
+		padding-left: 0px;
+	}
