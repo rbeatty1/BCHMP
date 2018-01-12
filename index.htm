@@ -31,6 +31,7 @@
 
       <!-- Javascript -->
       <script src="https://unpkg.com/esri-leaflet@2.1.1"></script>
+		<script src="https://unpkg.com/esri-leaflet-renderers@2.0.6"></script>
 
 </head>
 
@@ -55,7 +56,7 @@
                             <label for="LRPcongestion">2040 Long-Range Plan Traffic Congestion</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="layer-control" id="masterplanCongestion"  z-index="4" checked>
+                            <input type="checkbox" name="layer-control" id="masterplanCongestion"  z-index="4">
                             <label for="masterplanCongestion">Master Plan Traffic Congestion</label>
                         </li>
                         <li>
@@ -83,8 +84,32 @@
                 <div class="legend-box">
                     <ul class="legend-items">
                         <li>
+                            <input type="checkbox" name="layer-control" id="njCMPCorridors">
+                            <label for="njCMPCorridors">2015 CMP Planning Corridors</label>
+                        </li>
+                        <li>
                             <input type="checkbox" name="layer-control" id="NHS">
                             <label for="NHS">National Highway System</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="hurricane">
+                            <label for="hurricane">Hurricane Evacuation Routes</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="expressDetour">
+                            <label for="expressDetour">Expressway Detour Route</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="managedHighway">
+                            <label for="managedHighway">Managed Highway Network</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="trainOneMile">
+                            <label for="trainOneMile">Train Station within 1 Mile</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="NJTService">
+                            <label for="NJTService">NJT Bus Service</label>
                         </li>
                         <li>
                             <input type="checkbox" name="layer-control" id="shuttleBus">
@@ -111,8 +136,24 @@
                             <label for="freightCenters">Freight Centers</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="layer-control" id="planCenters">
-                            <label for="planCenters">2040 Planning Areas</label>
+                            <input type="checkbox" name="layer-control" id="planType">
+                            <label for="planType">2040 Planning Area Type</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="scenicByway">
+                            <label for="scenicByway">Designated Scenic Byway</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="flood">
+                            <label for="flood">Wetlands and Floodplains</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="socialResources">
+                            <label for="socialResources">Cultural, Historical, and Community Resources</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="layer-control" id="pinelands">
+                            <label for="pinelands">NJ Pinelands Area</label>
                         </li>
                     </ul>
                 </div>
@@ -176,7 +217,7 @@
 
 <script type="text/javascript" src="dev/js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="dev/js/bootstrap.js"></script>
-<script type="text/javascript" src="dev/js/esri-leaflet-renderers.js"></script>
+<script type="text/javascript" src="lib/js/renderers.js"></script>
 <script type="text/javascript" src="lib/js/plugins.js"></script>
 <script type="text/javascript" src="lib/js/app.js"></script>
 <script type="text/javascript" src="lib/js/map.js"></script>
