@@ -19,7 +19,7 @@
         <link rel="stylesheet" type="text/css" href="dev/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="dev/css/leaflet-1.2.css">
         <link rel="stylesheet" type="text/css" href="lib/css/app.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
       <!-- Javascript -->
 
         <script type="text/javascript" src="dev/js/leaflet.js"></script>
@@ -39,10 +39,22 @@
 
 <div class="container-fluid">
     <div class="row">
+        <!-- CONDITIONS panel BEGIN -->
             <div class="col-lg-1 panel-inactive bhcmp-panel" id="bchmp-conditions">
-                <h1 class="title">CONDITIONS</h1>
-                <div class="legend-box">
-                    <ul class="legend-items">
+                <div class="panel-title">
+                    <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">                
+                    <h1 class="title">CONDITIONS</h1>
+                </div>
+                <!-- CONDITIONS layers BEGIN -->
+                <div class="panel-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#conditions-layers">
+                        <div class="panel-link">
+                            <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
+                        </div>
+                    </a>
+                </div>
+                <div id="conditions-layers" class="layer-box panel-collapse collapse">
+                    <ul class="layer-items">
                         <li>
                             <input type="checkbox" name="layer-control" id="trafficSafety" z-index="1">
                             <label for="trafficSafety">2015 Traffic Safety</label>
@@ -77,12 +89,38 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+                <!-- CONDITIONS layers END -->
 
+                <!-- CONDITIONS legend BEGIN -->
+                <div class="panel-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#conditions-legend">
+                        <div class="panel-link">
+                            <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="legend-box panel-collapse collapse" id="conditions-legend"></div> 
+                <!-- CONDITIONS legend END -->               
+            </div>
+            <!-- CONDITIONS panel END -->
+
+            <!-- RESOURCES panel BEGIN -->
             <div class="col-lg-1 panel-inactive bhcmp-panel" id="bchmp-resources">
-                <h1 class="title">RESOURCES</h1>
-                <div class="legend-box">
-                    <ul class="legend-items">
+                <div class="panel-title">
+                    <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
+                    <h1 class="title">RESOURCES</h1>
+
+                </div>
+                <!-- RESOURCES layer BEGIN -->
+                <div class="panel-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#resource-layers">
+                        <div class="panel-link">
+                            <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
+                        </div>
+                    </a>
+                </div>
+                <div id="resource-layers" class="layer-box panel-collapse collapse">
+                    <ul class="layer-items">
                         <li>
                             <input type="checkbox" name="layer-control" id="njCMPCorridors">
                             <label for="njCMPCorridors">2015 CMP Planning Corridors</label>
@@ -98,10 +136,6 @@
                         <li>
                             <input type="checkbox" name="layer-control" id="expressDetour">
                             <label for="expressDetour">Expressway Detour Route</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="managedHighway">
-                            <label for="managedHighway">Managed Highway Network</label>
                         </li>
                         <li>
                             <input type="checkbox" name="layer-control" id="trainOneMile">
@@ -157,14 +191,40 @@
                         </li>
                     </ul>
                 </div>
+                <!-- RESOURCES layer END -->
+                <!-- RESOURCES legend BEGIN -->
+                <div class="panel-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#resource-legend">
+                        <div class="panel-link">
+                            <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="legend-box panel-collapse collapse" id="resource-legend"></div>
+                <!-- RESOURCES legend END -->  
             </div>
+            <!-- RESOURCES panel END -->
+
+            <!-- STRATEGIES panel BEGINS -->
             <div class="col-lg-1 panel-inactive bhcmp-panel" id="bchmp-strategies">
-                <h1 class="title">STRATEGIES</h1>
-                <div class="legend-box">
-                    <ul class="legend-items">
+                <div class="panel-title">
+                    <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
+                    <h1 class="title">STRATEGIES</h1>
+                    
+                </div>
+                <div class="panel-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-layers">
+                        <div class="panel-link">
+                            <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- STRATEGIES layers BEGIN -->
+                <div id="strategies-layers" class="layer-box panel-collapse collapse">
+                    <ul class="layer-items">
                         <li>
-                            <input type="checkbox" name="layer-control" id="tip-bridge">
-                            <label for="tip-bridge">NJ TIP (FY16 - FY19) - Bridges/Intersection</label>
+                            <input type="checkbox" name="layer-control" id="tip-point">
+                            <label for="tip-point">NJ TIP (FY16 - FY19) - Bridges/Intersection</label>
                         </li>
                         <li>
                             <input type="checkbox" name="layer-control" id="tip-roads">
@@ -192,8 +252,22 @@
                         </li>
                     </ul>
                 </div>
+                <!-- STRATEGIES layers END -->
+                <!-- STRATEGIES legend BEGIN -->
+                <div class="panel-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-legend">
+                        <div class="panel-link">
+                            <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="legend-box panel-collapse collapse" id="strategies-legend"></div>  
+                <!-- STRATEGIES legend END -->
             </div>
+        
+        <!-- MAP PANE -->
         <div class="col-lg-9" id="map"></div>
+        <!-- DROPDOWN -->
         <div class="navbar navbar-fixed-top navbar-right">
             <a id="drop-options" href="#" class="navbar-button dropdown-toggle title-text" data-toggle="dropdown">Learn More   <b class="caret"></b></a>
             <ul class="dropdown-menu">

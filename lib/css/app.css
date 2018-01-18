@@ -8,15 +8,22 @@ body{
 }
 
 .panel-inactive{
-	background-color: #66a6b5;
+	background-color: #005b9c;
 	color: white;
-	border: 2px solid white;
+	border: 2px solid #fff;
 	height: 100%;
 }
 
-.panel-inactive>.title{
-	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
+.panel-title{
+	margin-bottom: 3em;
+	font-size: 16px;
+	color: inherit;
+	height: 10%;
+	margin-top: 10px;
+}
+.panel-inactive>.panel-title>.title{
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: 24px;
 	font-weight: 700;
 	text-orientation: sideways;
 	writing-mode: vertical-rl;
@@ -24,25 +31,33 @@ body{
 }
 
 .panel-active{
-	background-color: #c2dbe1;
+	background-color: #ccc;
 	color: #005b9c;
 	border: 0px;
 	height: 100%;
 }
 
-.panel-active>.title{
-	font-family: 'Open Sans', sans-serif;
-	font-size: 24px;
+.panel-active>.panel-title>.title{
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: 30px;
 	text-align: left;
 	padding-top: 1em;
 	font-weight: 700;
+	color: #005b9c;
+}
+.panel-title-logo{
+	display: none;
+	float: right;
+	width: 30%;
+	height: 95%;
 }
 
 
+
 #drop-options {
-    background-color: #c2dbe1;
-    font-family: "Open Sans", sans-serif;
-    color: #005b9c;
+    background-color: #ccc;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: #fdd41d;
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
@@ -54,26 +69,35 @@ body{
 }
 
 /* sidebar */
-	.legend-box{
+	.panel-heading {
+		display: none;
+		/*margin-top: 5em;*/
+		background-color: #66a6b5;
+		border-bottom: 2px #fff solid;
+	}
+	.legend-title{
+		font-size: 20px;
+		color: #fff;
+		font-family: "Open Sans Condensed", sans-serif;
+		font-weight: 700;
+		text-align: center;
+	}
+	.legend-box, .layer-box{
 		display: none;
 		background-color: #e1e1e1;
 		border: 1.5px white solid;
-		margin-top: 5em;
+		border-top: none;
 		padding: 10px 10px;
-		box-shadow: 7px 7px 5px #66a6b5;
+		box-shadow: 7px 7px 10px #66a6b5;
+		margin-top: 0!important;
 	}
-
-	.legend-item{
-		font-family: "Open Sans", sans-serif;
-		color: #969696;
-		font-size:14px;
+	.layer-items{
+		padding-left: 10px;
 	}
-	.legend-items>a{
-		font-family: "Open Sans", sans-serif;
+	.layer-items>li{
+		font-family: "Open Sans Condensed", sans-serif;
 		font-color: #969696;
 		font-size:14px;
-	}
-	.legend-items{
-		list-style-type: none;
-		padding-left: 0px;
+		list-style: none;
+		text-align: left;
 	}
