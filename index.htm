@@ -31,7 +31,7 @@
 
       <!-- Javascript -->
       <script src="https://unpkg.com/esri-leaflet@2.1.1"></script>
-		<script src="https://unpkg.com/esri-leaflet-renderers@2.0.6"></script>
+      <script src="https://unpkg.com/esri-leaflet-renderers@2.0.6"></script>
 
 </head>
 
@@ -39,11 +39,13 @@
 
 <div class="container-fluid">
     <div class="row">
+        <div class="col-lg-2" id="sidebar">
         <!-- CONDITIONS panel BEGIN -->
-            <div class="col-lg-1 panel-inactive bhcmp-panel" id="bchmp-conditions">
+            <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-conditions">
                 <div class="panel-title">
-                    <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">                
+                    <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
                     <h1 class="title">CONDITIONS</h1>
+                    <a href="https://github.com" target="_blank" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
                 </div>
                 <!-- CONDITIONS layers BEGIN -->
                 <div class="panel-heading">
@@ -105,11 +107,11 @@
             <!-- CONDITIONS panel END -->
 
             <!-- RESOURCES panel BEGIN -->
-            <div class="col-lg-1 panel-inactive bhcmp-panel" id="bchmp-resources">
+            <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-resources">
                 <div class="panel-title">
                     <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
                     <h1 class="title">RESOURCES</h1>
-
+                    <a href="https://github.com" target="_blank" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
                 </div>
                 <!-- RESOURCES layer BEGIN -->
                 <div class="panel-heading">
@@ -206,11 +208,11 @@
             <!-- RESOURCES panel END -->
 
             <!-- STRATEGIES panel BEGINS -->
-            <div class="col-lg-1 panel-inactive bhcmp-panel" id="bchmp-strategies">
+            <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-strategies">
                 <div class="panel-title">
                     <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
                     <h1 class="title">STRATEGIES</h1>
-                    
+                    <a href="https://github.com" target="_blank" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
                 </div>
                 <div class="panel-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-layers">
@@ -264,9 +266,9 @@
                 <div class="legend-box panel-collapse collapse" id="strategies-legend"></div>  
                 <!-- STRATEGIES legend END -->
             </div>
-        
+        </div>
         <!-- MAP PANE -->
-        <div class="col-lg-9" id="map"></div>
+        <div class="col-lg-10 col-sm-10" id="map"></div>
         <!-- DROPDOWN -->
         <div class="navbar navbar-fixed-top navbar-right">
             <a id="drop-options" href="#" class="navbar-button dropdown-toggle title-text" data-toggle="dropdown">Learn More   <b class="caret"></b></a>
