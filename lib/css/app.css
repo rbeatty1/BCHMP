@@ -7,9 +7,6 @@ body{
 	height: 100%;
 }
 
-#sidebar{
-	padding: 0px;
-}
 .panel-inactive{
 	background-color: #005b9c;
 	color: white;
@@ -23,11 +20,6 @@ body{
 	color: inherit;
 	height: 10%;
 	margin-top: 10px;
-}
-
-.panel-title-left{
-	width: 60%;
-
 }
 .panel-inactive>.panel-title>.title{
 	font-family: "Open Sans Condensed", sans-serif;
@@ -56,37 +48,22 @@ body{
 .panel-title-logo{
 	display: none;
 	float: right;
-	width: 33%;
-	height: 100%;
+	width: 30%;
+	height: 95%;
 }
-
-.panel-title-info{
-	display: none;
-	font-size: 16px;
-	color: #005b9c;
-}
-.panel-title-link:hover, .panel-title-link:active, .panel-title-link:visited, .panel-title-link:focus{
-	text-decoration: none;
-}
-
-.panel-heading>a:hover, .panel-heading>a:active, .panel-heading>a:visited, .panel-heading>a:focus{
-	text-decoration-color: #fdd41d; 
-}
-
 
 
 
 #drop-options {
     background-color: #ccc;
     font-family: "Open Sans Condensed", sans-serif;
-    color: #005b9c;
+    color: #fdd41d;
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
     float: right;
     margin: 2em 2em 0px 0px;
     border: 2px solid white;
-    border-radius: 2em 1em;
     min-width: 160px;
     text-align: center;
 }
