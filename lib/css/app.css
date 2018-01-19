@@ -124,3 +124,34 @@ body{
 		list-style: none;
 		text-align: left;
 	}
+
+/* pop ups */
+.leaflet-popup-content-wrapper, .pop{
+	background-color: #ddd;
+	color: #333;
+	font-family: "Open Sans Condensed", sans-serif;
+	opacity: .9;
+}
+
+.leaflet-pop-content{
+	margin: 10px 15px;
+}
+
+.popup-title{
+	color: #66a6b5;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.leaflet-popup-content p{
+	margin-bottom: 10px;
+}
+
+.popup-content {
+	padding: 1px;
+	margin: 1px;
+	font-size: 14px;
+	text-align: center;
+	color: #2a2a2a;
+}
