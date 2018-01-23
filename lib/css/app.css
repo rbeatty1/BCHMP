@@ -126,11 +126,12 @@ body{
 	}
 
 /* pop ups */
-.leaflet-popup-content-wrapper, .pop{
+.leaflet-popup-content-wrapper, .leaflet-popup-tip{
 	background-color: #ddd;
 	color: #333;
 	font-family: "Open Sans Condensed", sans-serif;
 	opacity: .9;
+	border: 1px solid #005b9c;
 }
 
 .leaflet-pop-content{

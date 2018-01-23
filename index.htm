@@ -274,7 +274,7 @@
             <a id="drop-options" href="#" class="navbar-button dropdown-toggle title-text" data-toggle="dropdown">Learn More   <b class="caret"></b></a>
             <ul class="dropdown-menu">
                     <li>
-                        <a href="#modal-about" class="body-text">Project Overview</a>
+                        <a href="#" data-toggle="modal" data-target="#about-modal" class="body-text">Project Overview</a>
                     </li>
                     <li>
                         <a href="#modal-how" class="body-text">How To Use</a>
@@ -290,7 +290,88 @@
     </div>
 </div>
 
+<!-- MODALS BEGIN -->
+    <!-- Start About Modal-->
+        <div class="modal fade" id="about-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"> </h4>
+                    </div>
+                    <div class="modal-body">
+                         <ul id="about-tabs" class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#about" data-toggle="tab">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                    &nbsp;About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" data-toggle="tab">
+                                    <i class="glyphicon glyphicon-envelope"></i>
+                                    &nbsp;Contact
+                                </a>
+                            </li>   
+                            <li>
+                                <a href="#disclaimer" data-toggle="tab">
+                                    <i class="glyphicon glyphicon-exclamation-sign"></i>
+                                    &nbsp;Disclaimer
+                                </a>
+                            </li>
+                        </ul>
 
+                        <!-- About Modal Tab Content Begins -->
+                            <div id="about-tabs-content" class="tab-content">
+
+                                <!-- About Landing Tab -->
+                                    <div class="tab-pane fade active in" id="about">
+                                        <p>Burlington County has grown by more than 50,000 residents and 25,000 jobs since the Couny last prepared a Highway Master Plan in 1989. An almost equal number of people and jobs are forecasted to be added by the Year 2040. The Delaware Valley Regional Planning Commission (DVRPC) was commissioned to update the Highway Master Plan to supply a vision and implementation framework for the County highway network that can sustainably complement long-term County growth patterns.<br><br>
+
+                                        The County Route (CR) network is vital to everday movement in the County, and it plays an important role in interconnecting with the New Jersey Turnpike and interstate highway system. The CR Network carries NJ Transit and BurLink bus routes, provides access to stations along the NJ Transit RiverLINE, and serves as a scenic route network in the Pinelands.<br><br>
+                                        
+                                        Performance indicators for the road network, as well as land use conditions, were assembled for current and forecasted conditions. The conditions were assessed using DVRPC's Congestion Management Process (CMP) to identify candidate improvement strategies for the County road network.<br><br>
+
+                                        This webmap provides an interactive look at the information that informed the analysis and the resulting improvement strategies. The base year for the analysis was 2013, while 2040 was used as the forecast year when necessary.<br><br>
+
+                                        </p>
+                                         <inline>
+                                            <span style="color: #529018; font-size: 10px;"><p style="text-align: left;"><b>Data Updated:</b> October 2017<br><b>Application Updated:</b> January 2018</p></br></span>
+                                        </inline>
+
+                                    </div>
+                                <!-- End About Landing Tab -->
+
+                                <!-- Start Disclaimer Tab -->
+                                    <div class="tab-pane fade" id="disclaimer"> 
+                                            <p>This web page is a public resource of general information. The Delaware Valley Regional Planning Commission (DVRPC) makes no warranty, 
+                                                representation, or guarantee as to the content, sequence, accuracy, timeliness, or completeness of any of the spatial data or database 
+                                                information provided herein. DVRPC and partner state, local, and other agencies shall assume no liability for errors, omissions, or 
+                                                inaccuracies in the information provided regardless of how caused; or any decision made or action taken or not taken by any person relying 
+                                                on any information or data furnished within.</p>
+                                    </div>
+                                <!-- End Disclaimer Tab -->
+
+
+                                <!-- Start Contact Tab -->
+                                    <div class="tab-pane fade" id="contact">
+                                        <p><strong>Karen Cilurso, PP, AICP</strong><br/>
+                                        Manager, Community Reviatlization <br/>
+                                        Office of Smart Growth<br/>
+                                        Phone: 215-238-2876 <br/>
+                                        <a class="one" href="mailto:kpcilurso@dvrpc.org">kpcilurso@dvrpc.org </a> 
+                                        </p>
+                                    </div>
+                                <!-- End Contact Tab -->
+
+                            </div>
+                        <!-- About Modal Tab Content Ends -->   
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End About Modal -->
+<!-- MODALS END -->
 <script type="text/javascript" src="dev/js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="dev/js/bootstrap.js"></script>
 <script type="text/javascript" src="lib/js/renderers.js"></script>
