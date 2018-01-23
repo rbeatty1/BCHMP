@@ -78,27 +78,27 @@ body{
 
 
 /* Dropdown Menu */
-#drop-options {
-    background-color: #ccc;
-    font-family: "Open Sans Condensed", sans-serif;
-    color: #005b9c;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    float: right;
-    margin: 2em 2em 0px 0px;
-    border: 2px solid white;
-    border-radius: 1em;
-    min-width: 160px;
-    text-align: center;
-}
+	#drop-options {
+	    background-color: #ccc;
+	    font-family: "Open Sans Condensed", sans-serif;
+	    color: #005b9c;
+	    padding: 10px;
+	    font-size: 16px;
+	    font-weight: bold;
+	    float: right;
+	    margin: 2em 2em 0px 0px;
+	    border: 2px solid white;
+	    border-radius: 1em;
+	    min-width: 160px;
+	    text-align: center;
+	}
 
-.dropdown-menu>li>a:hover{
-	color: #2a2a2a;
-	font-weight: 700;
-	text-decoration: none;
-	background-color: #fdd41d;
-}
+	.dropdown-menu>li>a:hover{
+		color: #2a2a2a;
+		font-weight: 700;
+		text-decoration: none;
+		background-color: #fdd41d;
+	}
 
 /* sidebar */
 	.panel-heading {
@@ -135,73 +135,78 @@ body{
 	}
 
 /* pop ups */
-.leaflet-popup-content-wrapper, .leaflet-popup-tip{
-	background-color: #ddd;
-	color: #333;
-	font-family: "Open Sans Condensed", sans-serif;
-	opacity: .9;
-	border: 1px solid #005b9c;
-}
+	.leaflet-popup-content-wrapper, .leaflet-popup-tip{
+		background-color: #ddd;
+		color: #333;
+		font-family: "Open Sans Condensed", sans-serif;
+		opacity: .9;
+		border: 1px solid #005b9c;
+	}
 
-.leaflet-pop-content{
-	margin: 0 15px;
-}
+	.leaflet-pop-content{
+		margin: 0 15px;
+	}
 
-.popup-title{
-	color: #66a6b5;
-	font-size: 22px;
-	font-weight: 700;
-	text-align: center;
-}
+	.popup-title{
+		color: #66a6b5;
+		font-size: 22px;
+		font-weight: 700;
+		text-align: center;
+	}
 
-.leaflet-popup-content p{
-	margin: 5px 0;
-}
+	.leaflet-popup-content p{
+		margin: 5px 0;
+	}
 
-.popup-content {
-	padding: 1px;
-	font-size: 14px;
-	text-align: left;
-	color: #2a2a2a;
-}
+	.popup-content {
+		padding: 1px;
+		font-size: 14px;
+		text-align: left;
+		color: #2a2a2a;
+	}
 
-.popup-content-bold{
-	color: #005b9c;
-	font-weight: 700;
-}
+	.popup-content-bold{
+		color: #005b9c;
+		font-weight: 700;
+	}
 
 /* Modals */
-.modal-header{
-	background-color: #005b9c;
-	border-bottom: 3px solid #fdd41d;
-}
-.close{
-	color: #fddf1d;
-	opacity: 1;
-	text-shadow: none;
-}
-.close:hover{
-	color: #fff;
-	opacity: 1;
-	text-shadow: none;
-}
 
-.modal-title{
-	color: #fff;
-	text-align: center;
-}
-.modal-title-secondary{
-	font-weight: 300;
-}
+	.modal-header{
+		background-color: #005b9c;
+		border-bottom: 3px solid #fdd41d;
+	}
+	.close{
+		color: #fddf1d;
+		opacity: 1;
+		text-shadow: none;
+	}
+	.close:hover{
+		color: #fff;
+		opacity: 1;
+		text-shadow: none;
+	}
 
-.modal-title-primary{
-	font-weight: 700;
-	font-size: 20px;
-	color: #fdd41d;
-}
+	.modal-title{
+		color: #fff;
+		text-align: center;
+	}
+	.modal-title-secondary{
+		font-weight: 300;
+	}
 
-.contact-name{
-	color: #005b9c;
-	font-weight: 700;
-	font-size: 18px;
-}
+	.modal-title-primary{
+		font-weight: 700;
+		font-size: 20px;
+		color: #fdd41d;
+	}
+
+	.contact-name{
+		color: #005b9c;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	.tab-content{
+		padding-top: 1em;
+	}
