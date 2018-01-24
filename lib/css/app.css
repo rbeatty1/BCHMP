@@ -169,7 +169,7 @@ body{
 		color: #333;
 		font-family: "Open Sans Condensed", sans-serif;
 		opacity: .9;
-		border: 1px solid #005b9c;
+		border: 2px solid #ffffff;
 	}
 
 	.leaflet-pop-content{
@@ -177,7 +177,7 @@ body{
 	}
 
 	.popup-title{
-		color: #66a6b5;
+		color: #005b9c;
 		font-size: 22px;
 		font-weight: 700;
 		text-align: center;
@@ -195,7 +195,7 @@ body{
 	}
 
 	.popup-content-bold{
-		color: #005b9c;
+		color: #66a6b5;
 		font-weight: 700;
 	}
 
