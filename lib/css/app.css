@@ -238,7 +238,6 @@ body{
 	}
 	.nav-tabs>li>a:hover{
 		color: #aaa;
-		font-weight: 300;
-		font-size: 18px;
+		font-weight: 700;
 		font-family: "Open Sans Condensed", sans-serif;
 	}
