@@ -7,6 +7,7 @@ body{
 #map{
 	position: relative;
 	height: 100%;
+	z-index: 0;
 }
 
 #sidebar{
@@ -59,7 +60,6 @@ body{
 	display: none;
 	float: right;
 	width: 33%;
-	height: 100%;
 }
 
 .panel-title-info{
@@ -93,6 +93,12 @@ body{
 	    text-align: center;
 	}
 
+	.dropdown-menu-custom {
+		position: fixed;
+		right: 15px;
+		z-index: 1;
+		top: 15px;
+	}
 	.dropdown-menu{
 		font-family: "Open Sans Condensed", sans-serif;
 	}

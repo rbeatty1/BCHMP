@@ -37,255 +37,265 @@
 
 <body>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-2" id="sidebar">
-        <!-- CONDITIONS panel BEGIN -->
-            <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-conditions">
-                <div class="panel-title">
-                    <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
-                    <h1 class="title">CONDITIONS</h1>
-                    <a href="#" data-toggle="modal" data-target="#conditions-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
-                </div>
+<!-- MAIN CONTAINER BEGIN -->
+    <div class="container-fluid">
+        <div class="row">
+        <!-- SIDEBAR BEGINS -->
+            <div class="col-lg-2" id="sidebar">
+            <!-- CONDITIONS panel BEGIN -->
+                <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-conditions">
+                    <div class="panel-title">
+                        <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
+                        <h1 class="title">CONDITIONS</h1>
+                        <a href="#" data-toggle="modal" data-target="#conditions-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
+                    </div>
                 <!-- CONDITIONS layers BEGIN -->
-                <div class="panel-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#conditions-layers">
-                        <div class="panel-link">
-                            <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
-                        </div>
-                    </a>
-                </div>
-                <div id="conditions-layers" class="layer-box panel-collapse collapse">
-                    <ul class="layer-items">
-                        <li>
-                            <input type="checkbox" name="layer-control" id="trafficSafety" z-index="1">
-                            <label for="trafficSafety">2015 Traffic Safety</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="trafficCongestion" z-index="2">
-                            <label for="trafficCongestion">2013 Traffic Congestion</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="LRPcongestion" z-index="3">
-                            <label for="LRPcongestion">2040 Long-Range Plan Traffic Congestion</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="masterplanCongestion"  z-index="4">
-                            <label for="masterplanCongestion">Master Plan Traffic Congestion</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="transitScore" z-index="5">
-                            <label for="transitScore">2010 Transit Score</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="cmpScore" z-index="6">
-                            <label for="cmpScore">Congestion Management Process Composite Score</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="connectIndex" z-index="7">
-                            <label for="connectIndex">2010 Roadway Connectivity Index</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="roadAddition" z-index="8">
-                            <label for="roadAddition">Candidate County Road Addition</label>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#conditions-layers">
+                            <div class="panel-link">
+                                <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="conditions-layers" class="layer-box panel-collapse collapse">
+                        <ul class="layer-items">
+                            <li>
+                                <input type="checkbox" name="layer-control" id="trafficSafety" z-index="1">
+                                <label for="trafficSafety">2015 Traffic Safety</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="trafficCongestion" z-index="2">
+                                <label for="trafficCongestion">2013 Traffic Congestion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="LRPcongestion" z-index="3">
+                                <label for="LRPcongestion">2040 Long-Range Plan Traffic Congestion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="masterplanCongestion"  z-index="4">
+                                <label for="masterplanCongestion">Master Plan Traffic Congestion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="transitScore" z-index="5">
+                                <label for="transitScore">2010 Transit Score</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="cmpScore" z-index="6">
+                                <label for="cmpScore">Congestion Management Process Composite Score</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="connectIndex" z-index="7">
+                                <label for="connectIndex">2010 Roadway Connectivity Index</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="roadAddition" z-index="8">
+                                <label for="roadAddition">Candidate County Road Addition</label>
+                            </li>
+                        </ul>
+                    </div>
                 <!-- CONDITIONS layers END -->
 
                 <!-- CONDITIONS legend BEGIN -->
-                <div class="panel-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#conditions-legend">
-                        <div class="panel-link">
-                            <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="legend-box panel-collapse collapse" id="conditions-legend"></div> 
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#conditions-legend">
+                            <div class="panel-link">
+                                <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="legend-box panel-collapse collapse" id="conditions-legend"></div> 
                 <!-- CONDITIONS legend END -->               
-            </div>
+                </div>
             <!-- CONDITIONS panel END -->
 
             <!-- RESOURCES panel BEGIN -->
-            <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-resources">
-                <div class="panel-title">
-                    <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
-                    <h1 class="title">RESOURCES</h1>
-                    <a href="#" data-toggle="modal" data-target="#resources-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
-                </div>
+                <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-resources">
+                    <div class="panel-title">
+                        <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
+                        <h1 class="title">RESOURCES</h1>
+                        <a href="#" data-toggle="modal" data-target="#resources-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
+                    </div>
                 <!-- RESOURCES layer BEGIN -->
-                <div class="panel-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#resource-layers">
-                        <div class="panel-link">
-                            <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
-                        </div>
-                    </a>
-                </div>
-                <div id="resource-layers" class="layer-box panel-collapse collapse">
-                    <ul class="layer-items">
-                        <li>
-                            <input type="checkbox" name="layer-control" id="njCMPCorridors">
-                            <label for="njCMPCorridors">2015 CMP Planning Corridors</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="NHS">
-                            <label for="NHS">National Highway System</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="hurricane">
-                            <label for="hurricane">Hurricane Evacuation Routes</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="expressDetour">
-                            <label for="expressDetour">Expressway Detour Route</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="trainOneMile">
-                            <label for="trainOneMile">Train Station within 1 Mile</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="NJTService">
-                            <label for="NJTService">NJT Bus Service</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="shuttleBus">
-                            <label for="shuttleBus">BurLINK Shuttle Bus Service</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="parkRideLots">
-                            <label for="parkRideLots">Park-and-Ride Lots</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="bikeNetwork">
-                            <label for="bikeNetwork">On-Road Bike Network</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="luCenters">
-                            <label for="luCenters">Land Use Centers</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="bizCenters">
-                            <label for="bizCenters">Business Centers</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="freightCenters">
-                            <label for="freightCenters">Freight Centers</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="planType">
-                            <label for="planType">2040 Planning Area Type</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="scenicByway">
-                            <label for="scenicByway">Designated Scenic Byway</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="flood">
-                            <label for="flood">Wetlands and Floodplains</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="socialResources">
-                            <label for="socialResources">Cultural, Historical, and Community Resources</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="pinelands">
-                            <label for="pinelands">NJ Pinelands Area</label>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#resource-layers">
+                            <div class="panel-link">
+                                <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="resource-layers" class="layer-box panel-collapse collapse">
+                        <ul class="layer-items">
+                            <li>
+                                <input type="checkbox" name="layer-control" id="njCMPCorridors">
+                                <label for="njCMPCorridors">2015 CMP Planning Corridors</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="NHS">
+                                <label for="NHS">National Highway System</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="hurricane">
+                                <label for="hurricane">Hurricane Evacuation Routes</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="expressDetour">
+                                <label for="expressDetour">Expressway Detour Route</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="trainOneMile">
+                                <label for="trainOneMile">Train Station within 1 Mile</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="NJTService">
+                                <label for="NJTService">NJT Bus Service</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="shuttleBus">
+                                <label for="shuttleBus">BurLINK Shuttle Bus Service</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="parkRideLots">
+                                <label for="parkRideLots">Park-and-Ride Lots</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="bikeNetwork">
+                                <label for="bikeNetwork">On-Road Bike Network</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="luCenters">
+                                <label for="luCenters">Land Use Centers</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="bizCenters">
+                                <label for="bizCenters">Business Centers</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="freightCenters">
+                                <label for="freightCenters">Freight Centers</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="planType">
+                                <label for="planType">2040 Planning Area Type</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="scenicByway">
+                                <label for="scenicByway">Designated Scenic Byway</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="flood">
+                                <label for="flood">Wetlands and Floodplains</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="socialResources">
+                                <label for="socialResources">Cultural, Historical, and Community Resources</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="pinelands">
+                                <label for="pinelands">NJ Pinelands Area</label>
+                            </li>
+                        </ul>
+                    </div>
                 <!-- RESOURCES layer END -->
                 <!-- RESOURCES legend BEGIN -->
-                <div class="panel-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#resource-legend">
-                        <div class="panel-link">
-                            <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="legend-box panel-collapse collapse" id="resource-legend"></div>
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#resource-legend">
+                            <div class="panel-link">
+                                <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="legend-box panel-collapse collapse" id="resource-legend"></div>
                 <!-- RESOURCES legend END -->  
-            </div>
+                </div>
             <!-- RESOURCES panel END -->
 
             <!-- STRATEGIES panel BEGINS -->
-            <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-strategies">
-                <div class="panel-title">
-                    <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
-                    <h1 class="title">STRATEGIES</h1>
-                    <a href="#" data-toggle="modal" data-target="#strategies-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
-                </div>
-                <div class="panel-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-layers">
-                        <div class="panel-link">
-                            <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
-                        </div>
-                    </a>
-                </div>
+                <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-strategies">
+                    <div class="panel-title">
+                        <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
+                        <h1 class="title">STRATEGIES</h1>
+                        <a href="#" data-toggle="modal" data-target="#strategies-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
+                    </div>
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-layers">
+                            <div class="panel-link">
+                                <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
+                            </div>
+                        </a>
+                    </div>
                 <!-- STRATEGIES layers BEGIN -->
-                <div id="strategies-layers" class="layer-box panel-collapse collapse">
-                    <ul class="layer-items">
-                        <li>
-                            <input type="checkbox" name="layer-control" id="tip-point">
-                            <label for="tip-point">NJ TIP (FY16 - FY19) - Bridges/Intersection</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="tip-roads">
-                            <label for="tip-roads">NJ TIP (FY16 - FY19) - Roadway</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="hsip-intersection">
-                            <label for="hsip-intersection">HSIP (2015) - Eligible Intersection</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="hsip-road">
-                            <label for="hsip-road">HSIP (2015) -  Eligible Roadway</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="burCoPubWorks">
-                            <label for="burCoPubWorks">Burlington County Public Works Improvement Project</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="congestion-lrp">
-                            <label for="congestion-lrp">Congestion Management Strategies for 2040 Long-Range Plan</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="layer-control" id="cmp-inventory">
-                            <label for="cmp-inventory">Congestion Management Process Inventory of Appropriate Strategies</label>
-                        </li>
-                    </ul>
-                </div>
+                    <div id="strategies-layers" class="layer-box panel-collapse collapse">
+                        <ul class="layer-items">
+                            <li>
+                                <input type="checkbox" name="layer-control" id="tip-point">
+                                <label for="tip-point">NJ TIP (FY16 - FY19) - Bridges/Intersection</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="tip-roads">
+                                <label for="tip-roads">NJ TIP (FY16 - FY19) - Roadway</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="hsip-intersection">
+                                <label for="hsip-intersection">HSIP (2015) - Eligible Intersection</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="hsip-road">
+                                <label for="hsip-road">HSIP (2015) -  Eligible Roadway</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="burCoPubWorks">
+                                <label for="burCoPubWorks">Burlington County Public Works Improvement Project</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="congestion-lrp">
+                                <label for="congestion-lrp">Congestion Management Strategies for 2040 Long-Range Plan</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="cmp-inventory">
+                                <label for="cmp-inventory">Congestion Management Process Inventory of Appropriate Strategies</label>
+                            </li>
+                        </ul>
+                    </div>
                 <!-- STRATEGIES layers END -->
                 <!-- STRATEGIES legend BEGIN -->
-                <div class="panel-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-legend">
-                        <div class="panel-link">
-                            <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="legend-box panel-collapse collapse" id="strategies-legend"></div>  
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-legend">
+                            <div class="panel-link">
+                                <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="legend-box panel-collapse collapse" id="strategies-legend"></div>  
                 <!-- STRATEGIES legend END -->
+                </div>
+            <!-- STRATEGIES PANEL ENDS -->
             </div>
-        </div>
+        <!-- SIDEBAR ENDS -->
+
+        <!-- DROPDOWN BEGINS -->
+            <div class="dropdown-menu-custom">
+                <a id="drop-options" href="#" class="dropdown-toggle title-text" data-toggle="dropdown">Learn More   <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#about-modal" class="body-text">Project Overview</a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#how-modal" class="body-text">How To Use</a>
+                        </li>
+                        <li>
+                            <a href="http://www.co.burlington.nj.us/" target="_blank" class="body-text">Burlington County Website</a>
+                        </li>
+                </ul>
+            </div>
+        <!-- DROPDOWN ENDS -->
+        
         <!-- MAP PANE -->
-        <div class="col-lg-10 col-sm-10" id="map"></div>
-        <!-- DROPDOWN -->
-        <div class="navbar navbar-fixed-top navbar-right">
-            <a id="drop-options" href="#" class="navbar-button dropdown-toggle title-text" data-toggle="dropdown">Learn More   <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#about-modal" class="body-text">Project Overview</a>
-                    </li>
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#how-modal" class="body-text">How To Use</a>
-                    </li>
-                    <li>
-                        <a href="http://www.co.burlington.nj.us/" target="_blank" class="body-text">Burlington County Website</a>
-                    </li>
-            </ul>
+            <div class="col-lg-10 col-sm-10" id="map">
+            </div>
+
         </div>
     </div>
-</div>
+<!-- MAIN CONTAINER END -->
 
 <!-- MODALS BEGIN -->
     <!-- PROJECT OVERVIEW MODAL BEGIN -->
@@ -390,7 +400,7 @@
             </div>
         <!-- CONDITIONS END -->
 
-        <!-- RESOURCES  BEGIN -->
+        <!-- RESOURCES BEGIN -->
             <div class="modal fade" id="resources-modal">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -429,7 +439,6 @@
         <!-- STRATEGIES END -->
 
     <!-- PANE INFORMATION MODALS END -->
-
 <!-- MODALS END -->
 <script type="text/javascript" src="dev/js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="dev/js/bootstrap.js"></script>
