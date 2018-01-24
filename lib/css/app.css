@@ -151,6 +151,16 @@ body{
 		text-align: left;
 	}
 
+	.pane-logo-stakeholders{
+		max-height: 75px;
+		display: none;
+		margin: auto;
+		bottom: 25px;
+		left: 0;
+		right: 0;
+		position: absolute;
+	}
+
 /* pop ups */
 	.leaflet-popup-content-wrapper, .leaflet-popup-tip{
 		background-color: #ddd;
