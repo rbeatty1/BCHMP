@@ -147,7 +147,7 @@ body{
 	}
 	.layer-items>li{
 		font-family: "Open Sans Condensed", sans-serif;
-		font-color: #969696;
+		color: #969696;
 		font-size:14px;
 		list-style: none;
 		text-align: left;
@@ -162,6 +162,15 @@ body{
 		right: 0;
 		position: absolute;
 	}
+
+	/* legend */
+		.legend-items>li{
+			display: none;
+			font-family: "Open Sans Condensed", sans-serif;
+			font-size:14px;
+			list-style: none;
+			text-align: left;
+		}
 
 /* pop ups */
 	.leaflet-popup-content-wrapper, .leaflet-popup-tip{
