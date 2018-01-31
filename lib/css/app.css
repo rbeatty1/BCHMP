@@ -131,7 +131,7 @@ body{
 		font-weight: 700;
 		text-align: center;
 	}
-	.legend-box, .layer-box{
+	.layer-box{
 		display: none;
 		background-color: #e1e1e1;
 		border: 1.5px white solid;
@@ -147,7 +147,6 @@ body{
 	}
 	.layer-items>li{
 		font-family: "Open Sans Condensed", sans-serif;
-		color: #969696;
 		font-size:14px;
 		list-style: none;
 		text-align: left;
@@ -164,12 +163,32 @@ body{
 	}
 
 	/* legend */
+		.legend-box{
+			display: none;
+			background-color: #e1e1e1;
+			border: 1.5px white solid;
+			border-top: none;
+			padding: 10px 10px;
+			box-shadow: 5px 5px 10px rgba(35, 31, 32, .5);
+			margin: 0 0 25px;
+			max-height: 25%;
+			overflow-y: auto;
+		}
+		hr {
+			margin-top: 0;
+		}
+		.legend-items{
+			padding-left: 0;
+		}
+		.legend-square{
+			margin-bottom: 20px;
+		}
 		.legend-items>li{
 			display: none;
 			font-family: "Open Sans Condensed", sans-serif;
 			font-size:14px;
 			list-style: none;
-			text-align: left;
+			text-align: center;
 		}
 
 /* pop ups */
