@@ -148,11 +148,15 @@ body{
 		padding-left: 10px;
 	}
 	.layer-items>li{
-		font-family: "Open Sans Condensed", sans-serif;
+		font-family: "Libre Franklin", sans-serif;
 		font-color: #969696;
-		font-size:14px;
+		font-size:12px;
 		list-style: none;
 		text-align: left;
+	}
+	.layer-items>li>label{
+		width: 90%;
+		vertical-align: middle;
 	}
 
 	.pane-logo-stakeholders{
