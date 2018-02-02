@@ -37,6 +37,8 @@ body{
 	font-size: 24px;
 	font-weight: 700;
 	text-orientation: sideways;
+	-ms-transform: rotate(-270deg);
+	margin-top: 25px;
 	writing-mode: vertical-rl;
 	text-align: center;
 }
@@ -151,11 +153,15 @@ body{
 		list-style: none;
 		text-align: left;
 	}
+	.layer-items>li>label{
+		width: 90%;
+		vertical-align: middle;
+	}
 
 	.pane-logo-stakeholders{
 		max-height: 75px;
 		display: none;
-		margin: auto;
+		margin: 0 auto;
 		bottom: 25px;
 		left: 0;
 		right: 0;
