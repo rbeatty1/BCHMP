@@ -133,7 +133,7 @@ body{
 		font-weight: 700;
 		text-align: center;
 	}
-	.legend-box, .layer-box{
+	.layer-box{
 		display: none;
 		background-color: #e1e1e1;
 		border: 1.5px white solid;
@@ -141,16 +141,15 @@ body{
 		padding: 10px 10px;
 		box-shadow: 5px 5px 10px rgba(35, 31, 32, .5);
 		margin: 0 0 25px;
-		max-height: 33%;
+		max-height: 20%;
 		overflow-y: auto;
 	}
 	.layer-items{
 		padding-left: 10px;
 	}
 	.layer-items>li{
-		font-family: "Libre Franklin", sans-serif;
-		font-color: #969696;
-		font-size:12px;
+		font-family: "Open Sans Condensed", sans-serif;
+		font-size:14px;
 		list-style: none;
 		text-align: left;
 	}
@@ -168,6 +167,57 @@ body{
 		right: 0;
 		position: absolute;
 	}
+
+	/* legend */
+		.legend-box{
+			display: none;
+			background-color: #e1e1e1;
+			border: 1.5px white solid;
+			border-top: none;
+			padding: 10px 10px;
+			box-shadow: 5px 5px 10px rgba(35, 31, 32, .5);
+			margin: 0 0 25px;
+			max-height: 25%;
+			overflow-y: auto;
+		}
+		hr {
+			margin-top: 0;
+		}
+		.legend-items{
+			padding-left: 0;
+		}
+		.legend-square{
+			margin-bottom: 20px;
+		}
+		.legend-items>li{
+			display: none;
+			font-family: "Open Sans Condensed", sans-serif;
+			font-size:14px;
+			list-style: none;
+			text-align: center;
+		}
+		.legend-item-title{
+			font-weight: 700;
+			color: #005b9c;
+		}
+		.legend-item-subtitle{
+			font-weight: 700;
+			color: #66a6b5;
+		}
+		.legend-item-label{
+			font-family: "Libre Franklin", sans-serif;
+			color: #005b9c;
+			font-size: 10px;
+		}
+		.legend-item-cmp{
+			font-family: "Libre Franklin", sans-serif;
+			font-size: 10px;
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 5px;
+		}
+
+
 
 /* pop ups */
 	.leaflet-popup-content-wrapper, .leaflet-popup-tip{
