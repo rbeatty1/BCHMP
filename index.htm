@@ -23,7 +23,6 @@
       <!-- Javascript -->
 
         <script type="text/javascript" src="dev/js/leaflet.js"></script>
-        <script type="text/javascript" src="dev/js/leaflet-providers.js"></script>
 
 
     <!-- CSS CDNs for hosted app -->
@@ -33,7 +32,6 @@
       <!-- Javascript -->
       <script src="https://unpkg.com/esri-leaflet@2.1.1"></script>
       <script src="https://unpkg.com/esri-leaflet-renderers@2.0.6"></script>
-      <script src="https://unpkg.com/esri-leaflet-vector"></script>
 
 </head>
 
@@ -45,7 +43,7 @@
         <!-- SIDEBAR BEGINS -->
             <div class="col-lg-2" id="sidebar">
             <!-- CONDITIONS panel BEGIN -->
-                <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-conditions">
+                <div class="col-lg-3 col-sm-3 panel-inactive bchmp-panel" id="bchmp-conditions">
                     <div class="panel-title">
                         <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
                         <h1 class="title">CONDITIONS</h1>
@@ -228,7 +226,7 @@
             <!-- CONDITIONS panel END -->
 
             <!-- RESOURCES panel BEGIN -->
-                <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-resources">
+                <div class="col-lg-3 col-sm-3 panel-inactive bchmp-panel" id="bchmp-resources">
                     <div class="panel-title">
                         <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
                         <h1 class="title">RESOURCES</h1>
@@ -566,7 +564,7 @@
             <!-- RESOURCES panel END -->
 
             <!-- STRATEGIES panel BEGINS -->
-                <div class="col-lg-4 col-sm-4 panel-inactive bchmp-panel" id="bchmp-strategies">
+                <div class="col-lg-3 col-sm-3 panel-inactive bchmp-panel" id="bchmp-strategies">
                     <div class="panel-title">
                         <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
                         <h1 class="title">STRATEGIES</h1>
@@ -696,6 +694,55 @@
                     <img class="pane-logo-stakeholders" src="lib/img/stakeholders-logo.png" alt="Planning Partners for the Burlington County Highway Master Plan"/>
                 </div>
             <!-- STRATEGIES PANEL ENDS -->
+
+            <!-- RIGHT OF WAY PANEL BEGINS -->
+                <div class="col-lg-3 col-sm-3 panel-inactive bchmp-panel" id="bchmp-right-of-way">
+                    <div class="panel-title">
+                        <img src="lib/img/projectlogo.png" alt="Project Logo || DVRPC" class="panel-title-logo">
+                        <h1 class="title">RIGHT-OF-WAY</h1>
+                        <a href="#" data-toggle="modal" data-target="#row-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
+                    </div>
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#row-layers">
+                            <div class="panel-link">
+                                <span class="layer-header"><h5 class="legend-title">Layers</h5></span>
+                            </div>
+                        </a>
+                    </div>
+                <!-- RIGHT OF WAY layers BEGIN -->
+                    <div id="row-layers" class="layer-box panel-collapse collapse">
+                        <ul class="layer-items">
+                            <li>
+                                <input type="checkbox" name="layer-control" id="capacity">
+                                <label for="capacity">Capacity Assessment</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="row-recommend">
+                                <label for="row-recommend">Minimum Recommended Right-of-Way</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="layer-control" id="cross">
+                                <label for="cross">Roadway Elements by Roadway Type</label>
+                            </li>
+                        </ul>
+                    </div>
+                <!-- RIGHT OF WAY layers END -->
+                <!-- RIGHT OF WAY legend BEGIN -->
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#row-legend">
+                            <div class="panel-link">
+                                <span class="layer-header"><h5 class="legend-title">Legend</h5></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="legend-box panel-collapse collapse" id="row-legend">
+                        <ul class="legend-items">
+                        </ul>
+                    </div>  
+                <!-- RIGHT OF WAY legend END -->
+                    <img class="pane-logo-stakeholders" src="lib/img/stakeholders-logo.png" alt="Planning Partners for the Burlington County Highway Master Plan"/>
+                </div>
+            <!-- RIGHT OF WAY PANEL ENDS -->
             </div>
         <!-- SIDEBAR ENDS -->
 
