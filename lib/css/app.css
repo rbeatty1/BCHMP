@@ -250,6 +250,7 @@ body{
 		font-size: 14px;
 		text-align: left;
 		color: #2a2a2a;
+		white-space: nowrap;
 	}
 
 	.popup-content-bold{
