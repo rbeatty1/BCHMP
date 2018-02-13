@@ -310,7 +310,6 @@ body{
 		font-family: "Open Sans Condensed", sans-serif;
 	}
 	.nav-tabs> li.active>a:hover{
-		font-size: 18px;
 		color: #66a6b5;
 		font-family: "Open Sans Condensed", sans-serif;
 	}
@@ -323,4 +322,18 @@ body{
 		color: #aaa;
 		font-weight: 700;
 		font-family: "Open Sans Condensed", sans-serif;
+	}
+
+	.modal-body-subtitle{
+		font-family: "Open Sans Condensed", sans-serif;
+		color: #66a6b5;
+		font-weight: 700;
+		font-size: 16px;
+	}
+
+	.modal-body-emphasis{
+		font-size: 12px;
+		font-family: "Open Sans Condensed", sans-serif;
+		font-weight: 700;
+		color: #005b9c;
 	}

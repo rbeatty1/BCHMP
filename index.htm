@@ -726,7 +726,7 @@
                         <ul class="layer-items">
                             <li>
                                 <input type="checkbox" name="layer-control" id="row-recommend">
-                                <label for="row-recommend">Minimum Recommended Right-of-Way</label>
+                                <label for="row-recommend">Proposed Right-of-Way (ROW)</label>
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="capacity">
@@ -734,7 +734,7 @@
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="cross">
-                                <label for="cross">Roadway Elements by Roadway Type</label>
+                                <label for="cross">Design Elements by ROW Category</label>
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="urban-area">
@@ -755,7 +755,7 @@
                         <ul class="legend-items">
                             <li id="legend-row-recommend">
                                 <div>
-                                    <h4 class="legend-item-title">Minimum Recommended Right-of-Way (ROW)</h4>
+                                    <h4 class="legend-item-title">Proposed Right-of-Way (ROW)</h4>
                                     <h5 class="legend-item-subtitle">ROW Width (Feet)</h5>
                                     <span class="legend-item-cmp">
                                         <p style="float: left; width: 20%;">62</p>
@@ -789,7 +789,7 @@
                             </li>
                             <li id="legend-cross">
                                 <div>
-                                    <h4 class="legend-item-title">Roadway Element by Roadway Type</h4>
+                                    <h4 class="legend-item-title">Design Elements by ROW Category</h4>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 20%;">Local_M</p>
                                         <p style="float: left; width: 20%;">Local_W</p>
@@ -914,11 +914,11 @@
 
                                 <!-- About Landing Tab -->
                                     <div class="tab-pane fade active in" id="about">
-                                        <p>Burlington County has grown by more than 50,000 residents and 25,000 jobs since the County last prepared a Highway Master Plan in 1989. An almost equal number of people and jobs are forecasted to be added by the Year 2040. The Delaware Valley Regional Planning Commission (DVRPC) was commissioned to update the Highway Master Plan to supply a vision and implementation framework for the County highway network that can sustainably complement long-term County growth patterns.<br><br>
+                                        <p>Burlington County has grown by more than 50,000 residents and 25,000 jobs since the County last prepared a Highway Master Plan in 1989. An almost equal number of people and jobs are forecasted to be added by the Year 2040. The Delaware Valley Regional Planning Commission (<span class="modal-body-emphasis">DVRPC</span>) was commissioned to update the Highway Master Plan to supply a vision and implementation framework for the County highway network that can sustainably complement long-term County growth patterns.<br><br>
 
-                                        The County Route (CR) network is vital to everday movement in the County, and it plays an important role in interconnecting with the New Jersey Turnpike and interstate highway system. The CR Network carries NJ Transit and BurLink bus routes, provides access to stations along the NJ Transit RiverLINE, and serves as a scenic route network in the Pinelands.<br><br>
+                                        The County Route (<span class="modal-body-emphasis">CR</span>) network is vital to everday movement in the County, and it plays an important role in interconnecting with the New Jersey Turnpike and interstate highway system. The CR Network carries NJ Transit and BurLink bus routes, provides access to stations along the NJ Transit RiverLINE, and serves as a scenic route network in the Pinelands.<br><br>
                                         
-                                        Performance indicators for the road network, as well as land use conditions, were assembled for current and forecasted conditions. The conditions were assessed using DVRPC's Congestion Management Process (CMP) to identify candidate improvement strategies for the County road network.<br><br>
+                                        Performance indicators for the road network, as well as land use conditions, were assembled for current and forecasted conditions. The conditions were assessed using DVRPC's Congestion Management Process (<span class="modal-body-emphasis">CMP</span>) to identify candidate improvement strategies for the County road network.<br><br>
 
                                         This webmap provides an interactive look at the information that informed the analysis and the resulting improvement strategies. The base year for the analysis was 2013, while 2040 was used as the forecast year when necessary.<br><br>
 
@@ -932,7 +932,7 @@
 
                                 <!-- Start Disclaimer Tab -->
                                     <div class="tab-pane fade" id="disclaimer"> 
-                                            <p>This web page is a public resource of general information. The Delaware Valley Regional Planning Commission (DVRPC) makes no warranty, 
+                                            <p>This web page is a public resource of general information. The Delaware Valley Regional Planning Commission (<span class="modal-body-emphasis">DVRPC</span>) makes no warranty, 
                                                 representation, or guarantee as to the content, sequence, accuracy, timeliness, or completeness of any of the spatial data or database 
                                                 information provided herein. DVRPC and partner state, local, and other agencies shall assume no liability for errors, omissions, or 
                                                 inaccuracies in the information provided regardless of how caused; or any decision made or action taken or not taken by any person relying 
@@ -1033,13 +1033,45 @@
 
                         <div class="modal-body">
                             <p>
-                            DVRPC conducts a continuing, comprehensive and cooperative process for transportation planning, programming, and decision-making. Two important outcomes of this process are the Long-Range Plan (LRP) and Transportation Improvement Program (TIP). Inventorying current plans, programs, and pipelined projects is an important part of identifying candidate improvement strategies for the County's highway infrastructure. The componenets below include physical improvements related to the plans and programs that will address traffic safety and affect mobility. Projects that will deliver mobility changes were included in the Year 2040 LRP scenario to estimate future traffic conditions.
+                            DVRPC conducts a continuing, comprehensive and cooperative process for transportation planning, programming, and decision-making. Two important outcomes of this process are the Long-Range Plan (<span class="modal-body-emphasis">LRP</span>) and Transportation Improvement Program (<span class="modal-body-emphasis">TIP</span>). Inventorying current plans, programs, and pipelined projects is an important part of identifying candidate improvement strategies for the County's highway infrastructure. The componenets below include physical improvements related to the plans and programs that will address traffic safety and affect mobility. Projects that will deliver mobility changes were included in the Year 2040 LRP scenario to estimate future traffic conditions.
                             </p>            
                         </div>
                     </div>
                 </div>
             </div>
         <!-- STRATEGIES END -->
+
+        <!-- ROW MODAL BEGIN -->
+            <div class="modal fade" id="row-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                             <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Right-of-Way</span></h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>
+                            An important element of the Burlington County Highway Master Plan is the updated map of proposed right-of-way (<span class="modal-body-emphasis">ROW</span>) widths. The proposed ROW widths are to be used as a planning tool in designing roadway improvements and evaluating land development applications. It is very important for the county to reserve additional ROW because land development projects can have an impact on traffic circulation on adjacent county roads.
+                            </p>
+                            <br>
+                            <p class="modal-body-subtitle">Proposed Right-of-Way</p>
+                            <p>
+                            A proposed ROW width has been assigned to each County Route (<span class="modal-body-emphasis">CR</span>) segment based on its assigned functional classification and urban/rural area boundaries (USDOT Federal Highway Administration's Highway Functional Classification System (<span class="modal-body-emphasis">HFCS</span>)).
+                            </p>
+                            <p class="modal-body-subtitle">Capacity Assessment</p>
+                            <p>
+                            An analysis was conducted to determine the volume-to-capacity (<span class="modal-body-emphasis">V/C</span>) ratio of each CR segment. V/C ratio represents the ability of a roadway to accommodate (<span class="modal-body-emphasis">capacity</span>) vehicular demand (<span class="modal-body-emphasis">volume</span>), and it is a measure of traffic congestion. As the V/C ratio approaches 1, vehicles may experience delay or queuing. Therefor, a V/C ratio greater than 0.85 indicates that there may be a potential need to increase roadway capacity in the future
+                            </p>
+                            <p class="modal-body-subtitle">Design Elements by ROW Category</p>
+                            <p>
+                            The accompanying cross section diagram (click the link in the pop-up window to view the diagram) for each ROW category details the recommended width for each roadway design element. It is important to note that these cross section smay not exactly reflect existing or future conditions.
+                            </p>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- ROW MODAL END -->
 
     <!-- PANE INFORMATION MODALS END -->
 <!-- MODALS END -->
