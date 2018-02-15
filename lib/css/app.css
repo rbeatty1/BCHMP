@@ -170,6 +170,10 @@ body{
 		position: absolute;
 	}
 
+	#bchmp-right-of-way.panel-active{
+		border-right: 3px solid white;
+	}
+
 	/* legend */
 		.legend-box{
 			display: none;
@@ -223,10 +227,10 @@ body{
 
 /* pop ups */
 	.leaflet-popup-content-wrapper, .leaflet-popup-tip{
-		background-color: #ddd;
+		background-color: #d5d5d5;
 		color: #333;
 		font-family: "Open Sans Condensed", sans-serif;
-		opacity: .9;
+		opacity: .95;
 		border: 2px solid #ffffff;
 	}
 
