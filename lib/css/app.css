@@ -21,11 +21,9 @@ body{
 }
 
 .panel-title{
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	font-size: 16px;
 	color: inherit;
-	height: 10%;
-	margin-top: 10px;
 	white-space: nowrap;
 }
 
@@ -33,7 +31,7 @@ body{
 	width: 60%;
 
 }
-.panel-inactive>.panel-title>.title{
+.panel-inactive>.panel-title>span>.title{
 	font-family: "Open Sans Condensed", sans-serif;
 	font-size: 24px;
 	font-weight: 700;
@@ -51,20 +49,30 @@ body{
 	height: 100%;
 }
 
-.panel-active>.panel-title>.title{
+.panel-active>.panel-title>span>.title{
 	font-family: "Open Sans Condensed", sans-serif;
 	font-size: 30px;
 	text-align: left;
-	padding-top: 1em;
 	font-weight: 700;
 	color: #005b9c;
-}
-.panel-title-logo{
-	display: none;
-	float: right;
-	width: 33%;
+	display: inline-block;
 }
 
+.panel-title-logo{
+	display: none;
+	width: 100%;
+	border-bottom: 1px solid #9c9c9c;
+	padding-bottom: 10px;
+}
+.panel-title-logo-img{
+	display: inline;
+	float: right;
+	width: 40%;
+}
+
+.panel-title-block{
+	display: block;
+}
 .panel-title-info{
 	display: none;
 	font-size: 16px;
@@ -123,7 +131,7 @@ body{
 /* sidebar */
 	.panel-heading {
 		display: none;
-		/*margin-top: 5em;*/
+		padding: .25em;
 		background-color: #66a6b5;
 		border-bottom: 2px #fff solid;
 		box-shadow: 2px 2px 5px rgba(35, 31, 32, .7);
@@ -161,7 +169,7 @@ body{
 	}
 
 	.pane-logo-stakeholders{
-		max-height: 75px;
+		max-height: 10%;
 		display: none;
 		margin: 0 auto;
 		bottom: 25px;
