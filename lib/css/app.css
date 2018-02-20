@@ -26,6 +26,7 @@ body{
 	color: inherit;
 	height: 10%;
 	margin-top: 10px;
+	white-space: nowrap;
 }
 
 .panel-title-left{
@@ -37,9 +38,9 @@ body{
 	font-size: 24px;
 	font-weight: 700;
 	text-orientation: sideways;
+	transform: rotate(-270deg);
 	-ms-transform: rotate(-270deg);
 	margin-top: 25px;
-	writing-mode: vertical-rl;
 	text-align: center;
 }
 
@@ -125,6 +126,7 @@ body{
 		/*margin-top: 5em;*/
 		background-color: #66a6b5;
 		border-bottom: 2px #fff solid;
+		box-shadow: 2px 2px 5px rgba(35, 31, 32, .7);
 	}
 	.legend-title{
 		font-size: 20px;
@@ -139,7 +141,7 @@ body{
 		border: 1.5px white solid;
 		border-top: none;
 		padding: 10px 10px;
-		box-shadow: 5px 5px 10px rgba(35, 31, 32, .5);
+		box-shadow: 2px 2px 5px rgba(35, 31, 32, .7);
 		margin: 0 0 25px;
 		max-height: 20%;
 		overflow-y: auto;
@@ -168,6 +170,10 @@ body{
 		position: absolute;
 	}
 
+	#bchmp-right-of-way.panel-active{
+		border-right: 3px solid white;
+	}
+
 	/* legend */
 		.legend-box{
 			display: none;
@@ -175,7 +181,7 @@ body{
 			border: 1.5px white solid;
 			border-top: none;
 			padding: 10px 10px;
-			box-shadow: 5px 5px 10px rgba(35, 31, 32, .5);
+			box-shadow: 2px 2px 5px rgba(35, 31, 32, .7);
 			margin: 0 0 25px;
 			max-height: 25%;
 			overflow-y: auto;
@@ -221,10 +227,10 @@ body{
 
 /* pop ups */
 	.leaflet-popup-content-wrapper, .leaflet-popup-tip{
-		background-color: #ddd;
+		background-color: #d5d5d5;
 		color: #333;
 		font-family: "Open Sans Condensed", sans-serif;
-		opacity: .9;
+		opacity: .95;
 		border: 2px solid #ffffff;
 	}
 
@@ -250,10 +256,15 @@ body{
 		color: #2a2a2a;
 	}
 
+	.popup-content a{
+		font-weight: 700;
+	}
+
 	.popup-content-bold{
 		color: #66a6b5;
 		font-weight: 700;
 	}
+
 
 /* Modals */
 
@@ -308,7 +319,6 @@ body{
 		font-family: "Open Sans Condensed", sans-serif;
 	}
 	.nav-tabs> li.active>a:hover{
-		font-size: 18px;
 		color: #66a6b5;
 		font-family: "Open Sans Condensed", sans-serif;
 	}
@@ -321,4 +331,18 @@ body{
 		color: #aaa;
 		font-weight: 700;
 		font-family: "Open Sans Condensed", sans-serif;
+	}
+
+	.modal-body-subtitle{
+		font-family: "Open Sans Condensed", sans-serif;
+		color: #66a6b5;
+		font-weight: 700;
+		font-size: 16px;
+	}
+
+	.modal-body-emphasis{
+		font-size: 12px;
+		font-family: "Open Sans Condensed", sans-serif;
+		font-weight: 700;
+		color: #005b9c;
 	}
