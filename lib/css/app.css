@@ -254,13 +254,17 @@ body{
 		font-size: 14px;
 		text-align: left;
 		color: #2a2a2a;
-		white-space: nowrap;
+	}
+
+	.popup-content a{
+		font-weight: 700;
 	}
 
 	.popup-content-bold{
 		color: #66a6b5;
 		font-weight: 700;
 	}
+
 
 /* Modals */
 
