@@ -112,13 +112,14 @@ body{
 	}
 	.dropdown-menu{
 		font-family: "Open Sans Condensed", sans-serif;
+		font-size: .95em;
 	}
 
 	.dropdown-menu>li>a:hover{
 		color: #2a2a2a;
-		font-weight: 700;
 		text-decoration: none;
 		background-color: #fdd41d;
+		text-shadow: 0 0.025em #333, 0 -0.025em #333, 0.02em 0 #333, -0.02em 0 #333;
 	}
 
 	.logo-stakeholders{
