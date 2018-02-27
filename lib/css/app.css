@@ -338,7 +338,7 @@ body{
 		font-weight: 700;
 		font-family: "Open Sans Condensed", sans-serif;
 	}
-	.nav-tabs> li.active>a:hover{
+	.nav-tabs> li.active>a:hover, .nav-tabs>li.active>a:focus{
 		color: #66a6b5;
 		font-family: "Open Sans Condensed", sans-serif;
 	}
