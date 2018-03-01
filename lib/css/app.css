@@ -207,7 +207,7 @@ body{
 		.legend-items>li{
 			display: none;
 			font-family: "Open Sans Condensed", sans-serif;
-			font-size:14px;
+			font-size:12px;
 			list-style: none;
 			text-align: center;
 		}
@@ -222,11 +222,11 @@ body{
 		.legend-item-label{
 			font-family: "Libre Franklin", sans-serif;
 			color: #005b9c;
-			font-size: 10px;
+			font-size: 12px;
 		}
 		.legend-item-cmp{
 			font-family: "Libre Franklin", sans-serif;
-			font-size: 10px;
+			font-size: 12px;
 			display: inline-block;
 			width: 100%;
 			margin-bottom: 5px;
@@ -293,7 +293,7 @@ body{
 		border-bottom: 3px solid #fdd41d;
 	}
 	.modal-body{
-		font-size: 13px;
+		font-size: 14px;
 		color: #6a6a6a;
 	}
 	.close{
