@@ -129,6 +129,11 @@ body{
 		z-index: 1;
 	}
 
+	.leaflet-top.leaflet-left>.leaflet-control{
+		margin-top: -15px;
+		margin-left: -15px;
+	}
+
 /* sidebar */
 	.panel-heading {
 		display: none;
