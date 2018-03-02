@@ -56,6 +56,7 @@ body{
 	font-weight: 700;
 	color: #005b9c;
 	display: inline-block;
+	margin: 12px auto 0 auto;
 }
 
 .panel-title-logo{
@@ -67,7 +68,8 @@ body{
 .panel-title-logo-img{
 	display: inline;
 	float: right;
-	width: 40%;
+	width: 45%;
+	margin-top: 15px;
 }
 
 .panel-title-block{
@@ -127,6 +129,11 @@ body{
 		bottom: 20px;
 		right: 75px;
 		z-index: 1;
+	}
+
+	.leaflet-top.leaflet-left>.leaflet-control{
+		margin-top: -15px;
+		margin-left: -15px;
 	}
 
 /* sidebar */
