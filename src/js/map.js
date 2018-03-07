@@ -407,7 +407,7 @@ $(document).ready(function() {
 });
 
 module.exports = {
-    // map,
+    map,
     projectLogo,
     checkboxLayers,
     lazyLoadLayers
