@@ -1,5 +1,6 @@
 var mapper = require('./map.js');
 
+require('../css/app.scss');
 
 function sortBy(array, key) {
     return array.sort(function(a, b) {

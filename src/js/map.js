@@ -29,8 +29,6 @@ var bm = {
 };
 
 
-var map;
-
 function initmap() {
     map = new L.map('map', {
         center: [39.87, -74.73],
@@ -409,7 +407,7 @@ $(document).ready(function() {
 });
 
 module.exports = {
-    map,
+    // map,
     projectLogo,
     checkboxLayers,
     lazyLoadLayers
