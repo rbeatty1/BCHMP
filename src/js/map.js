@@ -28,6 +28,7 @@ var bm = {
     "Topographic": topo
 };
 
+var map;
 
 function initmap() {
     map = new L.map('map', {
@@ -407,8 +408,8 @@ $(document).ready(function() {
 });
 
 module.exports = {
-    map,
-    projectLogo,
-    checkboxLayers,
-    lazyLoadLayers
+    map: map,
+    projectLogo: projectLogo,
+    checkboxLayers: checkboxLayers,
+    lazyLoadLayers: lazyLoadLayers
 }

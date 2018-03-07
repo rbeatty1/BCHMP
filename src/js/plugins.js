@@ -262,5 +262,5 @@ function createPopUps(feature, layer) {
 }
 
 module.exports = {
-    createPopUps
+    createPopUps: createPopUps
 }
