@@ -55,7 +55,7 @@ L.Control.ProjectLogo = L.Control.extend({
     onAdd: function(map) {
         var img = L.DomUtil.create('img');
         // declare IMG path for project logo
-        img.src = "lib/img/project-logo-large.png";
+        img.src = "img/project-logo-large.png";
         img.style.width = '230px';
         return img;
     },

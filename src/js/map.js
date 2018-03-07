@@ -1,4 +1,6 @@
+var esri = require('esri-leaflet');
 var plugins = require('./plugins.js');
+
 
 // Load map variable and set extent
 // var satellite = L.tileLayer.provider('MapBox', {id: 'mapbox.satellite', access_token: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'}),
@@ -305,7 +307,7 @@ var allLayers = [{
 ];
 
 // load BurlCo boundary on load
-var BurlCo = L.esri.featureLayer({
+var BurlCo = esri.featureLayer({
     url: 'https://arcgis.dvrpc.org/arcgis/rest/services/Boundaries/DVRPC_Boundaries/FeatureServer/1',
     ignoreRenderer: true,
     where: "CO_NAME = 'Burlington'",
@@ -333,7 +335,7 @@ var lazyLoadLayers = function(pane) {
         // loop through active pane layers and load
         for (lyr in paneLayers) {
             if (paneLayers[lyr].qry != undefined) {
-                layer = L.esri.featureLayer({
+                layer = esri.featureLayer({
                     url: paneLayers[lyr].url,
                     id: paneLayers[lyr].name,
                     pane: paneLayers[lyr].drawingPane,
@@ -345,7 +347,7 @@ var lazyLoadLayers = function(pane) {
                 })
                 lyrGroup.push(layer);
             } else {
-                layer = L.esri.featureLayer({
+                layer = esri.featureLayer({
                     url: paneLayers[lyr].url,
                     id: paneLayers[lyr].name,
                     ignoreRenderer: false,

@@ -253,7 +253,9 @@ body{
 	.leaflet-pop-content{
 		margin: 0 15px;
 	}
-
+	.leaflet-popup-close-button{
+		z-index: 1;
+	}
 	.popup-title{
 		color: #005b9c;
 		font-size: 22px;

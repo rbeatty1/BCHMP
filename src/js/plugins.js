@@ -15,23 +15,23 @@ function congestStratPopUps(props) {
                 // assign img paths for the appropriate strategies
                 case 'Strat1':
                     var name = "Operational Strategies";
-                    var imgPath = 'lib/img/Congest-Icons/strat-1.svg';
+                    var imgPath = 'img/Congest-Icons/strat-1.svg';
                     break;
                 case 'Strat2':
                     var name = "Transportation Demand Management Strategies";
-                    var imgPath = 'lib/img/Congest-Icons/strat-2.svg';
+                    var imgPath = 'img/Congest-Icons/strat-2.svg';
                     break;
                 case 'Strat3':
                     var name = "Increase Existing Transportation System Capacity";
-                    var imgPath = 'lib/img/Congest-Icons/strat-3.svg';
+                    var imgPath = 'img/Congest-Icons/strat-3.svg';
                     break;
                 case 'Strat4':
                     var name = "Add New Transportation System Capacity";
-                    var imgPath = 'lib/img/Congest-Icons/strat-4.svg';
+                    var imgPath = 'img/Congest-Icons/strat-4.svg';
                     break;
                 case 'Strat5':
                     var name = "Goods Movement Strategies";
-                    var imgPath = 'lib/img/Congest-Icons/strat-5.svg';
+                    var imgPath = 'img/Congest-Icons/strat-5.svg';
                     break;
             }
             // create dictionary to access during pop-up creation
