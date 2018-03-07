@@ -7,11 +7,18 @@
     "lib": "lib"
   },
   "dependencies": {
+    "esri-leaflet": "2.1.1",
+    "esri-leaflet-renderers": "2.0.6",
     "esri-leaflet-legend": "^2.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "webpack",
+    "build:prod": "webpack -p",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
