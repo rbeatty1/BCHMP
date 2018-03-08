@@ -4,7 +4,7 @@ const path = require('path'),
     ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var extractPlugin = new ExtractTextPlugin({
-   filename: './css/bundle.styles.css'
+   filename: './bundle.styles.css'
 });
 
 
@@ -20,12 +20,21 @@ const config = {
             'esri-leaflet-renderers'
         ]
   },
+  // resolve: {
+  //       extensions: [ '.html', '.js', '.json', '.scss', '.css'],
+  //       alias: {
+  //           leaflet_css: __dirname + "/node_modules/leaflet/dist/leaflet.css",
+  //           leaflet_marker: __dirname + "/node_modules/leaflet/dist/images/marker-icon.png",
+  //           leaflet_marker_2x: __dirname + "/node_modules/leaflet/dist/images/marker-icon-2x.png",
+  //           leaflet_marker_shadow: __dirname + "/node_modules/leaflet/dist/images/marker-shadow.png"
+  //       }
+  //   },
   module: {
         rules: [    
             {
                 test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
                 use: [{
-                    loader: "file-loader"
+                    loader: "file-loader?name=fonts/[name].[ext]"
                 }]
             },
             {
@@ -33,7 +42,16 @@ const config = {
                   use: extractPlugin.extract({
                     use: ['css-loader', 'sass-loader']
                 })
-            }
+            },
+            {
+                test: /\.(png|jpg)$/, 
+                use: "file-loader?name=img/[name].[ext]"
+              },
+              {
+            // HTML LOADER
+            test: /\.html$/,
+            loader: 'html-loader'
+          },
         ]
   },
   output: {
@@ -49,7 +67,7 @@ const config = {
         }),
         new HtmlWebpackPlugin({
           title: 'Custom template',
-          template: 'index.htm'
+          template: 'index.html'
         })
     ]  
 
