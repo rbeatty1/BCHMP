@@ -1,13 +1,11 @@
 const path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
-    ExtractTextPlugin = require("extract-text-webpack-plugin"),
-    CopyWebpackPlugin = require('copy-webpack-plugin');
+    ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var extractPlugin = new ExtractTextPlugin({
    filename: './bundle.styles.css'
 });
-
 
 const config = {
   context: path.resolve(__dirname, 'src'),  
@@ -58,14 +56,11 @@ const config = {
         }),
         new webpack.optimize.CommonsChunkPlugin('vendor'),
         extractPlugin,
+        //make jquery global
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        }),
-        new CopyWebpackPlugin([
-          {from: path.join(__dirname, 'src', 'img'), to: 'img'}
-        ])
-        
+        })        
     ]  
 
 }
