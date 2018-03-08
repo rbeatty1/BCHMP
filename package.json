@@ -9,7 +9,6 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "esri-leaflet": "2.1.1",
-    "esri-leaflet-legend": "^2.0.1",
     "esri-leaflet-renderers": "2.0.6",
     "jquery": "3.3.1"
   },
