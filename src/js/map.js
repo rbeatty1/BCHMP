@@ -363,7 +363,7 @@ var lazyLoadLayers = function(pane) {
 
 // show layers based on checked/unchecked status
 var checkboxLayers = function(visibleLayers) {
-    loadedLayers = lyrGroup;
+    var loadedLayers = lyrGroup;
     var loaded = new Object();
     var vizName = [];
     for (key in loadedLayers) {
@@ -377,15 +377,12 @@ var checkboxLayers = function(visibleLayers) {
         var temp = loaded[lyr].options.id;
         if (vizName.indexOf(temp) != -1) {
             loaded[lyr].addTo(map);
-            $(document).ready(function() {
-                $("#legend-" + temp).show();
-            });
+            $("#legend-" + temp).show();
         } else {
             if (map.hasLayer(loaded[lyr])) {
                 loaded[lyr].removeFrom(map);
-                $(document).ready(function() {
-                    $("#legend-" + temp).hide();
-                });
+                $("#legend-" + temp).hide();
+                
             }
         }
     }
