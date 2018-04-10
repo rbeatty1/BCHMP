@@ -1,59 +1,39 @@
 <!-- DOCTYPE html -->
-<html lang ="en">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="author" content="Robert Beatty">
-  <meta name="keywords" content="Planning, DVRPC, Sustainable, #38A800, Urban Planning, DVRPC, Delaware Valley Regional Planning Commission, Burlington County, Highway Master Plan">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TBD">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Robert Beatty">
+    <meta name="keywords" content="Planning, DVRPC, Sustainable, #38A800, Urban Planning, DVRPC, Delaware Valley Regional Planning Commission, Burlington County, Highway Master Plan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TBD">
 
-  <!-- Necessary Things -->
-  <title>Burlington County Highway Master Plan</title>
+    <title>Burlington County Highway Master Plan</title>
 
-  <!-- Load things -->
-
-    <!-- Local files for development -->
-      <!-- CSS-->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css">
-        <link rel="stylesheet" type="text/css" href="lib/css/app.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,Libre+Franklin" rel="stylesheet">
-      <!-- Javascript -->
-
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
-
-
-    <!-- CSS CDNs for hosted app -->
-      <!-- CSS -->
-
-
-      <!-- Javascript -->
-      <script src="https://unpkg.com/esri-leaflet@2.1.1"></script>
-      <script src="https://unpkg.com/esri-leaflet-renderers@2.0.6"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,Libre+Franklin" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- MAIN CONTAINER BEGIN -->
+    <!-- MAIN CONTAINER BEGIN -->
     <div class="container-fluid">
         <div class="row">
-        <!-- SIDEBAR BEGINS -->
+            <!-- SIDEBAR BEGINS -->
             <div class="col-lg-2 col-md-2 col-sm-2" id="sidebar">
-            <!-- CONDITIONS panel BEGIN -->
+                <!-- CONDITIONS panel BEGIN -->
                 <div class="col-lg-3 col-md-3 col-sm-3 panel-inactive bchmp-panel" id="bchmp-conditions">
                     <div class="panel-title-logo">
-                        <img src="lib/img/BCHMP-sidebar-logo.png" alt="Burlington County Highway Master Plan Logo" class="panel-title-logo-img">
+                        <img src="<%- require('./img/BCHMP-sidebar-logo.png')%>" alt="Burlington County Highway Master Plan Logo" class="panel-title-logo-img">
                     </div>
-                <div class="panel-title">
-                    <span class="panel-title-block">
+                    <div class="panel-title">
+                        <span class="panel-title-block">
                         <h1 class="title">CONDITIONS</h1>
                         <a href="#" data-toggle="modal" data-target="#conditions-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
-                    </span>    
-                </div>
-                <!-- CONDITIONS layers BEGIN -->
+                    </span>
+                    </div>
+                    <!-- CONDITIONS layers BEGIN -->
                     <div class="panel-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#conditions-layers">
                             <div class="panel-link">
@@ -76,7 +56,7 @@
                                 <label for="LRPcongestion">2040 Long-Range Plan Traffic Congestion</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="layer-control" id="masterplanCongestion"  z-index="4">
+                                <input type="checkbox" name="layer-control" id="masterplanCongestion" z-index="4">
                                 <label for="masterplanCongestion">Master Plan Traffic Congestion</label>
                             </li>
                             <li>
@@ -97,9 +77,9 @@
                             </li>
                         </ul>
                     </div>
-                <!-- CONDITIONS layers END -->
+                    <!-- CONDITIONS layers END -->
 
-                <!-- CONDITIONS legend BEGIN -->
+                    <!-- CONDITIONS legend BEGIN -->
                     <div class="panel-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#conditions-legend">
                             <div class="panel-link">
@@ -116,7 +96,7 @@
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 33%;">0.00x - 0.99x</p>
                                         <p style="float: left; width: 33%;">1.00x - 1.99x</p>
-                                        <p style="float: right; width: 33%;">2.00x and greater</p>                                        
+                                        <p style="float: right; width: 33%;">2.00x and greater</p>
                                     </span>
                                     <hr style="width: 33%; background-color: #38A800; float: left; height: 2px;">
                                     <hr style="width: 33%; background-color: #FFFF00; float: left; height: 3.5px;">
@@ -130,7 +110,7 @@
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 33%;">0.00 - 0.84</p>
                                         <p style="float: left; width: 33%;">0.85 - 0.99</p>
-                                        <p style="float: right; width: 33%;">1.00 and greater</p>                                        
+                                        <p style="float: right; width: 33%;">1.00 and greater</p>
                                     </span>
                                     <hr style="width: 33%; background-color: #9C9C9C; float: left; height: 2px;">
                                     <hr style="width: 33%; background-color: #FFAA00; float: left; height: 3.5px;">
@@ -144,7 +124,7 @@
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 33%;">0.00 - 0.84</p>
                                         <p style="float: left; width: 33%;">0.85 - 0.99</p>
-                                        <p style="float: right; width: 33%;">1.00 and greater</p>                                         
+                                        <p style="float: right; width: 33%;">1.00 and greater</p>
                                     </span>
                                     <hr style="width: 33%; background-color: #9C9C9C; float: left; height: 2px;">
                                     <hr style="width: 33%; background-color: #FFAA00; float: left; height: 3.5px;">
@@ -158,7 +138,7 @@
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 33%;">0.00 - 0.84</p>
                                         <p style="float: left; width: 33%;">0.85 - 0.99</p>
-                                        <p style="float: right; width: 33%;">1.00 and greater</p>                                        
+                                        <p style="float: right; width: 33%;">1.00 and greater</p>
                                     </span>
                                     <hr style="width: 33%; background-color: #9C9C9C; float: left; height: 2px;">
                                     <hr style="width: 33%; background-color: #FFAA00; float: left; height: 3.5px;">
@@ -171,10 +151,10 @@
                                     <h5 class="legend-item-subtitle">Transit Score Category, 2010</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 20%;">Low</p>
-                                        <p style="float: left; width: 20%;">Marginal</p>  
-                                        <p style="float: left; width: 20%;">Medium</p>  
-                                        <p style="float: left; width: 20%;">Med-High</p>  
-                                        <p style="float: left; width: 20%;">High</p>                                  
+                                        <p style="float: left; width: 20%;">Marginal</p>
+                                        <p style="float: left; width: 20%;">Medium</p>
+                                        <p style="float: left; width: 20%;">Med-High</p>
+                                        <p style="float: left; width: 20%;">High</p>
                                     </span>
                                     <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #FFFFFF; float: left; height: 15px;"></div>
                                     <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #BBE06C; float: left; height: 15px;"></div>
@@ -189,7 +169,7 @@
                                     <h5 class="legend-item-subtitle">Top CMP Score</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">0 - 5 : Satisfactory</p>
-                                        <p style="float: left; width: 50%;">More than 5 : Warrant Attention</p>                                        
+                                        <p style="float: left; width: 50%;">More than 5 : Warrant Attention</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #9C9C9C; float: left; height: 2px;">
                                     <hr style="width: 50%; background-color: #FF0000; float: left; height: 3.5px;">
@@ -201,10 +181,10 @@
                                     <h5 class="legend-item-subtitle">Connecting Road Density</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 20%;">Low</p>
-                                        <p style="float: left; width: 20%;">Marginal</p>  
-                                        <p style="float: left; width: 20%;">Medium</p>  
-                                        <p style="float: left; width: 20%;">Med-High</p>  
-                                        <p style="float: left; width: 20%;">High</p>                                  
+                                        <p style="float: left; width: 20%;">Marginal</p>
+                                        <p style="float: left; width: 20%;">Medium</p>
+                                        <p style="float: left; width: 20%;">Med-High</p>
+                                        <p style="float: left; width: 20%;">High</p>
                                     </span>
                                     <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #CDF57A; float: left; height: 15px;"></div>
                                     <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #70A800; float: left; height: 15px;"></div>
@@ -217,35 +197,35 @@
                                 <div>
                                     <h4 class="legend-item-title">Candidate County Road Addition</h4>
                                     <span class="legend-item-subtitle">
-                                        <p style="float: left; width: 100%;">County Road Addition Candidate</p>                                
+                                        <p style="float: left; width: 100%;">County Road Addition Candidate</p>
                                     </span>
                                     <hr style="width: 100%; background-color: #a900e6; float: left; height: 5px;">
                                 </div>
                             </li>
                         </ul>
-                    </div> 
-                <!-- CONDITIONS legend END -->
+                    </div>
+                    <!-- CONDITIONS legend END -->
                     <div class="pane-logo-stakeholders">
                         <span style="margin: 20%">
-                            <a href="https://www.dvrpc.org/" rel="noopener" target="_blank"><img src="lib/img/dvrpc-logo.png" <a href alt="Delaware Valley Regional Planning Commission Home Page" height="50px" style="margin-right: 1em"/></a>
-                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank"><img src="lib/img/burlco-logo.png" alt="Burlington County, New Jersey Home Page" height="75px" style="border-left: 1.5px solid #aaa; padding-left: 1em"/></a>
-                        </span> 
-                    </div>        
+                            <a href="https://www.dvrpc.org/" rel="noopener" target="_blank"><img src="<%- require('./img/dvrpc-logo.png') %>" <a href alt="Delaware Valley Regional Planning Commission Home Page" height="50px" style="margin-right: 1em"/></a>
+                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank"><img src="<%- require('./img/burlco-logo.png') %>" alt="Burlington County, New Jersey Home Page" height="75px" style="border-left: 1.5px solid #aaa; padding-left: 1em"/></a>
+                        </span>
+                    </div>
                 </div>
-            <!-- CONDITIONS panel END -->
+                <!-- CONDITIONS panel END -->
 
-            <!-- RESOURCES panel BEGIN -->
+                <!-- RESOURCES panel BEGIN -->
                 <div class="col-lg-3 col-md-3 col-sm-3 panel-inactive bchmp-panel" id="bchmp-resources">
                     <div class="panel-title-logo">
-                        <img src="lib/img/BCHMP-sidebar-logo.png" alt="Burlington County Highway Master Plan Logo" class="panel-title-logo-img">
+                        <img src="<%- require('./img/BCHMP-sidebar-logo.png') %>" alt="Burlington County Highway Master Plan Logo" class="panel-title-logo-img">
                     </div>
-                <div class="panel-title">
-                    <span class="panel-title-block">
+                    <div class="panel-title">
+                        <span class="panel-title-block">
                         <h1 class="title">RESOURCES</h1>
                         <a href="#" data-toggle="modal" data-target="#resources-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
-                    </span>    
-                </div>
-                <!-- RESOURCES layer BEGIN -->
+                    </span>
+                    </div>
+                    <!-- RESOURCES layer BEGIN -->
                     <div class="panel-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#resource-layers">
                             <div class="panel-link">
@@ -311,7 +291,7 @@
                                 <input type="checkbox" name="layer-control" id="scenicByway">
                                 <label for="scenicByway">Designated Scenic Byway</label>
                             </li>
-<!-- THIS LAYER ISN'T WORKING AND I DON'T KNOW WHY
+                            <!-- THIS LAYER ISN'T WORKING AND I DON'T KNOW WHY
                            <li>
                                 <input type="checkbox" name="layer-control" id="flood">
                                 <label for="flood">Wetlands and Floodplains</label>
@@ -326,8 +306,8 @@
                             </li>
                         </ul>
                     </div>
-                <!-- RESOURCES layer END -->
-                <!-- RESOURCES legend BEGIN -->
+                    <!-- RESOURCES layer END -->
+                    <!-- RESOURCES legend BEGIN -->
                     <div class="panel-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#resource-legend">
                             <div class="panel-link">
@@ -343,11 +323,18 @@
                                     <h5 class="legend-item-subtitle">DVRPC (2015)</h5>
                                     <div>
                                         <div class="legend-item-cmp">
-                                            <div style="float: left; width: 20%;">I-295<br>&amp;<br>NJ Tpk (N)</div>
-                                            <div style="float: left; width: 20%;">I-295<br>&amp;<br>NJ Tpk (S)</div>  
-                                            <div style="float: left; width: 20%;padding-top: 4%">AC Expwy/<br>NJ 42</div>  
-                                            <div style="float: left; width: 20%;">US 1<br>&amp;<br>US 206</div>  
-                                            <div style="float: left; width: 20%;padding-top: 7.5%">US 30</div>                                  
+                                            <div style="float: left; width: 20%;">I-295
+                                                <br>&amp;
+                                                <br>NJ Tpk (N)</div>
+                                            <div style="float: left; width: 20%;">I-295
+                                                <br>&amp;
+                                                <br>NJ Tpk (S)</div>
+                                            <div style="float: left; width: 20%;padding-top: 4%">AC Expwy/
+                                                <br>NJ 42</div>
+                                            <div style="float: left; width: 20%;">US 1
+                                                <br>&amp;
+                                                <br>US 206</div>
+                                            <div style="float: left; width: 20%;padding-top: 7.5%">US 30</div>
                                         </div>
                                         <div class="legend-item-cmp">
                                             <div class="legend-square" style="width: 20%; border: 2px solid #004DA8; background-color: #73DFFF; float: left; height: 15px;"></div>
@@ -360,10 +347,12 @@
                                     <div>
                                         <div class="legend-item-cmp">
                                             <div style="float: left; width: 20%;padding-top: 7.5%">US 130</div>
-                                            <div style="float: left; width: 20%;">US 322 <br>&amp;<br>Cross Keys</div>  
-                                            <div style="float: left; width: 20%;padding-top: 7.55%">NJ 31</div>  
-                                            <div style="float: left; width: 20%;padding-top: 7.5%">NJ 33</div>  
-                                            <div style="float: left; width: 20%;padding-top: 7.5%">NJ 38</div>                                  
+                                            <div style="float: left; width: 20%;">US 322
+                                                <br>&amp;
+                                                <br>Cross Keys</div>
+                                            <div style="float: left; width: 20%;padding-top: 7.55%">NJ 31</div>
+                                            <div style="float: left; width: 20%;padding-top: 7.5%">NJ 33</div>
+                                            <div style="float: left; width: 20%;padding-top: 7.5%">NJ 38</div>
                                         </div>
                                         <div class="legend-item-cmp">
                                             <div class="legend-square" style="width: 20%; border: 2px solid #E60000; background-color: #FFBEBE; float: left; height: 15px;"></div>
@@ -375,10 +364,11 @@
                                     </div>
                                     <div style="margin: auto;">
                                         <div class="legend-item-cmp">
-                                            <div style="float: left; width: 25%;">NJ 41, NJ 45,<br>NJ 47, NJ 55</div>
-                                            <div style="float: left; width: 25%;padding-top: 5%">NJ 70</div>  
-                                            <div style="float: left; width: 25%;padding-top: 5%">NJ 73</div>  
-                                            <div style="float: left; width: 25%;padding-top: 5%">CR 571</div>                
+                                            <div style="float: left; width: 25%;">NJ 41, NJ 45,
+                                                <br>NJ 47, NJ 55</div>
+                                            <div style="float: left; width: 25%;padding-top: 5%">NJ 70</div>
+                                            <div style="float: left; width: 25%;padding-top: 5%">NJ 73</div>
+                                            <div style="float: left; width: 25%;padding-top: 5%">CR 571</div>
                                         </div>
                                         <div class="legend-item-cmp">
                                             <div class="legend-square" style="width: 25%; border: 2px solid #00734C; background-color: #73FFDF; float: left; height: 15px;"></div>
@@ -394,7 +384,7 @@
                                     <h4 class="legend-item-title">National Highway System</h4>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Yes</p>                                        
+                                        <p style="float: left; width: 50%;">Yes</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #B1D1D9; float: left; height: 2px;">
                                     <hr style="width: 50%; background-color: #66A6B5; float: left; height: 3.5px;">
@@ -406,7 +396,7 @@
                                     <h5 class="legend-item-subtitle">Incident Management Network</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Yes</p>                                        
+                                        <p style="float: left; width: 50%;">Yes</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #FFBEBE; float: left; height: 2px;">
                                     <hr style="width: 50%; background-color: #ED5151; float: left; height: 3.5px;">
@@ -418,7 +408,7 @@
                                     <h5 class="legend-item-subtitle">Incident Management Network</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Yes</p>                                       
+                                        <p style="float: left; width: 50%;">Yes</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #73B2FF; float: left; height: 2px;">
                                     <hr style="width: 50%; background-color: #005B9C; float: left; height: 3.5px;">
@@ -430,7 +420,7 @@
                                     <h5 class="legend-item-subtitle">National Highway System</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Yes</p>                                      
+                                        <p style="float: left; width: 50%;">Yes</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #E8BEFF; float: left; height: 2px;">
                                     <hr style="width: 50%; background-color: #8400A8; float: left; height: 3.5px;">
@@ -442,9 +432,9 @@
                                     <h5 class="legend-item-subtitle">Number of Weekday Bus Routes</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 25%;">0 Routes</p>
-                                        <p style="float: left; width: 25%;">1 Route</p>      
+                                        <p style="float: left; width: 25%;">1 Route</p>
                                         <p style="float: left; width: 25%;">2 Routes</p>
-                                        <p style="float: left; width: 25%;">More than 2 Routes</p>                                   
+                                        <p style="float: left; width: 25%;">More than 2 Routes</p>
                                     </span>
                                     <hr style="width: 25%; background-color: #F5671B; float: left; height: 3px;">
                                     <hr style="width: 25%; background-color: #C61864; float: left; height: 3px;">
@@ -464,7 +454,7 @@
                                     <h4 class="legend-item-title">Park-and-Ride Lots</h4>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">Existing</p>
-                                        <p style="float: left; width: 50%;">Identified Opportunity</p>                             
+                                        <p style="float: left; width: 50%;">Identified Opportunity</p>
                                     </span>
                                     <div class="legend-square" style="width: 50%;float: left;">
                                         <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #006100; border: 1.5px solid #000; margin: auto;"></div>
@@ -480,7 +470,7 @@
                                     <h5 class="legend-item-subtitle">CCTMA (2015)</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">Existing Facility</p>
-                                        <p style="float: left; width: 50%;">Proposed Facility</p>                                        
+                                        <p style="float: left; width: 50%;">Proposed Facility</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #FFAA00; float: left; height: 3px;">
                                     <hr style="width: 50%; background-color: #773EC2; float: left; height: 3px;">
@@ -492,10 +482,10 @@
                                     <h5 class="legend-item-subtitle">Land Use Plan Type</h5>
                                     <span class="legend-item-cmp">
                                         <p style="float: left; width: 20%;">County-Defined<br>Center</p>
-                                        <p style="float: left; width: 20%;">Planned<br>Town Center</p>  
-                                        <p style="float: left; width: 20%;">Rural<br>Center</p>  
-                                        <p style="float: left; width: 20%;">Suburban Center</p>  
-                                        <p style="float: left; width: 20%;">Town<br>Center</p>                                  
+                                        <p style="float: left; width: 20%;">Planned<br>Town Center</p>
+                                        <p style="float: left; width: 20%;">Rural<br>Center</p>
+                                        <p style="float: left; width: 20%;">Suburban Center</p>
+                                        <p style="float: left; width: 20%;">Town<br>Center</p>
                                     </span>
                                     <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #66C2A5; float: left; height: 15px;"></div>
                                     <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #FC8D62; float: left; height: 15px;"></div>
@@ -521,14 +511,16 @@
                                     <h4 class="legend-item-title">2040 Planning Area Type</h4>
                                     <h5 class="legend-item-subtitle">2040 Long-Range Planning Areas</h5>
                                     <span class="legend-item-label">
-                                        <p style="float: left; width: 33%;">Developed<br>Suburb</p>  
-                                        <p style="float: left; width: 33%;">Growing<br>Suburb</p>  
-                                        <p style="float: left; width: 33%;">Rural<br>Area</p>                              
+                                        <p style="float: left; width: 33%;">Developed<br>Suburb</p>
+                                        <p style="float: left; width: 33%;">Growing<br>Suburb</p>
+                                        <p style="float: left; width: 33%;">Rural<br>Area</p>
                                     </span>
                                     <div class="legend-square" style="width: 33%; border: .5px solid #D6DFF2; background-color: #91ADD9; float: left; height: 20px;"></div>
                                     <div class="legend-square" style="width: 33%; border: .5px solid #90ABD9; background-color: #D5DEF0; float: left; height: 20px;"></div>
                                     <div class="legend-square" style="width: 33%; border: .5px solid #90ABD9; background-color: #FFFFFF; float: left; height: 20px;"></div>
-                                    <div><p><span style="font-weight: 700">NOTE:</span> Though Core City is a fourth 2040 Planning Area Type, there is no Core City in Burlington County. Therefore, this Planning Area Type is not shown in the map</p></div>
+                                    <div>
+                                        <p><span style="font-weight: 700">NOTE:</span> Though Core City is a fourth 2040 Planning Area Type, there is no Core City in Burlington County. Therefore, this Planning Area Type is not shown in the map</p>
+                                    </div>
                                 </div>
                             </li>
                             <li id="legend-scenicByway">
@@ -537,20 +529,20 @@
                                     <h5 class="legend-item-subtitle">National Highway System</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Yes</p>                                        
+                                        <p style="float: left; width: 50%;">Yes</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #CDCD66; float: left; height: 2px;">
                                     <hr style="width: 50%; background-color: #4C7300; float: left; height: 3.5px;">
                                 </div>
                             </li>
-<!-- THIS LAYER ISN'T WORKING AND I DON'T KNOW WHY
+                            <!-- THIS LAYER ISN'T WORKING AND I DON'T KNOW WHY
                             <li id="legend-flood">
                                 <div>
                                     <h4 class="legend-item-title">Wetlands and Floodplains</h4>
                                     <h5 class="legend-item-subtitle">Description</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 33%;">100-yr<br>Floodplain</p>
-                                        <p style="float: left; width: 33%;">Wetlands</p>  
+                                        <p style="float: left; width: 33%;">Wetlands</p>
                                         <p style="float: left; width: 33%;">Wetlands &amp;<br>100-yr Floodplain</p>
                                     </span>
                                     <div class="legend-square" style="width: 33%; background-color: #DF73FF; float: left; height: 20px;"></div>
@@ -564,7 +556,7 @@
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 33%;">Historic Site</p>
                                         <p style="float: left; width: 33%;">Municipal Services</p>
-                                        <p style="float: left; width: 33%;">School</p>                                
+                                        <p style="float: left; width: 33%;">School</p>
                                     </span>
                                     <div class="legend-square" style="width: 33%;float: left;">
                                         <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #E81014; border: 1.5px solid #000; margin: auto;"></div>
@@ -585,28 +577,28 @@
                             </li>
                         </ul>
                     </div>
-                <!-- RESOURCES legend END --> 
+                    <!-- RESOURCES legend END -->
                     <div class="pane-logo-stakeholders">
                         <span style="margin: 20%">
-                            <a href="https://www.dvrpc.org/" rel="noopener" target="_blank"><img src="lib/img/dvrpc-logo.png" alt="Delaware Valley Regional Planning Commission Home Page" height="50px" style="margin-right: 1em"/></a>
-                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank"><img src="lib/img/burlco-logo.png" alt="Burlington County, New Jersey Home Page" height="75px" style="border-left: 1.5px solid #aaa; padding-left: 1em"/></a>
-                        </span> 
-                    </div>    
+                            <a href="https://www.dvrpc.org/" rel="noopener" target="_blank"><img src="<%- require('./img/dvrpc-logo.png') %>" alt="Delaware Valley Regional Planning Commission Home Page" height="50px" style="margin-right: 1em"/></a>
+                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank"><img src="<%- require('./img/burlco-logo.png') %>" alt="Burlington County, New Jersey Home Page" height="75px" style="border-left: 1.5px solid #aaa; padding-left: 1em"/></a>
+                        </span>
+                    </div>
                 </div>
-            <!-- RESOURCES panel END -->
+                <!-- RESOURCES panel END -->
 
-            <!-- STRATEGIES panel BEGINS -->
+                <!-- STRATEGIES panel BEGINS -->
                 <div class="col-lg-3 col-md-3 col-sm-3 panel-inactive bchmp-panel" id="bchmp-strategies">
                     <div class="panel-title-logo">
-                        <img src="lib/img/BCHMP-sidebar-logo.png" alt="Burlington County Highway Master Plan Logo" class="panel-title-logo-img">
+                        <img src="<%- require('./img/BCHMP-sidebar-logo.png') %>" alt="Burlington County Highway Master Plan Logo" class="panel-title-logo-img">
                     </div>
-                <div class="panel-title">
-                    <span class="panel-title-block">
+                    <div class="panel-title">
+                        <span class="panel-title-block">
                         <h1 class="title">STRATEGIES</h1>
                         <a href="#" data-toggle="modal" data-target="#strategies-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
-                    </span>   
-                </div>
-                <!-- STRATEGIES layers BEGIN -->              
+                    </span>
+                    </div>
+                    <!-- STRATEGIES layers BEGIN -->
                     <div class="panel-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-layers">
                             <div class="panel-link">
@@ -631,7 +623,7 @@
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="hsip-road">
-                                <label for="hsip-road">HSIP (2015) -  Eligible Roadways</label>
+                                <label for="hsip-road">HSIP (2015) - Eligible Roadways</label>
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="burCoPubWorks">
@@ -647,8 +639,8 @@
                             </li>
                         </ul>
                     </div>
-                <!-- STRATEGIES layers END -->
-                <!-- STRATEGIES legend BEGIN -->
+                    <!-- STRATEGIES layers END -->
+                    <!-- STRATEGIES legend BEGIN -->
                     <div class="panel-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#strategies-legend">
                             <div class="panel-link">
@@ -671,7 +663,7 @@
                                 <div>
                                     <h4 class="legend-item-title">NJ TIP (FY16 - FY19)</h4>
                                     <span class="legend-item-label">
-                                        <p style="float: left; width: 100%;">Roadway</p>                                
+                                        <p style="float: left; width: 100%;">Roadway</p>
                                     </span>
                                     <hr style="width: 100%; background-color: #0070FF; float: left; height: 5px;">
                                 </div>
@@ -682,7 +674,7 @@
                                     <h5 class="legend-item-subtitle">Eligible Intersection</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">Intersection</p>
-                                        <p style="float: left; width: 50%;">Pedestrian Intersection</p>                             
+                                        <p style="float: left; width: 50%;">Pedestrian Intersection</p>
                                     </span>
                                     <div class="legend-square" style="width: 50%;float: left;">
                                         <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #ED5151; border: 1.5px solid #000000; margin: auto;"></div>
@@ -698,7 +690,7 @@
                                     <h5 class="legend-item-subtitle">Eligibile Roadway</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">Pedestrian Corridor</p>
-                                        <p style="float: left; width: 50%;">High Risk Rural Road</p>                                        
+                                        <p style="float: left; width: 50%;">High Risk Rural Road</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #ED5151; float: left; height: 3px;">
                                     <hr style="width: 50%; background-color: #149ECE; float: left; height: 3px;">
@@ -719,9 +711,9 @@
                                         <p style="float: left; width: 16%;">0</p>
                                         <p style="float: left; width: 16%;">1</p>
                                         <p style="float: left; width: 16%;">2</p>
-                                        <p style="float: left; width: 16%;">3</p>  
-                                        <p style="float: left; width: 16%;">4</p>  
-                                        <p style="float: left; width: 16%;">5</p>                                         
+                                        <p style="float: left; width: 16%;">3</p>
+                                        <p style="float: left; width: 16%;">4</p>
+                                        <p style="float: left; width: 16%;">5</p>
                                     </span>
                                     <div class="legend-item-cmp">
                                         <hr style="width: 16%; background-color: #9C9C9C; float: left; height: 1.5px;">
@@ -730,7 +722,8 @@
                                         <hr style="width: 16%; background-color: #74a9cf; float: left; height: 3px;">
                                         <hr style="width: 16%; background-color: #2b8cbe; float: left; height: 3.5px;">
                                         <hr style="width: 16%; background-color: #045a8d; float: left; height: 4px;">
-                                    </div>                                </div>
+                                    </div>
+                                </div>
                             </li>
                             <li id="legend-cmp-inventory">
                                 <div>
@@ -740,8 +733,8 @@
                                         <p style="float: left; width: 20%;">0</p>
                                         <p style="float: left; width: 20%;">1</p>
                                         <p style="float: left; width: 20%;">2</p>
-                                        <p style="float: left; width: 20%;">3</p>  
-                                        <p style="float: left; width: 20%;">4</p>                                        
+                                        <p style="float: left; width: 20%;">3</p>
+                                        <p style="float: left; width: 20%;">4</p>
                                     </span>
                                     <div class="legend-item-cmp">
                                         <hr style="width: 20%; background-color: #9C9C9C; float: left; height: 1.5px;">
@@ -753,29 +746,29 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>  
-                <!-- STRATEGIES legend END -->
+                    </div>
+                    <!-- STRATEGIES legend END -->
                     <div class="pane-logo-stakeholders">
                         <span style="margin: 20%">
-                            <a href="https://www.dvrpc.org/" rel="noopener" target="_blank"><img src="lib/img/dvrpc-logo.png" alt="Delaware Valley Regional Planning Commission Home Page" height="50px" style="margin-right: 1em"/></a>
-                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank"><img src="lib/img/burlco-logo.png" alt="Burlington County, New Jersey Home Page" height="75px" style="border-left: 1.5px solid #aaa; padding-left: 1em"/></a>
-                        </span> 
-                    </div>      
+                            <a href="https://www.dvrpc.org/" rel="noopener" target="_blank"><img src="<%- require('./img/dvrpc-logo.png') %>" alt="Delaware Valley Regional Planning Commission Home Page" height="50px" style="margin-right: 1em"/></a>
+                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank"><img src="<%- require('./img/burlco-logo.png') %>" alt="Burlington County, New Jersey Home Page" height="75px" style="border-left: 1.5px solid #aaa; padding-left: 1em"/></a>
+                        </span>
+                    </div>
                 </div>
-            <!-- STRATEGIES PANEL ENDS -->
+                <!-- STRATEGIES PANEL ENDS -->
 
-            <!-- RIGHT OF WAY PANEL BEGINS -->
+                <!-- RIGHT OF WAY PANEL BEGINS -->
                 <div class="col-lg-3 col-md-3 col-sm-3 panel-inactive bchmp-panel" id="bchmp-right-of-way">
                     <div class="panel-title-logo">
-                        <img src="lib/img/BCHMP-sidebar-logo.png" alt="Burlington County Highway Master Plan Logo" class="panel-title-logo-img">
+                        <img src="<%- require('./img/BCHMP-sidebar-logo.png') %>" alt="Burlington County Highway Master Plan Logo" class="panel-title-logo-img">
                     </div>
-                <div class="panel-title">
-                    <span class="panel-title-block">
+                    <div class="panel-title">
+                        <span class="panel-title-block">
                         <h1 class="title">RIGHT-OF-WAY</h1>
                         <a href="#" data-toggle="modal" data-target="#row-modal" class="panel-title-link"><i class="glyphicon glyphicon-info-sign panel-title-info"></i></a>
-                    </span>   
-                </div>
-                <!-- RIGHT-OF-WAY layers BEGIN -->     
+                    </span>
+                    </div>
+                    <!-- RIGHT-OF-WAY layers BEGIN -->
                     <div class="panel-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#row-layers">
                             <div class="panel-link">
@@ -803,8 +796,8 @@
                             </li>
                         </ul>
                     </div>
-                <!-- RIGHT OF WAY layers END -->
-                <!-- RIGHT OF WAY legend BEGIN -->
+                    <!-- RIGHT OF WAY layers END -->
+                    <!-- RIGHT OF WAY legend BEGIN -->
                     <div class="panel-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#row-legend">
                             <div class="panel-link">
@@ -822,8 +815,8 @@
                                         <p style="float: left; width: 20%;">62</p>
                                         <p style="float: left; width: 20%;">80</p>
                                         <p style="float: left; width: 20%;">100</p>
-                                        <p style="float: left; width: 20%;">125</p>  
-                                        <p style="float: left; width: 20%;">150</p>                                        
+                                        <p style="float: left; width: 20%;">125</p>
+                                        <p style="float: left; width: 20%;">150</p>
                                     </span>
                                     <div class="legend-item-cmp">
                                         <hr style="width: 20%; background-color: #B2B2B2; float: left; height: 1.5px;">
@@ -840,7 +833,7 @@
                                     <h5 class="legend-item-subtitle">Potential Need to Increase Capacity</h5>
                                     <span class="legend-item-cmp">
                                         <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Yes</p>                                      
+                                        <p style="float: left; width: 50%;">Yes</p>
                                     </span>
                                     <div class="legend-item-cmp">
                                         <hr style="width: 50%; background-color: #0070FF; float: left; height: 3px;">
@@ -853,7 +846,7 @@
                                     <h4 class="legend-item-title">Desired Typical Cross Sections</h4>
                                     <h5 class="legend-item-subtitle">Same as Existing</h5>
                                     <span class="legend-item-label">
-                                        <p style="float: left; width: 100%;">All Functional Classes in a Rural Area</p>                                  
+                                        <p style="float: left; width: 100%;">All Functional Classes in a Rural Area</p>
                                     </span>
                                     <div class="legend-item-cmp">
                                         <hr style="width: 100%; background-color: #828282; float: left; height: 3px;">
@@ -861,7 +854,7 @@
                                     <span class="legend-item-label">
                                         <h5 class="legend-item-subtitle" style="float: left; width: 33%;">Maintain</h5>
                                         <p style="float: left; width: 33%;"></p>
-                                        <h5 class="legend-item-subtitle" style="float: left; width: 33%;"">Widen</h5>                                        
+                                        <h5 class="legend-item-subtitle" style="float: left; width: 33%;">Widen</h5>
                                     </span>
                                     <div class="legend-item-cmp">
                                         <span>
@@ -907,257 +900,242 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>  
-                <!-- RIGHT OF WAY legend END -->
+                    </div>
+                    <!-- RIGHT OF WAY legend END -->
                     <div class="pane-logo-stakeholders">
                         <span style="margin: 20%">
-                            <a href="https://www.dvrpc.org/" rel="noopener" target="_blank"><img src="lib/img/dvrpc-logo.png" alt="Delaware Valley Regional Planning Commission Home Page" rel="noopener" height="50px" style="margin-right: 1em"/></a>
-                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank"><img src="lib/img/burlco-logo.png" alt="Burlington County, New Jersey Home Page" rel="noopener" height="75px" style="border-left: 1.5px solid #aaa; padding-left: 1em"/></a>
-                        </span> 
-                    </div>   
+                            <a href="https://www.dvrpc.org/" rel="noopener" target="_blank"><img src="<%- require('./img/dvrpc-logo.png') %>" alt="Delaware Valley Regional Planning Commission Home Page" rel="noopener" height="50px" style="margin-right: 1em"/></a>
+                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank"><img src="<%- require('./img/burlco-logo.png') %>" alt="Burlington County, New Jersey Home Page" rel="noopener" height="75px" style="border-left: 1.5px solid #aaa; padding-left: 1em"/></a>
+                        </span>
+                    </div>
                 </div>
-            <!-- RIGHT OF WAY PANEL ENDS -->
+                <!-- RIGHT OF WAY PANEL ENDS -->
             </div>
-        <!-- SIDEBAR ENDS -->
+            <!-- SIDEBAR ENDS -->
 
-        <!-- DROPDOWN BEGINS -->
+            <!-- DROPDOWN BEGINS -->
             <div class="dropdown-menu-custom">
                 <a id="drop-options" href="#" class="dropdown-toggle title-text" data-toggle="dropdown">Learn More   <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#about-modal" class="body-text">Project Overview</a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#how-modal" class="body-text">How To Use</a>
-                        </li>
-                        <li>
-                            <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank" class="body-text">Burlington County Website</a>
-                        </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#about-modal" class="body-text">Project Overview</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#how-modal" class="body-text">How To Use</a>
+                    </li>
+                    <li>
+                        <a href="http://www.co.burlington.nj.us/" rel="noopener" target="_blank" class="body-text">Burlington County Website</a>
+                    </li>
                 </ul>
             </div>
 
+            <!-- DROPDOWN ENDS -->
 
-        <!-- DROPDOWN ENDS -->
-
-        <!-- Logo Container BEGINS-->
+            <!-- Logo Container BEGINS-->
             <div class="logo-stakeholders" id="stakeholders-logo-map">
-                <img src="lib/img/stakeholders-logo.png" alt="Planning Partners for the Burlington County Highway Master Plan&mdash;DVRPC and Burlington County, New Jersey" style="max-height:75px"/>
+                <img src="<%- require('./img/stakeholders-logo.png') %>" alt="Planning Partners for the Burlington County Highway Master Plan&mdash;DVRPC and Burlington County, New Jersey" style="max-height:75px" />
             </div>
-        <!-- Logo Container ENDS -->
-        
-        <!-- MAP PANE -->
+            <!-- Logo Container ENDS -->
+
+            <!-- MAP PANE -->
             <div class="col-lg-10 col-md-10 col-sm-10" id="map">
             </div>
 
         </div>
     </div>
-<!-- MAIN CONTAINER END -->
+    <!-- MAIN CONTAINER END -->
 
-<!-- MODALS BEGIN -->
+    <!-- MODALS BEGIN -->
     <!-- PROJECT OVERVIEW MODAL BEGIN -->
-        <div class="modal fade" id="about-modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Project Overview</span></h4>
+    <div class="modal fade" id="about-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Project Overview</span></h4>
+                </div>
+                <div class="modal-body">
+                    <ul id="about-tabs" class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#about" data-toggle="tab">
+                                <i class="glyphicon glyphicon-question-sign"></i> &nbsp;About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" data-toggle="tab">
+                                <i class="glyphicon glyphicon-envelope"></i> &nbsp;Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#disclaimer" data-toggle="tab">
+                                <i class="glyphicon glyphicon-exclamation-sign"></i> &nbsp;Disclaimer
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- About Modal Tab Content Begins -->
+                    <div id="about-tabs-content" class="tab-content">
+
+                        <!-- About Landing Tab -->
+                        <div class="tab-pane fade active in" id="about">
+                            <p>Burlington County has grown by more than 50,000 residents and 25,000 jobs since the County last prepared a Highway Master Plan in 1989. An almost equal number of people and jobs are forecasted to be added by the Year 2040. The Delaware Valley Regional Planning Commission (<span class="modal-body-emphasis">DVRPC</span>) was commissioned to update the Highway Master Plan to supply a vision and implementation framework for the County highway network that can sustainably complement long-term County growth patterns.
+                                <br>
+                                <br> The County Route (<span class="modal-body-emphasis">CR</span>) network is vital to everday movement in the County, and it plays an important role in interconnecting with the New Jersey Turnpike and interstate highway system. The CR Network carries NJ Transit and BurLink bus routes, provides access to stations along the NJ Transit RiverLINE, and serves as a scenic route network in the Pinelands.
+                                <br>
+                                <br> Performance indicators for the road network, as well as land use conditions, were assembled for current and forecasted conditions. The conditions were assessed using DVRPC's Congestion Management Process (<span class="modal-body-emphasis">CMP</span>) to identify candidate improvement strategies for the County road network.
+                                <br>
+                                <br> This webmap provides an interactive look at the information that informed the analysis and the resulting improvement strategies. The base year for the analysis was 2013, while 2040 was used as the forecast year when necessary.
+                                <br>
+                                <br>
+
+                            </p>
+                            <inline>
+                                <span style="color: #66A6B5; font-size: 10px;"><p style="text-align: left;"><b>Data Updated:</b> October 2017<br><b>Application Updated:</b> January 2018</p></br></span>
+                            </inline>
+
+                        </div>
+                        <!-- End About Landing Tab -->
+
+                        <!-- Start Disclaimer Tab -->
+                        <div class="tab-pane fade" id="disclaimer">
+                            <p>This web page is a public resource of general information. The Delaware Valley Regional Planning Commission (<span class="modal-body-emphasis">DVRPC</span>) makes no warranty, representation, or guarantee as to the content, sequence, accuracy, timeliness, or completeness of any of the spatial data or database information provided herein. DVRPC and partner state, local, and other agencies shall assume no liability for errors, omissions, or inaccuracies in the information provided regardless of how caused; or any decision made or action taken or not taken by any person relying on any information or data furnished within.</p>
+                        </div>
+                        <!-- End Disclaimer Tab -->
+
+                        <!-- Start Contact Tab -->
+                        <div class="tab-pane fade" id="contact">
+                            <p><span class="contact-name">Sarah Moran, AICP</span>
+                                <br/> Transportation Planner
+                                <br/> Office of Modeling and Analysis
+                                <br/> Phone: 215-238-2875
+                                <br/>
+                                <a class="one" href="mailto:smoran@dvrpc.org">smoran@dvrpc.org </a>
+                            </p>
+                        </div>
+                        <!-- End Contact Tab -->
+
                     </div>
-                    <div class="modal-body">
-                         <ul id="about-tabs" class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#about" data-toggle="tab">
-                                    <i class="glyphicon glyphicon-question-sign"></i>
-                                    &nbsp;About
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact" data-toggle="tab">
-                                    <i class="glyphicon glyphicon-envelope"></i>
-                                    &nbsp;Contact
-                                </a>
-                            </li>   
-                            <li>
-                                <a href="#disclaimer" data-toggle="tab">
-                                    <i class="glyphicon glyphicon-exclamation-sign"></i>
-                                    &nbsp;Disclaimer
-                                </a>
-                            </li>
-                        </ul>
-
-                        <!-- About Modal Tab Content Begins -->
-                            <div id="about-tabs-content" class="tab-content">
-
-                                <!-- About Landing Tab -->
-                                    <div class="tab-pane fade active in" id="about">
-                                        <p>Burlington County has grown by more than 50,000 residents and 25,000 jobs since the County last prepared a Highway Master Plan in 1989. An almost equal number of people and jobs are forecasted to be added by the Year 2040. The Delaware Valley Regional Planning Commission (<span class="modal-body-emphasis">DVRPC</span>) was commissioned to update the Highway Master Plan to supply a vision and implementation framework for the County highway network that can sustainably complement long-term County growth patterns.<br><br>
-
-                                        The County Route (<span class="modal-body-emphasis">CR</span>) network is vital to everday movement in the County, and it plays an important role in interconnecting with the New Jersey Turnpike and interstate highway system. The CR Network carries NJ Transit and BurLink bus routes, provides access to stations along the NJ Transit RiverLINE, and serves as a scenic route network in the Pinelands.<br><br>
-                                        
-                                        Performance indicators for the road network, as well as land use conditions, were assembled for current and forecasted conditions. The conditions were assessed using DVRPC's Congestion Management Process (<span class="modal-body-emphasis">CMP</span>) to identify candidate improvement strategies for the County road network.<br><br>
-
-                                        This webmap provides an interactive look at the information that informed the analysis and the resulting improvement strategies. The base year for the analysis was 2013, while 2040 was used as the forecast year when necessary.<br><br>
-
-                                        </p>
-                                         <inline>
-                                            <span style="color: #66A6B5; font-size: 10px;"><p style="text-align: left;"><b>Data Updated:</b> October 2017<br><b>Application Updated:</b> January 2018</p></br></span>
-                                        </inline>
-
-                                    </div>
-                                <!-- End About Landing Tab -->
-
-                                <!-- Start Disclaimer Tab -->
-                                    <div class="tab-pane fade" id="disclaimer"> 
-                                            <p>This web page is a public resource of general information. The Delaware Valley Regional Planning Commission (<span class="modal-body-emphasis">DVRPC</span>) makes no warranty, 
-                                                representation, or guarantee as to the content, sequence, accuracy, timeliness, or completeness of any of the spatial data or database 
-                                                information provided herein. DVRPC and partner state, local, and other agencies shall assume no liability for errors, omissions, or 
-                                                inaccuracies in the information provided regardless of how caused; or any decision made or action taken or not taken by any person relying 
-                                                on any information or data furnished within.</p>
-                                    </div>
-                                <!-- End Disclaimer Tab -->
-
-
-                                <!-- Start Contact Tab -->
-                                    <div class="tab-pane fade" id="contact">
-                                        <p><span class="contact-name">Sarah Moran, AICP</span><br/>
-                                        Transportation Planner <br/>
-                                        Office of Modeling and Analysis<br/>
-                                        Phone: 215-238-2875 <br/>
-                                        <a class="one" href="mailto:smoran@dvrpc.org">smoran@dvrpc.org </a> 
-                                        </p>
-                                    </div>
-                                <!-- End Contact Tab -->
-
-                            </div>
-                        <!-- About Modal Tab Content Ends -->   
-                    </div>
+                    <!-- About Modal Tab Content Ends -->
                 </div>
             </div>
         </div>
+    </div>
     <!-- PROJECT OVERVIEW MODAL END -->
 
     <!-- HOW TO USE MODAL BEGIN -->
-        <div class="modal fade" id="how-modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                         <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">How To Use</span></h4>
-                    </div>
+    <div class="modal fade" id="how-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">How To Use</span></h4>
+                </div>
 
-                    <div class="modal-body">
-                        <p>
+                <div class="modal-body">
+                    <p>
                         Clicking on one of the blue sidebar panes to the left opens options to display and about various data layers pertaining to each category. Add layers, click on features, and explore all of the data contained in this tool at your will. With a sibebar pane open, you can find an informational summary of each category by clicking on the <i class="glyphicon glyphicon-info-sign"></i> icon.
-                        </p><br><br>
-                        <p>
+                    </p>
+                    <br>
+                    <br>
+                    <p>
                         In the bottom right you will find several tools to aid in navigation around the map extent. Click on the home button to return to the default extent, and use the <span style="font-size: 1.5em; font-weight: 700;">+</span> or <span style="font-size: 1.5em; font-weight: 700;">-</span> buttons to zoom in or out respectively. You can return to the base extent by clicking the <i class="glyphicon glyphicon-home"></i> icon.
-                        </p> <br><br>
-                        <p>In the bottom left corner, you can find a tool to toggle between the three available basemaps: Topographic (<span class="modal-body-emphasis">Default</span>), Light Gray, and Satellite Imagery.</p>
-                    </div>
+                    </p>
+                    <br>
+                    <br>
+                    <p>In the bottom left corner, you can find a tool to toggle between the three available basemaps: Topographic (<span class="modal-body-emphasis">Default</span>), Light Gray, and Satellite Imagery.</p>
                 </div>
             </div>
         </div>
+    </div>
     <!-- HOW TO USE MODAL END -->
 
     <!-- PANE MODALS BEGIN -->
 
-        <!-- CONDITIONS BEGIN -->
-            <div class="modal fade" id="conditions-modal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                             <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Conditions</span></h4>
-                        </div>
+    <!-- CONDITIONS BEGIN -->
+    <div class="modal fade" id="conditions-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Conditions</span></h4>
+                </div>
 
-                        <div class="modal-body">
-                            <p>
-                            The conditions analysis includes snapshots of measurable information about the County's road network. This information was used as part of the evaluation method to help identify location-appropriate improvement strategies.
-                            </p>            
-                        </div>
-                    </div>
+                <div class="modal-body">
+                    <p>
+                        The conditions analysis includes snapshots of measurable information about the County's road network. This information was used as part of the evaluation method to help identify location-appropriate improvement strategies.
+                    </p>
                 </div>
             </div>
-        <!-- CONDITIONS END -->
+        </div>
+    </div>
+    <!-- CONDITIONS END -->
 
-        <!-- RESOURCES BEGIN -->
-            <div class="modal fade" id="resources-modal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                             <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Resources</span></h4>
-                        </div>
+    <!-- RESOURCES BEGIN -->
+    <div class="modal fade" id="resources-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Resources</span></h4>
+                </div>
 
-                        <div class="modal-body">
-                            <p>
-                            Resources include transportation, land use, and community planning attributes associated with the roadway segment or adjacent lands that may offer opportunities or pose constraints along a highway segment. This information can be used to help identify strategies for improvements and inform highway planning decisions.
-                            </p>            
-                        </div>
-                    </div>
+                <div class="modal-body">
+                    <p>
+                        Resources include transportation, land use, and community planning attributes associated with the roadway segment or adjacent lands that may offer opportunities or pose constraints along a highway segment. This information can be used to help identify strategies for improvements and inform highway planning decisions.
+                    </p>
                 </div>
             </div>
-        <!-- RESOURCES END -->
+        </div>
+    </div>
+    <!-- RESOURCES END -->
 
-        <!-- STRATEGIES BEGIN -->
-            <div class="modal fade" id="strategies-modal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                             <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Strategies</span></h4>
-                        </div>
+    <!-- STRATEGIES BEGIN -->
+    <div class="modal fade" id="strategies-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Strategies</span></h4>
+                </div>
 
-                        <div class="modal-body">
-                            <p>
-                            DVRPC conducts a continuing, comprehensive and cooperative process for transportation planning, programming, and decision-making. Two important outcomes of this process are the Long-Range Plan (<span class="modal-body-emphasis">LRP</span>) and Transportation Improvement Program (<span class="modal-body-emphasis">TIP</span>). Inventorying current plans, programs, and pipelined projects is an important part of identifying candidate improvement strategies for the County's highway infrastructure. The componenets below include physical improvements related to the plans and programs that will address traffic safety and affect mobility. Projects that will deliver mobility changes were included in the Year 2040 LRP scenario to estimate future traffic conditions.
-                            </p>            
-                        </div>
-                    </div>
+                <div class="modal-body">
+                    <p>
+                        DVRPC conducts a continuing, comprehensive and cooperative process for transportation planning, programming, and decision-making. Two important outcomes of this process are the Long-Range Plan (<span class="modal-body-emphasis">LRP</span>) and Transportation Improvement Program (<span class="modal-body-emphasis">TIP</span>). Inventorying current plans, programs, and pipelined projects is an important part of identifying candidate improvement strategies for the County's highway infrastructure. The componenets below include physical improvements related to the plans and programs that will address traffic safety and affect mobility. Projects that will deliver mobility changes were included in the Year 2040 LRP scenario to estimate future traffic conditions.
+                    </p>
                 </div>
             </div>
-        <!-- STRATEGIES END -->
+        </div>
+    </div>
+    <!-- STRATEGIES END -->
 
-        <!-- ROW MODAL BEGIN -->
-            <div class="modal fade" id="row-modal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                             <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Right-of-Way</span></h4>
-                        </div>
+    <!-- ROW MODAL BEGIN -->
+    <div class="modal fade" id="row-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><span class="modal-title-secondary">Burlington County Highway Master Plan</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span class="modal-title-primary">Right-of-Way</span></h4>
+                </div>
 
-                        <div class="modal-body">
-                            <p>
-                            An important element of the Burlington County Highway Master Plan is the updated map of proposed right-of-way (<span class="modal-body-emphasis">ROW</span>) widths. The proposed ROW widths are to be used as a planning tool in designing roadway improvements and evaluating land development applications. It is very important for the county to reserve additional ROW because land development projects can have an impact on traffic circulation on adjacent county roads.
-                            </p>
-                            <br>
-                            <p class="modal-body-subtitle">Proposed Right-of-Way</p>
-                            <p>
-                            A proposed ROW width has been assigned to each County Route (<span class="modal-body-emphasis">CR</span>) segment based on its assigned functional classification and urban/rural area boundaries (USDOT Federal Highway Administration's Highway Functional Classification System (<span class="modal-body-emphasis">HFCS</span>)).
-                            </p>
-                            <p class="modal-body-subtitle">Capacity Assessment</p>
-                            <p>
-                            An analysis was conducted to determine the volume-to-capacity (<span class="modal-body-emphasis">V/C</span>) ratio of each CR segment. V/C ratio represents the ability of a roadway to accommodate (<span class="modal-body-emphasis">capacity</span>) vehicular demand (<span class="modal-body-emphasis">volume</span>), and it is a measure of traffic congestion. As the V/C ratio approaches 1, vehicles may experience delay or queuing. Therefore, a V/C ratio greater than 0.85 indicates that there may be a potential need to increase roadway capacity in the future.
-                            </p>
-                            <p class="modal-body-subtitle">Desired Typical Cross Section</p>
-                            <p>
-                            The accompanying cross section diagram (click the link in the pop-up window to view the diagram) for each ROW category details recommended roadway design elements. It is important to note that these cross sections may not exactly reflect existing or future conditions.
-                            </p>      
-                        </div>
-                    </div>
+                <div class="modal-body">
+                    <p>
+                        An important element of the Burlington County Highway Master Plan is the updated map of proposed right-of-way (<span class="modal-body-emphasis">ROW</span>) widths. The proposed ROW widths are to be used as a planning tool in designing roadway improvements and evaluating land development applications. It is very important for the county to reserve additional ROW because land development projects can have an impact on traffic circulation on adjacent county roads.
+                    </p>
+                    <br>
+                    <p class="modal-body-subtitle">Proposed Right-of-Way</p>
+                    <p>
+                        A proposed ROW width has been assigned to each County Route (<span class="modal-body-emphasis">CR</span>) segment based on its assigned functional classification and urban/rural area boundaries (USDOT Federal Highway Administration's Highway Functional Classification System (<span class="modal-body-emphasis">HFCS</span>)).
+                    </p>
+                    <p class="modal-body-subtitle">Capacity Assessment</p>
+                    <p>
+                        An analysis was conducted to determine the volume-to-capacity (<span class="modal-body-emphasis">V/C</span>) ratio of each CR segment. V/C ratio represents the ability of a roadway to accommodate (<span class="modal-body-emphasis">capacity</span>) vehicular demand (<span class="modal-body-emphasis">volume</span>), and it is a measure of traffic congestion. As the V/C ratio approaches 1, vehicles may experience delay or queuing. Therefore, a V/C ratio greater than 0.85 indicates that there may be a potential need to increase roadway capacity in the future
+                    </p>
+                    <p class="modal-body-subtitle">Design Elements by ROW Category</p>
+                    <p>
+                        The accompanying cross section diagram (click the link in the pop-up window to view the diagram) for each ROW category details the recommended width for each roadway design element. It is important to note that these cross section smay not exactly reflect existing or future conditions.
+                    </p>
                 </div>
             </div>
-        <!-- ROW MODAL END -->
-
-    <!-- PANE INFORMATION MODALS END -->
-<!-- MODALS END -->
-<script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="lib/js/plugins.js"></script>
-<script type="text/javascript" src="lib/js/app.js"></script>
-<script type="text/javascript" src="lib/js/map.js"></script>
-
-
-
-
+        </div>
+    </div>
 </body>

@@ -1,6 +1,6 @@
 # Build dependency directories
 dist
-node-modules
+node_modules
 
 # Windows thumbnail cache files
 Thumbs.db
