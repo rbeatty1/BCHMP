@@ -58,7 +58,8 @@ const config = {
   plugins: [
         new HtmlWebpackPlugin({
           title: 'Custom template',
-          template: 'index.html'
+          template: 'index.html',
+          hash: true
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: 'static'
