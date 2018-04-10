@@ -50,6 +50,11 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: './js/[name].bundle.js'
   },
+  watch: true,
+  devServer: {
+      contentBase: path.resolve(__dirname, 'dist'),
+      port: 9000
+  },
   plugins: [
         new HtmlWebpackPlugin({
           title: 'Custom template',

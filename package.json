@@ -21,13 +21,16 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "webpack": "3.11.0",
-    "webpack-bundle-analyzer": "^2.11.1"
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.0.0"
   },
   "scripts": {
     "test": "test",
     "build": "webpack",
     "build:prod": "webpack -p",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --config webpack.config.js"
   },
   "repository": {
     "type": "git",
