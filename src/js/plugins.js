@@ -178,14 +178,8 @@ function crossSectionPopups(props) {
         popupContent = L.Util.template('<div class="popup-title"><p>Typical Cross Sections</p></div>' +
             '<div class="popup-content">' +
             '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {FHWA}</p>' +
-            '<p><span class="popup-content-bold">NJDOT Land Use:</span> {LandUse}</p>' +
-            '<p><span class="popup-content-bold">Capacity: </span>{Capacity}</p>' +
-            '<p><span class="popup-content-bold">Width of Center Median or Turning Lane:</span> {Median} ft</p>' +
-            '<p><span class="popup-content-bold">Width of Travel Lane:</span> {TravLane_W} ft</p>' +
-            '<p><span class="popup-content-bold">Bike Lane Width (Shoulder):</span> {BicLan_Sho} ft</p>' +
-            '<p><span class="popup-content-bold">Parking Lane Width:</span> {PLane_Sho} ft</p>' +
-            '<p><span class="popup-content-bold">Sidewalk Buffer Width:</span> {Sidewa_Buf} ft</p>' +
-            '<p><span class="popup-content-bold">Sidewalk Width:</span> {Sidewalk} ft</p>' +
+            '<p><span class="popup-content-bold">NJDOT Land Use:</span> {LandUse}</p>'+
+            '<p><span class="popup-content-bold">Capacity:</span> {Capacity}</p>'+
             '<a href="{img}" rel="noopener" target="_blank">Click Here for a ROW Cross-Section Diagram</a>' +
             '</div>', props);
         return popupContent;
@@ -248,9 +242,17 @@ function createPopUps(feature, layer) {
             break;
         case "row-recommend":
             popupContent = L.Util.template('<div class="popup-title"><p>Minimum Recommended Right-of-Way</p></div><div class="popup-content">' +
-                '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {NJDOT_FC_2}</p>' +
+                '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {FHWA}</p>' +
+                '<p><span class="popup-content-bold">NJDOT Urban Area:</span> {LandUse}</p>' +
                 '<p><span class="popup-content-bold">Recommended ROW Width:</span> {ROW} ft</p>' +
-                '<p><span class="popup-content-bold">NJDOT Urban Area:</span> {NJDOT_LU}</p></div>', props);
+                '<p><span class="popup-content-bold">Number of Travel Lanes:</span> {TravelLanes}</p>' +
+                '<p><span class="popup-content-bold">Capacity: </span>{Capacity}</p>' +
+                '<p><span class="popup-content-bold">Width of Center Median or Turning Lane:</span> {Median} ft</p>' +
+                '<p><span class="popup-content-bold">Width of Travel Lane:</span> {TravLane_W} ft</p>' +
+                '<p><span class="popup-content-bold">Bike Lane Width (Shoulder):</span> {BicLan_Sho} ft</p>' +
+                '<p><span class="popup-content-bold">Parking Lane Width:</span> {PLane_Sho} ft</p>' +
+                '<p><span class="popup-content-bold">Sidewalk Buffer Width:</span> {Sidewa_Buf} ft</p>' +
+                '<p><span class="popup-content-bold">Sidewalk Width:</span> {Sidewalk} ft</p>', props);
             break;
         case "cross":
             popupContent = crossSectionPopups(props);
