@@ -163,8 +163,14 @@ var allLayers = [{
                 drawingPane: "line"
             },
             {
-                name: "shuttleBus",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/5',
+                name: "shuttleBus1",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BurLINK/FeatureServer/1',
+                popup: false,
+                drawingPane: "line"
+            },
+            {
+                name: "shuttleBus2",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BurLINK/FeatureServer/2',
                 popup: false,
                 drawingPane: "line"
             },
@@ -375,10 +381,19 @@ var checkboxLayers = function(visibleLayers) {
     }
     for (lyr in loaded) {
         var temp = loaded[lyr].options.id;
-        if (vizName.indexOf(temp) != -1) {
+        if (temp.match(/shuttleBus\d/) && vizName.indexOf("shuttleBus")!=-1){
+            loaded[lyr].addTo(map);
+            $("#legend-shuttleBus").show();
+        }
+        else if (vizName.indexOf(temp) != -1) {
             loaded[lyr].addTo(map);
             $("#legend-" + temp).show();
-        } else {
+        } 
+        else {
+            if (temp.match(/shuttleBus\d/)){
+                loaded[lyr].removeFrom(map);
+                $("#legend-shuttleBus").hide();
+            } 
             if (map.hasLayer(loaded[lyr])) {
                 loaded[lyr].removeFrom(map);
                 $("#legend-" + temp).hide();

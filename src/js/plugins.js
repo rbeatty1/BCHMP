@@ -188,9 +188,6 @@ function crossSectionPopups(props) {
         case "img/ROW/MinC_M.png":
             img = require("../img/ROW/MinC_M.png");
             break;
-        case "img/ROW/MinC_W.png":
-            img = require("../img/ROW/MinC_W.png");
-            break;
         case "img/ROW/PA_M_2.png":
             img = require("../img/ROW/PA_M_2.png");
             break;
