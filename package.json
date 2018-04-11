@@ -31,7 +31,7 @@
     "build:prod": "webpack -p",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --config webpack.config.js",
-    "demo-deploy": "git branch -D gh-pages && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages"    
+    "demo-deploy": "git branch -D gh-pages && git subtree split --prefix dist -b gh-pages && git push --delete origin gh-pages && git push --set-upstream origin gh-pages"    
   },
   "repository": {
     "type": "git",
