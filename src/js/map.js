@@ -332,7 +332,6 @@ var lazyLoadLayers = function(pane) {
     for (layer in lyrGroup) {
         lyrGroup[layer].removeFrom(map);
     }
-    lyrGroup.length = 0;
     // loop through all layers
     for (key in layers) {
         // find layers associated with active pane
