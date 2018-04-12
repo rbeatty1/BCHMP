@@ -1,4 +1,5 @@
 # Build dependency directories
+dist
 node_modules
 
 # Windows thumbnail cache files
