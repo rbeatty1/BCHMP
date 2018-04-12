@@ -2,9 +2,10 @@
   "name": "bchmp",
   "version": "1.0.0",
   "description": "Map Viewer for the Burlington County Highway Master Plan, created by the Delaware Valley Regional Planning Commission (DVRPC)",
-  "main": "index.js",
+  "main": "app.js",
   "directories": {
-    "lib": "lib"
+    "src": "src",
+    "dist": "dist"
   },
   "dependencies": {
     "bootstrap": "3.3.7",
