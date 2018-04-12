@@ -166,47 +166,6 @@ function stratInventoryPopups(props) {
 
 function crossSectionPopups(props) {
     // create pop-ups based on if the road is in the urban area or not
-    let img;
-    switch(props.img){
-        default:
-            return;
-        case "img/ROW/Local.png":
-            img = require("../img/ROW/Local.png");
-            break;
-        case "img/ROW/MajC_M.png":
-            img = "img/ROW/MajC_M.png";
-            break;
-        case "img/ROW/MajC_W.png":
-            img = require("../img/ROW/MajC_W.png");
-            break;
-        case "img/ROW/MinA_M.png":
-            img = require("../img/ROW/MinA_M.png");
-            break;
-        case "img/ROW/MinA_W.png":
-            img = require("../img/ROW/MinA_W.png");
-            break;
-        case "img/ROW/MinC_M.png":
-            img = require("../img/ROW/MinC_M.png");
-            break;
-        case "img/ROW/PA_M_2.png":
-            img = require("../img/ROW/PA_M_2.png");
-            break;
-        case "img/ROW/PA_M_3.png":
-            img = require("../img/ROW/PA_M_3.png");
-            break;
-        case "img/ROW/PA_M_4.png":
-            img = require("../img/ROW/PA_M_4.png");
-            break;
-        case "img/ROW/PA_M_6.png":
-            img = require("../img/ROW/PA_M_6.png");
-            break;
-        case "img/ROW/PA_W_4.png":
-            img = require("../img/ROW/PA_W_4.png");
-            break;
-        case "img/ROW/PA_W_6.png":
-            img = require("../img/ROW/PA_W_6.png");
-            break;
-   }
     if (props.LandUse != 'Urban') {
         popupContent = L.Util.template('<div class="popup-title"><p>Typical Cross Sections</p></div>' +
             '<div class="popup-content">' +
@@ -216,6 +175,47 @@ function crossSectionPopups(props) {
             '</div>', props);
         return popupContent;
     } else {
+        let img;
+        switch(props.img){
+            default:
+                return;
+            case "img/ROW/Local.png":
+                img = require("../img/ROW/Local.png");
+                break;
+            case "img/ROW/MajC_M.png":
+                img = "img/ROW/MajC_M.png";
+                break;
+            case "img/ROW/MajC_W.png":
+                img = require("../img/ROW/MajC_W.png");
+                break;
+            case "img/ROW/MinA_M.png":
+                img = require("../img/ROW/MinA_M.png");
+                break;
+            case "img/ROW/MinA_W.png":
+                img = require("../img/ROW/MinA_W.png");
+                break;
+            case "img/ROW/MinC_M.png":
+                img = require("../img/ROW/MinC_M.png");
+                break;
+            case "img/ROW/PA_M_2.png":
+                img = require("../img/ROW/PA_M_2.png");
+                break;
+            case "img/ROW/PA_M_3.png":
+                img = require("../img/ROW/PA_M_3.png");
+                break;
+            case "img/ROW/PA_M_4.png":
+                img = require("../img/ROW/PA_M_4.png");
+                break;
+            case "img/ROW/PA_M_6.png":
+                img = require("../img/ROW/PA_M_6.png");
+                break;
+            case "img/ROW/PA_W_4.png":
+                img = require("../img/ROW/PA_W_4.png");
+                break;
+            case "img/ROW/PA_W_6.png":
+                img = require("../img/ROW/PA_W_6.png");
+                break;
+       }
         popupContent = L.Util.template('<div class="popup-title"><p>Typical Cross Sections</p></div>' +
             '<div class="popup-content">' +
             '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {FHWA}</p>' +
