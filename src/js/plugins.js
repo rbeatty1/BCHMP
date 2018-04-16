@@ -246,7 +246,7 @@ function createPopUps(feature, layer) {
             popupContent = L.Util.template('<div class="popup-title"><p>Master Plan Traffic Congestion</p></div><div class="popup-content"><p><span class="popup-content-bold">Forecasted Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.MPlan_VC).toFixed(2) + '</p></div>');
             break;
         case "njCMPCorridors":
-            popupContent = L.Util.template('<div class="popup-title"><p>2015 CMP Planning Corridor</p></div><div class="popup-content"><p><span class="popup-content-bold">Corridor:</span> {GIS_ID}, {SUBNAME}</p></div>', props);
+            popupContent = L.Util.template('<div class="popup-title"><p>2015 CMP Planning Corridor</p></div><div class="popup-content"><p><span class="popup-content-bold">Corridor:</span> {CMP_ID}{SUB_ID}, {SUBNAME}</p><a href="{DETAILS}" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></div>', props);
             break;
         case "NJTservice":
             popupContent = L.Util.template('<div class="popup-title"><p>New Jersey Transit Bus Service</p></div><div class="popup-content"><p><span class="popup-content-bold">Number of Weekday Bus Routes:</span> {NJTBusServ}</p></div>', props);

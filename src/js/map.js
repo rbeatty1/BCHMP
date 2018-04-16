@@ -128,37 +128,37 @@ var allLayers = [{
     {
         resources: [{
                 name: "njCMPCorridors",
-                url: 'https://arcgis.dvrpc.org/arcgis/rest/services/Transportation/CMP_Corridors/MapServer/0',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/0',
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "NHS",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/0',
-                popup: false,
-                drawingPane: "line"
-            },
-            {
-                name: "hurricane",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/1',
                 popup: false,
                 drawingPane: "line"
             },
             {
-                name: "expressDetour",
+                name: "hurricane",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/2',
                 popup: false,
                 drawingPane: "line"
             },
             {
-                name: "trainOneMile",
+                name: "expressDetour",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/3',
                 popup: false,
                 drawingPane: "line"
             },
             {
-                name: "NJTservice",
+                name: "trainOneMile",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/4',
+                popup: false,
+                drawingPane: "line"
+            },
+            {
+                name: "NJTservice",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/5',
                 popup: true,
                 drawingPane: "line"
             },
