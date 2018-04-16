@@ -242,7 +242,9 @@ body{
 			margin-bottom: 5px;
 		}
 		.legend-cmp-strat-row{
-			display: inline;
+			display: inline-block;
+			width: 90%;
+			margin-top: .75em
 		}
 		.legend-cmp-strat-icon{
 			height: 20%;
@@ -251,6 +253,9 @@ body{
 		.legend-cmp-strat-label{
 			font-size: 14px;
 			padding-top: 5px;
+			display: inline-block;
+			width: 75%;
+			text-align: left;
 		}
 
 
