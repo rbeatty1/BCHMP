@@ -174,7 +174,17 @@ function crossSectionPopups(props) {
             '<p><span class="popup-content-bold">Cross Section: </span>Same as Existing</p>' +
             '</div>', props);
         return popupContent;
-    } else {
+    }
+    else if (props.ROW == 0){
+        popupContent = L.Util.template('<div class="popup-title"><p>Typical Cross Sections</p></div>' +
+            '<div class="popup-content">' +
+            '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> Principal Arterial - Ramp</p>' +
+            '<p><span class="popup-content-bold">NJDOT Land Use:</span> {LandUse}</p>' +
+            '<p><span class="popup-content-bold">Cross Section: </span>Same as Existing</p>' +
+            '</div>', props);
+        return popupContent;
+    } 
+    else{
         let img;
         switch(props.img){
             default:
@@ -282,18 +292,29 @@ function createPopUps(feature, layer) {
             popupContent = stratInventoryPopups(props);
             break;
         case "row-recommend":
-            popupContent = L.Util.template('<div class="popup-title"><p>Minimum Recommended Right-of-Way</p></div><div class="popup-content">' +
-                '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {FHWA}</p>' +
-                '<p><span class="popup-content-bold">NJDOT Urban Area:</span> {LandUse}</p>' +
-                '<p><span class="popup-content-bold">Recommended ROW Width:</span> {ROW} ft</p>' +
-                '<p><span class="popup-content-bold">Number of Travel Lanes:</span> {TravelLanes}</p>' +
-                '<p><span class="popup-content-bold">Capacity: </span>{Capacity}</p>' +
-                '<p><span class="popup-content-bold">Width of Center Median or Turning Lane:</span> {Median} ft</p>' +
-                '<p><span class="popup-content-bold">Width of Travel Lane:</span> {TravLane_W} ft</p>' +
-                '<p><span class="popup-content-bold">Bike Lane Width (Shoulder):</span> {BicLan_Sho} ft</p>' +
-                '<p><span class="popup-content-bold">Parking Lane Width:</span> {PLane_Sho} ft</p>' +
-                '<p><span class="popup-content-bold">Sidewalk Buffer Width:</span> {Sidewa_Buf} ft</p>' +
-                '<p><span class="popup-content-bold">Sidewalk Width:</span> {Sidewalk} ft</p>', props);
+            if (props.ROW != 0){
+                popupContent = L.Util.template('<div class="popup-title"><p>Minimum Recommended Right-of-Way</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {FHWA}</p>' +
+                    '<p><span class="popup-content-bold">NJDOT Urban Area:</span> {LandUse}</p>' +
+                    '<p><span class="popup-content-bold">Recommended ROW Width:</span> {ROW} ft</p>' +
+                    '<p><span class="popup-content-bold">Number of Travel Lanes:</span> {TravelLanes}</p>' +
+                    '<p><span class="popup-content-bold">Capacity: </span>{Capacity}</p>' +
+                    '<p><span class="popup-content-bold">Width of Center Median or Turning Lane:</span> {Median} ft</p>' +
+                    '<p><span class="popup-content-bold">Width of Travel Lane:</span> {TravLane_W} ft</p>' +
+                    '<p><span class="popup-content-bold">Bike Lane Width (Shoulder):</span> {BicLan_Sho} ft</p>' +
+                    '<p><span class="popup-content-bold">Parking Lane Width:</span> {PLane_Sho} ft</p>' +
+                    '<p><span class="popup-content-bold">Sidewalk Buffer Width:</span> {Sidewa_Buf} ft</p>' +
+                    '<p><span class="popup-content-bold">Sidewalk Width:</span> {Sidewalk} ft</p>', props);
+            }
+            else{
+                popupContent = L.Util.template('<div class="popup-title"><p>Minimum Recommended Right-of-Way</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {FHWA}</p>' +
+                    '<p><span class="popup-content-bold">NJDOT Urban Area:</span> {LandUse}</p>' +
+                    '<p><span class="popup-content-bold">Recommended ROW Width:</span> Ramp</p>' +
+                    '<p><span class="popup-content-bold">Number of Travel Lanes:</span> {TravelLanes}</p>' +
+                    '<p><span class="popup-content-bold">Capacity: </span>{Capacity}</p>', props);
+
+            }
             break;
         case "cross":
             popupContent = crossSectionPopups(props);
