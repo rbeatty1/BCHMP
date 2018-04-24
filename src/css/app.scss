@@ -95,7 +95,7 @@ body{
 
 /* Stuff overtop of the map */
 	#drop-options {
-	    background-color: #ccc;
+	    background-color: #ddd;
 	    font-family: "Open Sans Condensed", sans-serif;
 	    color: #005b9c;
 	    padding: 10px;
@@ -367,21 +367,21 @@ body{
 	}
 
 	.nav-tabs> li.active>a{
-		color: #66a6b5;
+		color: #005b9c;
 		font-weight: 700;
 		font-family: "Open Sans Condensed", sans-serif;
 	}
 	.nav-tabs> li.active>a:hover, .nav-tabs>li.active>a:focus{
-		color: #66a6b5;
+		color: #005b9c;
 		font-family: "Open Sans Condensed", sans-serif;
 	}
 	.nav-tabs>li>a{
-		color: #aaa;
+		color: #6a6a6a;
 		font-weight: 300;
 		font-family: "Open Sans Condensed", sans-serif;
 	}
 	.nav-tabs>li>a:hover{
-		color: #aaa;
+		color: #6a6a6a;
 		font-weight: 700;
 		font-family: "Open Sans Condensed", sans-serif;
 	}

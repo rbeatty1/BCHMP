@@ -56,6 +56,7 @@ L.Control.ProjectLogo = L.Control.extend({
         var img = L.DomUtil.create('img');
         // declare IMG path for project logo
         img.src = require("../img/project-logo-large.png");
+        img.alt = "Burlington County Highway Master Plan project logo"
         img.style.width = '230px';
         return img;
     },
