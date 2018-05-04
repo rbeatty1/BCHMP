@@ -399,3 +399,32 @@ body{
 		font-weight: 700;
 		color: #6e6e6e;
 	}
+	.metadata-header{
+		background-color: #005b9c;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 700;
+		font-family: "Open Sans Condensed", sans-serif;
+	}
+	.metadata-table{
+		width: 100%;
+		height: 300px;
+		overflow: auto;
+	}
+	.metadata-header>th{
+		padding: 5px;
+		text-align: left;
+	}
+	.metadata-row-odd{
+		background-color: #e3eef1;
+	}
+	.metadata-row-even{
+		background-color: #d2e5ea;
+	}
+	.metadata-row-even>td,.metadata-row-odd>td{
+		font-size: 10px;
+		color: #414042;
+		padding: 5px;
+		text-align: left;
+		border-bottom: .5px dashed #045b9b
+	} 
