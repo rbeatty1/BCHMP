@@ -254,13 +254,13 @@ var allLayers = [{
             {
                 name: "hsip-intersection",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/2',
-                popup: true,
+                popup: false,
                 drawingPane: "point"
             },
             {
                 name: "hsip-road",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/3',
-                popup: true,
+                popup: false,
                 drawingPane: "line"
             },
             {
@@ -287,7 +287,7 @@ var allLayers = [{
         row: [{
                 name: "cross",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_ROW/FeatureServer/2',
-                popup: false,
+                popup: true,
                 drawingPane: "line"
             },
             {
@@ -299,7 +299,7 @@ var allLayers = [{
             {
                 name: "row-recommend",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/BCHMP_ROW/FeatureServer/0',
-                popup: false,
+                popup: true,
                 drawingPane: "line"
             },
             {
@@ -316,6 +316,7 @@ var BurlCo = esri.featureLayer({
     url: 'https://arcgis.dvrpc.org/arcgis/rest/services/Boundaries/DVRPC_Boundaries/FeatureServer/1',
     ignoreRenderer: true,
     where: "CO_NAME = 'Burlington'",
+    interactive: false,
     style: {
         color: "#fdd41d",
         weight: 4,
@@ -343,6 +344,7 @@ var lazyLoadLayers = function(pane) {
                 layer = esri.featureLayer({
                     url: paneLayers[lyr].url,
                     id: paneLayers[lyr].name,
+                    interactive: paneLayers[lyr].popup,
                     pane: paneLayers[lyr].drawingPane,
                     ignoreRenderer: false,
                     where: paneLayers[lyr].qry,
@@ -355,6 +357,7 @@ var lazyLoadLayers = function(pane) {
                 layer = esri.featureLayer({
                     url: paneLayers[lyr].url,
                     id: paneLayers[lyr].name,
+                    interactive: paneLayers[lyr].popup,
                     ignoreRenderer: false,
                     pane: paneLayers[lyr].drawingPane,
                     onEachFeature: function(f, l) {
