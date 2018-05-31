@@ -147,7 +147,7 @@ var allLayers = [{
             {
                 name: "expressDetour",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/3',
-                popup: false,
+                popup: true,
                 drawingPane: "line"
             },
             {

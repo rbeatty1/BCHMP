@@ -319,6 +319,17 @@ function createPopUps(feature, layer) {
         case "cross":
             popupContent = crossSectionPopups(props);
             break;
+        case "expressDetour":
+            if (props.DetourRt == ' '){
+                popupContent = L.Util.template('<div class="popup-title"><p>Expressway Detour Route</p></div><div class="popup-content">'+
+            '<p>This route is not a designated Expressway Detour Route</p>')
+            }
+            else{
+            popupContent = L.Util.template('<div class="popup-title"><p>Expressway Detour Route</p></div><div class="popup-content">' +
+            '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
+            '<p><span class="popup-content-bold">Detoured Route:</span> {ROUTE}</p>', props);
+            }
+            break;
         default:
             return;
     }
