@@ -88,12 +88,6 @@ var allLayers = [{
                 drawingPane: "line"
             },
             {
-                name: "LRPcongestion",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/2',
-                popup: true,
-                drawingPane: "line"
-            },
-            {
                 name: "masterplanCongestion",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/3',
                 popup: true,
@@ -110,28 +104,11 @@ var allLayers = [{
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/5',
                 popup: false,
                 drawingPane: "line"
-            },
-            {
-                name: "connectIndex",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/6',
-                popup: false,
-                drawingPane: "polygon"
-            },
-            {
-                name: "roadAddition",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/7',
-                popup: false,
-                drawingPane: "line"
             }
         ]
     },
     {
-        resources: [{
-                name: "njCMPCorridors",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/0',
-                popup: true,
-                drawingPane: "polygon"
-            },
+        resources: [
             {
                 name: "NHS",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/1',
@@ -217,19 +194,6 @@ var allLayers = [{
                 popup: false,
                 drawingPane: "line"
             },
-            // -------------- THIS LAYER ISN'T WORKING AND I DON'T KNOW WHY ----------------------------------//
-            // {
-            //     name: "flood",
-            //     url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/Resources/FeatureServer/8',
-            //     popup: false,
-            //     drawingPane: "polygon"
-            // },
-            {
-                name: "socialResources",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/14',
-                popup: false,
-                drawingPane: "point"
-            },
             {
                 name: 'pinelands',
                 url: 'https://services1.arcgis.com/nCm6SZaiGMuGX35l/arcgis/rest/services/Pinelands_Area/FeatureServer/0',
@@ -239,45 +203,10 @@ var allLayers = [{
         ]
     },
     {
-        strategies: [{
-                name: "tip-point",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/0',
-                popup: true,
-                drawingPane: "point"
-            },
-            {
-                name: "tip-roads",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/1',
-                popup: true,
-                drawingPane: "line"
-            },
-            {
-                name: "hsip-intersection",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/2',
-                popup: false,
-                drawingPane: "point"
-            },
-            {
-                name: "hsip-road",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/3',
-                popup: false,
-                drawingPane: "line"
-            },
-            {
-                name: "burCoPubWorks",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/4',
-                popup: true,
-                drawingPane: "point"
-            },
+        strategies: [
             {
                 name: "congestion-lrp",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/5',
-                popup: true,
-                drawingPane: "line"
-            },
-            {
-                name: "cmp-inventory",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/6',
                 popup: true,
                 drawingPane: "line"
             }

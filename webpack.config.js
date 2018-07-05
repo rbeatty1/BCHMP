@@ -1,8 +1,7 @@
 const path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
-    ExtractTextPlugin = require("extract-text-webpack-plugin"),
-    BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+    ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 var extractPlugin = new ExtractTextPlugin({
    filename: './bundle.styles.css'
@@ -60,9 +59,6 @@ const config = {
           title: 'Custom template',
           template: 'index.html',
           hash: true
-        }),
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'static'
         }),
         new webpack.optimize.CommonsChunkPlugin('vendor'),
         extractPlugin,

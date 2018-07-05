@@ -104,66 +104,6 @@ function congestStratPopUps(props) {
     return popupContent;
 }
 
-function stratInventoryPopups(props) {
-    var info = [];
-    var popupContent;
-    // loop through properties to only access necessary attributes
-    for (key in props) {
-        if (key.match(/^CMP\d$/) && props[key] != " ") {
-            info.push({
-                field: key,
-                corridor: props[key]
-            });
-        } else if (key.match(/^CMP_\d$/) && props[key] != " ") {
-            info.push({
-                field: key,
-                link: props[key]
-            });
-        }
-    }
-    switch (info.length) {
-        // build pop-ups based on number of CMP corridors intersected
-        default: popupContent = L.Util.template('<div class="popup-title">' +
-            '<p>Congestion Management Strategies</p></div>' +
-            '<div class="popup-content-congest">' +
-            '<div style="width: 100%; font-size: 1.5em">No Appropriate CMP Strategies</div>' +
-            '</div>');
-            break;
-        case 8:
-            popupContent = L.Util.template('<div class="popup-title"><p>Appropriate CMP Strategies</p></div>' +
-                '<div class="popup-content">' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[0]['corridor'] + '&nbsp;&nbsp;<a href="' + info[4]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[1]['corridor'] + '&nbsp;&nbsp;<a href="' + info[5]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[2]['corridor'] + '&nbsp;&nbsp;<a href="' + info[6]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[3]['corridor'] + '&nbsp;&nbsp;<a href="' + info[7]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '</div>');
-            break;
-        case 6:
-            popupContent = L.Util.template('<div class="popup-title"><p>Appropriate CMP Strategies</p></div>' +
-                '<div class="popup-content">' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[0]['corridor'] + '&nbsp;&nbsp;<a href="' + info[3]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[1]['corridor'] + '&nbsp;&nbsp;<a href="' + info[4]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[2]['corridor'] + '&nbsp;&nbsp;<a href="' + info[5]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '</div>');
-            break;
-        case 4:
-            popupContent = L.Util.template('<div class="popup-title"><p>Appropriate CMP Strategies</p></div>' +
-                '<div class="popup-content">' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[0]['corridor'] + '&nbsp;&nbsp;<a href="' + info[2]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a>' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[1]['corridor'] + '&nbsp;&nbsp;<a href="' + info[3]['link'] + '" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '</div>');
-            break;
-        case 2:
-            popupContent = L.Util.template('<div class="popup-title"><p>Appropriate CMP Strategies</p></div>' +
-                '<div class="popup-content">' +
-                '<p><span class="popup-content-bold">CMP Corridor: </span>' + info[0]['corridor'] + '&nbsp;&nbsp;<a href="' + info[1]['link'] + '" class="popup-content-bold"  rel="noopener" target="_blank">Click Here for Details</a></p>' +
-                '</div>');
-            break;
-
-    }
-    return popupContent;
-}
-
 function crossSectionPopups(props) {
     // create pop-ups based on if the road is in the urban area or not
     if (props.LandUse != 'Urban') {
@@ -244,19 +184,13 @@ function createPopUps(feature, layer) {
     // custom pop-ups for each layer
     switch (name) {
         case "trafficSafety":
-            popupContent = L.Util.template('<div class="popup-title"><p>2015 Traffic Safety</p></div><div class="popup-content"><p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>');
+            popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>', props);
             break;
         case "trafficCongestion":
-            popupContent = L.Util.template('<div class="popup-title"><p>2013 Traffic Congestion</p></div><div class="popup-content"><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>');
-            break;
-        case "LRPcongestion":
-            popupContent = L.Util.template('<div class="popup-title"><p>2040 LRP Traffic Congestion</p></div><div class="popup-content"><p><span class="popup-content-bold">Forecasted Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.LRP_VC).toFixed(2) + '</p></div>');
+            popupContent = L.Util.template('<div class="popup-title"><p>2013 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
             break;
         case "masterplanCongestion":
-            popupContent = L.Util.template('<div class="popup-title"><p>2040 Master Plan Traffic Congestion</p></div><div class="popup-content"><p><span class="popup-content-bold">Forecasted Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.MPlan_VC).toFixed(2) + '</p></div>');
-            break;
-        case "njCMPCorridors":
-            popupContent = L.Util.template('<div class="popup-title"><p>2015 CMP Planning Corridor</p></div><div class="popup-content"><p><span class="popup-content-bold">Corridor:</span> {CMP_ID}{SUB_ID}, {SUBNAME}</p><a href="{DETAILS}" class="popup-content-bold" rel="noopener" target="_blank">Click Here for Details</a></div>', props);
+            popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Master Plan Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Forecasted Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.MPlan_VC).toFixed(2) + '</p></div>', props);
             break;
         case "NJTservice":
             popupContent = L.Util.template('<div class="popup-title"><p>New Jersey Transit Bus Service</p></div><div class="popup-content"><p><span class="popup-content-bold">Number of Weekday Bus Routes:</span> {NJTBusServ}</p></div>', props);
@@ -276,20 +210,8 @@ function createPopUps(feature, layer) {
         case "planType":
             popupContent = L.Util.template('<div class="popup-title"><p>2040 LRP Area Type</p></div><div class="popup-content"><p><span class="popup-content-bold">Plan Area Type:</span> {PA_2040}</p></div>', props);
             break;
-        case "tip-point":
-            popupContent = L.Util.template('<div class="popup-title"><p>New Jersey TIP<br>Bridge/Intersections</p></div><div class="popup-content"><p><span class="popup-content-bold">Project Name:</span> {PROJECTNAM}</p><p><span class="popup-content-bold">Type:</span> {TYPE}</p><p><span class="popup-content-bold">Program:</span> {PROGRAM}</p><a href="{REPORT}" rel="noopener" target="_blank">Click Here for More Info</a></div>', props);
-            break;
-        case "tip-roads":
-            popupContent = L.Util.template('<div class="popup-title"><p>New Jersey TIP<br>Roadways</p></div><div class="popup-content"><p><span class="popup-content-bold">Project Name:</span> {PROJECT}</p><p><span class="popup-content-bold">Program:</span> {PROGRAM}</p><p><span class="popup-content-bold">Description:</span> {DESCRIPTIO}</p><a href="{DETAIL}" rel="noopener" target="_blank">Click Here for More Info</a></div>', props);
-            break;
-        case "burCoPubWorks":
-            popupContent = L.Util.template('<div class="popup-title"><p>Burlington County Public Works Improvement Project</p></div><div class="popup-content"><p><span class="popup-content-bold">Project:</span> {Project}</p><p><span class="popup-content-bold">Future:</span> {Future}</p></div>', props);
-            break;
         case "congestion-lrp":
             popupContent = congestStratPopUps(props);
-            break;
-        case "cmp-inventory":
-            popupContent = stratInventoryPopups(props);
             break;
         case "row-recommend":
             if (props.ROW != 0){

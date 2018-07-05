@@ -49,19 +49,15 @@
                         <ul class="layer-items">
                             <li>
                                 <input type="checkbox" name="layer-control" id="trafficSafety" z-index="1">
-                                <label for="trafficSafety">2015 Traffic Safety</label>
+                                <label for="trafficSafety">Crash Data</label>
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="trafficCongestion" z-index="2">
-                                <label for="trafficCongestion">2013 Traffic Congestion</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="layer-control" id="LRPcongestion" z-index="3">
-                                <label for="LRPcongestion">2040 Long-Range Plan Traffic Congestion</label>
+                                <label for="trafficCongestion">2013 Volume-to-Capacity Ratio</label>
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="masterplanCongestion" z-index="4">
-                                <label for="masterplanCongestion">2040 Master Plan Traffic Congestion</label>
+                                <label for="masterplanCongestion">Forecasted 2040 Volume-to-Capacity Ratio</label>
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="transitScore" z-index="5">
@@ -70,14 +66,6 @@
                             <li>
                                 <input type="checkbox" name="layer-control" id="cmpScore" z-index="6">
                                 <label for="cmpScore">Congestion Management Process Composite Score</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="layer-control" id="connectIndex" z-index="7">
-                                <label for="connectIndex">2010 Roadway Connectivity Index</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="layer-control" id="roadAddition" z-index="8">
-                                <label for="roadAddition">Candidate County Road Addition</label>
                             </li>
                         </ul>
                     </div>
@@ -97,7 +85,7 @@
                         <ul class="legend-items">
                             <li id="legend-trafficSafety">
                                 <div>
-                                    <h4 class="legend-item-title">2015 Traffic Safety</h4>
+                                    <h4 class="legend-item-title">Crash Data (2015)</h4>
                                     <h5 class="legend-item-subtitle">Avg. Crash Rate by Functional Highway Class</h5>
                                     <span class="legend-item-cmp">
                                         <p style="float: left; width: 33%;">0.00x - 0.99x</p>
@@ -111,22 +99,8 @@
                             </li>
                             <li id="legend-trafficCongestion">
                                 <div>
-                                    <h4 class="legend-item-title">2013 Traffic Congestion</h4>
-                                    <h5 class="legend-item-subtitle">Peak Hour Volume/Capacity Ratio</h5>
-                                    <span class="legend-item-cmp">
-                                        <p style="float: left; width: 33%;">0.00 - 0.84</p>
-                                        <p style="float: left; width: 33%;">0.85 - 0.99</p>
-                                        <p style="float: right; width: 33%;">1.00 and greater</p>
-                                    </span>
-                                    <hr style="width: 33%; background-color: #9C9C9C; float: left; height: 2px;">
-                                    <hr style="width: 33%; background-color: #FFAA00; float: left; height: 3.5px;">
-                                    <hr style="width: 33%; background-color: #FF0000; float: left; height: 5px;">
-                                </div>
-                            </li>
-                            <li id="legend-LRPcongestion">
-                                <div>
-                                    <h4 class="legend-item-title">2040 Long-Range Plan Traffic Congestion</h4>
-                                    <h5 class="legend-item-subtitle">Forecasted Peak Hour Volume/Capacity Ratio</h5>
+                                    <h4 class="legend-item-title">2013 Volume/Capacity Ratio</h4>
+                                    <h5 class="legend-item-subtitle">Peak Hour V/C Ratio</h5>
                                     <span class="legend-item-cmp">
                                         <p style="float: left; width: 33%;">0.00 - 0.84</p>
                                         <p style="float: left; width: 33%;">0.85 - 0.99</p>
@@ -139,8 +113,8 @@
                             </li>
                             <li id="legend-masterplanCongestion">
                                 <div>
-                                    <h4 class="legend-item-title">2040 Master Plan Traffic Congestion</h4>
-                                    <h5 class="legend-item-subtitle">Forecasted Peak Hour Volume/Capacity Ratio</h5>
+                                    <h4 class="legend-item-title">2040 Forecasted Volume/Capacity Ratio</h4>
+                                    <h5 class="legend-item-subtitle">Peak Hour V/C Ratio</h5>
                                     <span class="legend-item-cmp">
                                         <p style="float: left; width: 33%;">0.00 - 0.84</p>
                                         <p style="float: left; width: 33%;">0.85 - 0.99</p>
@@ -179,33 +153,6 @@
                                     </span>
                                     <hr style="width: 50%; background-color: #9C9C9C; float: left; height: 2px;">
                                     <hr style="width: 50%; background-color: #FF0000; float: left; height: 3.5px;">
-                                </div>
-                            </li>
-                            <li id="legend-connectIndex">
-                                <div>
-                                    <h4 class="legend-item-title">2010 Roadway Connectivity Index</h4>
-                                    <h5 class="legend-item-subtitle">Connecting Road Density</h5>
-                                    <span class="legend-item-cmp">
-                                        <p style="float: left; width: 20%;">Low</p>
-                                        <p style="float: left; width: 20%;">Marginal</p>
-                                        <p style="float: left; width: 20%;">Medium</p>
-                                        <p style="float: left; width: 20%;">Med-High</p>
-                                        <p style="float: left; width: 20%;">High</p>
-                                    </span>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #CDF57A; float: left; height: 15px;"></div>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #70A800; float: left; height: 15px;"></div>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #FFFF00; float: left; height: 15px;"></div>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #FF8000; float: left; height: 15px;"></div>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #6E6E6E; background-color: #FF0000; float: left; height: 15px;"></div>
-                                </div>
-                            </li>
-                            <li id="legend-roadAddition">
-                                <div>
-                                    <h4 class="legend-item-title">Candidate County Road Addition</h4>
-                                    <span class="legend-item-subtitle">
-                                        <p style="float: left; width: 100%;">County Road Addition Candidate</p>
-                                    </span>
-                                    <hr style="width: 100%; background-color: #a900e6; float: left; height: 5px;">
                                 </div>
                             </li>
                         </ul>
@@ -251,10 +198,6 @@
                     </div>
                     <div id="resource-layers" class="layer-box panel-collapse collapse">
                         <ul class="layer-items">
-                            <li>
-                                <input type="checkbox" name="layer-control" id="njCMPCorridors">
-                                <label for="njCMPCorridors">2015 CMP Planning Corridors</label>
-                            </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="NHS">
                                 <label for="NHS">National Highway System</label>
@@ -313,10 +256,6 @@
                                 <label for="flood">Wetlands and Floodplains</label>
                             </li> -->
                             <li>
-                                <input type="checkbox" name="layer-control" id="socialResources">
-                                <label for="socialResources">Cultural, Historical, and Community Resources</label>
-                            </li>
-                            <li>
                                 <input type="checkbox" name="layer-control" id="pinelands">
                                 <label for="pinelands">NJ Pinelands Area</label>
                             </li>
@@ -335,68 +274,6 @@
                     </div>
                     <div class="legend-box panel-collapse collapse" id="resource-legend">
                         <ul class="legend-items">
-                            <li id="legend-njCMPCorridors">
-                                <div>
-                                    <h4 class="legend-item-title">CMP Planning Corridors</h4>
-                                    <h5 class="legend-item-subtitle">DVRPC (2015)</h5>
-                                    <div>
-                                        <div class="legend-item-cmp">
-                                            <div style="float: left; width: 20%;">I-295
-                                                <br>&amp;
-                                                <br>NJ Tpk (N)</div>
-                                            <div style="float: left; width: 20%;">I-295
-                                                <br>&amp;
-                                                <br>NJ Tpk (S)</div>
-                                            <div style="float: left; width: 20%;padding-top: 4%">AC Expwy/
-                                                <br>NJ 42</div>
-                                            <div style="float: left; width: 20%;">US 1
-                                                <br>&amp;
-                                                <br>US 206</div>
-                                            <div style="float: left; width: 20%;padding-top: 7.5%">US 30</div>
-                                        </div>
-                                        <div class="legend-item-cmp">
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #004DA8; background-color: #73DFFF; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #005CE6; background-color: #00C5FF; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #4C0073; background-color: #DF73FF; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #00A884; background-color: #73FFDF; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #895A44; background-color: #D7C29E; float: left; height: 15px;"></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="legend-item-cmp">
-                                            <div style="float: left; width: 20%;padding-top: 7.5%">US 130</div>
-                                            <div style="float: left; width: 20%;">US 322
-                                                <br>&amp;
-                                                <br>Cross Keys</div>
-                                            <div style="float: left; width: 20%;padding-top: 7.55%">NJ 31</div>
-                                            <div style="float: left; width: 20%;padding-top: 7.5%">NJ 33</div>
-                                            <div style="float: left; width: 20%;padding-top: 7.5%">NJ 38</div>
-                                        </div>
-                                        <div class="legend-item-cmp">
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #E60000; background-color: #FFBEBE; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #267300; background-color: #89CD66; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #898944; background-color: #FFEBAF; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #734C00; background-color: #D7B09E; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 20%; border: 2px solid #A83800; background-color: #FFD37F; float: left; height: 15px;"></div>
-                                        </div>
-                                    </div>
-                                    <div style="margin: auto;">
-                                        <div class="legend-item-cmp">
-                                            <div style="float: left; width: 25%;">NJ 41, NJ 45,
-                                                <br>NJ 47, NJ 55</div>
-                                            <div style="float: left; width: 25%;padding-top: 5%">NJ 70</div>
-                                            <div style="float: left; width: 25%;padding-top: 5%">NJ 73</div>
-                                            <div style="float: left; width: 25%;padding-top: 5%">CR 571</div>
-                                        </div>
-                                        <div class="legend-item-cmp">
-                                            <div class="legend-square" style="width: 25%; border: 2px solid #00734C; background-color: #73FFDF; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 25%; border: 2px solid #E600A9; background-color: #FFBEE8; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 25%; border: 2px solid #8400A8; background-color: #E8BEFF; float: left; height: 15px;"></div>
-                                            <div class="legend-square" style="width: 25%; border: 2px solid #894444; background-color: #F5CA7A; float: left; height: 15px;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
                             <li id="legend-NHS">
                                 <div>
                                     <h4 class="legend-item-title">National Highway System</h4>
@@ -580,25 +457,6 @@
                                     <div class="legend-square" style="width: 33%; background-color: #0084A8; float: left; height: 20px;"></div>
                                 </div>
                             </li> -->
-                            <li id="legend-socialResources">
-                                <div>
-                                    <h4 class="legend-item-title">Cultural, Historical, and Community Resources</h4>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 33%;">Historic Site</p>
-                                        <p style="float: left; width: 33%;">Municipal Services</p>
-                                        <p style="float: left; width: 33%;">School</p>
-                                    </span>
-                                    <div class="legend-square" style="width: 33%;float: left;">
-                                        <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #E81014; border: 1.5px solid #000; margin: auto;"></div>
-                                    </div>
-                                    <div class="legend-square" style="width: 33%;float: left;">
-                                        <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #FAFA64; border: 1.5px solid #000; margin: auto;"></div>
-                                    </div>
-                                    <div class="legend-square" style="width: 33%;float: left;">
-                                        <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #2892C7; border: 1.5px solid #000; margin: auto;"></div>
-                                    </div>
-                                </div>
-                            </li>
                             <li id="legend-pinelands">
                                 <div>
                                     <h4 class="legend-item-title">New Jersey Pinelands Area</h4>
@@ -650,32 +508,8 @@
                     <div id="strategies-layers" class="layer-box panel-collapse collapse">
                         <ul class="layer-items">
                             <li>
-                                <input type="checkbox" name="layer-control" id="tip-point">
-                                <label for="tip-point">NJ TIP (FY16 - FY19) - Bridges and Intersections</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="layer-control" id="tip-roads">
-                                <label for="tip-roads">NJ TIP (FY16 - FY19) - Roadways</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="layer-control" id="hsip-intersection">
-                                <label for="hsip-intersection">HSIP (2015) - Eligible Intersections</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="layer-control" id="hsip-road">
-                                <label for="hsip-road">HSIP (2015) - Eligible Roadways</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="layer-control" id="burCoPubWorks">
-                                <label for="burCoPubWorks">Burlington County Public Works Improvement Projects</label>
-                            </li>
-                            <li>
                                 <input type="checkbox" name="layer-control" id="congestion-lrp">
                                 <label for="congestion-lrp">Congestion Management Strategies for 2040 Long-Range Plan</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="layer-control" id="cmp-inventory">
-                                <label for="cmp-inventory">Congestion Management Process Inventory of Appropriate Strategies</label>
                             </li>
                         </ul>
                     </div>
@@ -692,59 +526,6 @@
                     </div>
                     <div class="legend-box panel-collapse collapse" id="strategies-legend">
                         <ul class="legend-items">
-                            <li id="legend-tip-point">
-                                <div>
-                                    <h4 class="legend-item-title">NJ TIP (FY16 - FY19)</h4>
-                                    <h5 class="legend-item-subtitle">Bridge/Intersection</h5>
-                                    <div class="legend-square" style="width: 100%;float: left;">
-                                        <div style="width: 15px; height: 15px; border-radius: 50%; border: 3px solid white; background-color: #00A884; margin: auto;"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="legend-tip-roads">
-                                <div>
-                                    <h4 class="legend-item-title">NJ TIP (FY16 - FY19)</h4>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 100%;">Roadway</p>
-                                    </span>
-                                    <hr style="width: 100%; background-color: #0070FF; float: left; height: 5px;">
-                                </div>
-                            </li>
-                            <li id="legend-hsip-intersection">
-                                <div>
-                                    <h4 class="legend-item-title">2015 Highway Safety Improvement Program</h4>
-                                    <h5 class="legend-item-subtitle">Eligible Intersection</h5>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 50%;">Intersection</p>
-                                        <p style="float: left; width: 50%;">Pedestrian Intersection</p>
-                                    </span>
-                                    <div class="legend-square" style="width: 50%;float: left;">
-                                        <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #ED5151; border: 1.5px solid #000000; margin: auto;"></div>
-                                    </div>
-                                    <div class="legend-square" style="width: 50%;float: left;">
-                                        <div style="width: 15px; height: 15px; border-radius: 50%; background-color: #149ECE; border: 1.5px solid #000000; margin: auto;"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="legend-hsip-road">
-                                <div>
-                                    <h4 class="legend-item-title">2015 Highway Safety Improvement Program</h4>
-                                    <h5 class="legend-item-subtitle">Eligibile Roadway</h5>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 50%;">Pedestrian Corridor</p>
-                                        <p style="float: left; width: 50%;">High Risk Rural Road</p>
-                                    </span>
-                                    <hr style="width: 50%; background-color: #ED5151; float: left; height: 3px;">
-                                    <hr style="width: 50%; background-color: #149ECE; float: left; height: 3px;">
-                                </div>
-                            </li>
-                            <li id="legend-burCoPubWorks">
-                                <div>
-                                    <h4 class="legend-item-title" style="font-weight: 700;">Burlington County</h4>
-                                    <h5 class="legend-item-subtitle">Public Works Improvement Project</h5>
-                                    <div class="legend-square" style="width: 10%; background-color: #c500ff; margin: auto; padding-top: 10%"></div>
-                                </div>
-                            </li>
                             <li id="legend-congestion-lrp">
                                 <div>
                                     <h4 class="legend-item-title">CMP Strategies - 2040 Long Range Plan</h4>
@@ -792,26 +573,6 @@
                                             />
                                             <p class="legend-cmp-strat-label">Goods Movement Strategies</p>
                                         </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="legend-cmp-inventory">
-                                <div>
-                                    <h4 class="legend-item-title">Congestion Management Process Corridors</h4>
-                                    <h5 class="legend-item-subtitle">Number of CMP Corridors Intersected by Road Segment</h5>
-                                    <span class="legend-item-cmp">
-                                        <p style="float: left; width: 20%;">0</p>
-                                        <p style="float: left; width: 20%;">1</p>
-                                        <p style="float: left; width: 20%;">2</p>
-                                        <p style="float: left; width: 20%;">3</p>
-                                        <p style="float: left; width: 20%;">4</p>
-                                    </span>
-                                    <div class="legend-item-cmp">
-                                        <hr style="width: 20%; background-color: #9C9C9C; float: left; height: 1.5px;">
-                                        <hr style="width: 20%; background-color: #FBB4B9; float: left; height: 2px;">
-                                        <hr style="width: 20%; background-color: #F768A1; float: left; height: 2.5px;">
-                                        <hr style="width: 20%; background-color: #F768A1; float: left; height: 3px;">
-                                        <hr style="width: 20%; background-color: #AE017E; float: left; height: 3.5px;">
                                     </div>
                                 </div>
                             </li>
