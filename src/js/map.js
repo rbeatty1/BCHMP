@@ -77,31 +77,31 @@ var lyrGroup = [];
 var allLayers = [{
         conditions: [{
                 name: "trafficSafety",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/0',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/0',
                 popup: true,
                 drawingPane: "line"
             },
             {
                 name: "trafficCongestion",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/1',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/1',
                 popup: true,
                 drawingPane: "line"
             },
             {
                 name: "masterplanCongestion",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/3',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/2',
                 popup: true,
                 drawingPane: "line"
             },
             {
                 name: "transitScore",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/4',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/4',
                 popup: false,
                 drawingPane: "polygon"
             },
             {
                 name: "cmpScore",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/5',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/5',
                 popup: false,
                 drawingPane: "line"
             }

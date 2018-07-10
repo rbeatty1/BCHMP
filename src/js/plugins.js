@@ -184,14 +184,29 @@ function createPopUps(feature, layer) {
     // custom pop-ups for each layer
     switch (name) {
         case "trafficSafety":
-            popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>', props);
+            if (props.CR_Num === 0){
+            popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Crash Count (2015): </span>{CrashCount}</p><p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>', props);
+            }
+            else{
+            popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Crash Count (2015): </span>{CrashCount}</p><p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>', props);
+        }
             break;
         case "trafficCongestion":
-            popupContent = L.Util.template('<div class="popup-title"><p>2013 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
+            if (props.CR_Num === 0){
+                popupContent = L.Util.template('<div class="popup-title"><p>2013 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
+            }
+            else{
+                popupContent = L.Util.template('<div class="popup-title"><p>2013 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
+            }
             break;
         case "masterplanCongestion":
-            popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Master Plan Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Forecasted Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.MPlan_VC).toFixed(2) + '</p></div>', props);
-            break;
+        if (props.CR_Num === 0){
+            popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
+        }
+        else{
+            popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
+        }
+        break;
         case "NJTservice":
             popupContent = L.Util.template('<div class="popup-title"><p>New Jersey Transit Bus Service</p></div><div class="popup-content"><p><span class="popup-content-bold">Number of Weekday Bus Routes:</span> {NJTBusServ}</p></div>', props);
             break;
