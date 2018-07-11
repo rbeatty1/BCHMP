@@ -211,8 +211,8 @@
                                 <label for="expressDetour">Expressway Detour Route</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="layer-control" id="trainOneMile">
-                                <label for="trainOneMile">Train Station within 1 Mile</label>
+                                <input type="checkbox" name="layer-control" id="trainAccess">
+                                <label for="trainAccess">Train Station within 1 Mile</label>
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="NJTservice">
@@ -250,11 +250,6 @@
                                 <input type="checkbox" name="layer-control" id="scenicByway">
                                 <label for="scenicByway">Designated Scenic Byway</label>
                             </li>
-                            <!-- THIS LAYER ISN'T WORKING AND I DON'T KNOW WHY
-                           <li>
-                                <input type="checkbox" name="layer-control" id="flood">
-                                <label for="flood">Wetlands and Floodplains</label>
-                            </li> -->
                             <li>
                                 <input type="checkbox" name="layer-control" id="pinelands">
                                 <label for="pinelands">NJ Pinelands Area</label>
@@ -277,48 +272,37 @@
                             <li id="legend-NHS">
                                 <div>
                                     <h4 class="legend-item-title">National Highway System</h4>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Yes</p>
-                                    </span>
-                                    <hr style="width: 50%; background-color: #B1D1D9; float: left; height: 2px;">
-                                    <hr style="width: 50%; background-color: #66A6B5; float: left; height: 3.5px;">
+                                    <h5 class="legend-item-subtitle">National Highway System</h5>
+                                    <hr style="width: 75%; background-color: #66A6B5; height: 3.5px;">
                                 </div>
                             </li>
                             <li id="legend-hurricane">
                                 <div>
                                     <h4 class="legend-item-title">Hurricane Evacuation Route</h4>
                                     <h5 class="legend-item-subtitle">Incident Management Network</h5>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Hurricane Evacuation Route</p>
-                                    </span>
-                                    <hr style="width: 50%; background-color: #FFBEBE; float: left; height: 2px;">
-                                    <hr style="width: 50%; background-color: #ED5151; float: left; height: 3.5px;">
+                                    <hr style="width: 75%; background-color: #ED5151; height: 3.5px;">
                                 </div>
                             </li>
                             <li id="legend-expressDetour">
                                 <div>
                                     <h4 class="legend-item-title">Expressway Detour Route</h4>
                                     <h5 class="legend-item-subtitle">Incident Management Network</h5>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Expressway Detour Route</p>
-                                    </span>
-                                    <hr style="width: 50%; background-color: #73B2FF; float: left; height: 2px;">
-                                    <hr style="width: 50%; background-color: #005B9C; float: left; height: 3.5px;">
+                                    <hr style="width: 75%; background-color: #005B9C; height: 3.5px;">
                                 </div>
                             </li>
-                            <li id="legend-trainOneMile">
+                            <li id="legend-trainAccess">
                                 <div>
-                                    <h4 class="legend-item-title">Train Station Within One Mile</h4>
-                                    <h5 class="legend-item-subtitle">National Highway System</h5>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Yes</p>
-                                    </span>
-                                    <hr style="width: 50%; background-color: #E8BEFF; float: left; height: 2px;">
-                                    <hr style="width: 50%; background-color: #8400A8; float: left; height: 3.5px;">
+                                    <h4 class="legend-item-title">Train Station Access</h4>
+                                    <h5 class="legend-item-subtitle">RiverLINE Light Rail Station</h5>
+                                    <div class="legend-square" style="width:100%;">
+                                        <div style="width:15px; height:15px; border-radius:50%; background-color: #FFD847; border: 1px solid #000; margin: auto;"></div>
+                                    </div>
+                                    <h5 class="legend-item-subtitle">Roads with Train Station within One Mile</h5>
+                                    <hr style="width: 75%; background-color: #8400A8; height: 3.5px;">
+                                    <h5 class="legend-item-subtitle">One Mile Buffer of RiverLINE Light Rail Station</h5>
+                                    <div class="legend-square" style="width:100%;">
+                                        <div style="width:30px; height:30px; border-radius:50%; background-color: #00D3F4; margin: auto;"></div>
+                                    </div>
                                 </div>
                             </li>
                             <li id="legend-NJTservice">
@@ -326,15 +310,15 @@
                                     <h4 class="legend-item-title">New Jersey Transit Bus Service</h4>
                                     <h5 class="legend-item-subtitle">Number of Weekday Bus Routes</h5>
                                     <span class="legend-item-label">
-                                        <p style="float: left; width: 25%;">0 Routes</p>
-                                        <p style="float: left; width: 25%;">1 Route</p>
-                                        <p style="float: left; width: 25%;">2 Routes</p>
-                                        <p style="float: left; width: 25%;">More than 2 Routes</p>
+                                        <p style="float: left; width: 33%;">1 Route</p>
+                                        <p style="float: left; width: 33%;">2 Routes</p>
+                                        <p style="float: left; width: 33%;">More than 2 Routes</p>
                                     </span>
-                                    <hr style="width: 25%; background-color: #F5671B; float: left; height: 1.5px;">
-                                    <hr style="width: 25%; background-color: #C61864; float: left; height: 3px;">
-                                    <hr style="width: 25%; background-color: #801EA5; float: left; height: 3px;">
-                                    <hr style="width: 25%; background-color: #2B3D94; float: left; height: 3px;">
+                                    <hr style="width: 33%; background-color: #F5671B; float: left; height: 3px;">
+                                    <hr style="width: 33%; background-color: #C61864; float: left; height: 3px;">
+                                    <hr style="width: 33%; background-color: #2B3D94; float: left; height: 3px;">
+                                    <h5 class="legend-item-subtitle">1/4 Mile Buffer</h5>
+                                    <div class="legend-square" style="width: 80%; border-radius: 15px; background-color: #FFA77F; margin: auto; height: 25px;"></div>
                                 </div>
                             </li>
                             <li id="legend-shuttleBus">
@@ -388,11 +372,11 @@
                                         <p style="float: left; width: 20%;">Town
                                             <br>Center</p>
                                     </span>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #0185E6; float: left; height: 15px;"></div>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #E062BE; float: left; height: 15px;"></div>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #FF5C8B; float: left; height: 15px;"></div>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #FE7154; float: left; height: 15px;"></div>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #ED931D; float: left; height: 15px;"></div>
+                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #a6d854; float: left; height: 15px;"></div>
+                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #e78ac3; float: left; height: 15px;"></div>
+                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #8da0cb; float: left; height: 15px;"></div>
+                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #fc8d62; float: left; height: 15px;"></div>
+                                    <div class="legend-square" style="width: 20%; border: .5px solid #FFFFFF; background-color: #66c2a5; float: left; height: 15px;"></div>
                                 </div>
                             </li>
                             <li id="legend-bizCenters">
@@ -434,33 +418,13 @@
                                 <div>
                                     <h4 class="legend-item-title">Designated Scenic Byway</h4>
                                     <h5 class="legend-item-subtitle">National Highway System</h5>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 50%;">No</p>
-                                        <p style="float: left; width: 50%;">Designated Scenic Byway</p>
-                                    </span>
-                                    <hr style="width: 50%; background-color: #CDCD66; float: left; height: 2px;">
-                                    <hr style="width: 50%; background-color: #4C7300; float: left; height: 3.5px;">
+                                    <hr style="width: 75%; background-color: #4C7300; height: 3.5px;">
                                 </div>
                             </li>
-                            <!-- THIS LAYER ISN'T WORKING AND I DON'T KNOW WHY
-                            <li id="legend-flood">
-                                <div>
-                                    <h4 class="legend-item-title">Wetlands and Floodplains</h4>
-                                    <h5 class="legend-item-subtitle">Description</h5>
-                                    <span class="legend-item-label">
-                                        <p style="float: left; width: 33%;">100-yr<br>Floodplain</p>
-                                        <p style="float: left; width: 33%;">Wetlands</p>
-                                        <p style="float: left; width: 33%;">Wetlands &amp;<br>100-yr Floodplain</p>
-                                    </span>
-                                    <div class="legend-square" style="width: 33%; background-color: #DF73FF; float: left; height: 20px;"></div>
-                                    <div class="legend-square" style="width: 33%; background-color: #70A800; float: left; height: 20px;"></div>
-                                    <div class="legend-square" style="width: 33%; background-color: #0084A8; float: left; height: 20px;"></div>
-                                </div>
-                            </li> -->
                             <li id="legend-pinelands">
                                 <div>
                                     <h4 class="legend-item-title">New Jersey Pinelands Area</h4>
-                                    <div class="legend-square" style="width: 20%; border: .5px solid #4C81CD; background-color: #4C81CD; margin: auto; height: 30px; opacity: .75"></div>
+                                    <div class="legend-square" style="width: 20%; border: 1px solid #00734C; background-color: #C7D79E; margin: auto; height: 30px; opacity: .75"></div>
                                 </div>
                             </li>
                         </ul>

@@ -111,33 +111,51 @@ var allLayers = [{
         resources: [
             {
                 name: "NHS",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/1',
-                popup: false,
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/0',
+                popup: true,
                 drawingPane: "line"
             },
             {
                 name: "hurricane",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/2',
-                popup: false,
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/1',
+                popup: true,
                 drawingPane: "line"
             },
             {
                 name: "expressDetour",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/3',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/2',
                 popup: true,
                 drawingPane: "line"
             },
             {
-                name: "trainOneMile",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/4',
+                name: "trainAccess1",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/Resources_RiverLINE/FeatureServer/1',
+                popup: true,
+                drawingPane: "point"
+            },
+            {
+                name: "trainAccess2",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/Resources_RiverLINE/FeatureServer/2',
+                popup: true,
+                drawingPane: "line"
+            },
+            {
+                name: "trainAccess3",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/Resources_RiverLINE/FeatureServer/3',
                 popup: false,
+                drawingPane: "polygon"
+            },
+            {
+                name: "NJTservice1",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_NJTBus/FeatureServer/1',
+                popup: true,
                 drawingPane: "line"
             },
             {
-                name: "NJTservice",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/5',
+                name: "NJTservice2",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_NJTBus/FeatureServer/2',
                 popup: true,
-                drawingPane: "line"
+                drawingPane: "polygon"
             },
             {
                 name: "shuttleBus1",
@@ -153,50 +171,50 @@ var allLayers = [{
             },
             {
                 name: "parkRideLots",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/6',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/3',
                 popup: true,
                 drawingPane: "point"
             },
             {
                 name: "bikeNetwork",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/7',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/4',
                 popup: false,
                 drawingPane: "line"
             },
             {
                 name: "luCenters",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/8',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/5',
                 qry: "COUNTY = 'Burlington'",
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "bizCenters",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/9',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/6',
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "freightCenters",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/10',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/7',
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "planType",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/11',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/8',
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "scenicByway",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/12',
-                popup: false,
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/9',
+                popup: true,
                 drawingPane: "line"
             },
             {
                 name: 'pinelands',
-                url: 'https://services1.arcgis.com/nCm6SZaiGMuGX35l/arcgis/rest/services/Pinelands_Area/FeatureServer/0',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/10',
                 popup: false,
                 drawingPane: "polygon"
             }
@@ -316,6 +334,14 @@ var checkboxLayers = function(visibleLayers) {
             loaded[lyr].addTo(map);
             $("#legend-shuttleBus").show();
         }
+        else if (temp.match(/trainAccess\d/) && vizName.indexOf("trainAccess")!=-1){
+            loaded[lyr].addTo(map);
+            $("#legend-trainAccess").show();
+        }
+        else if (temp.match(/NJTservice\d/) && vizName.indexOf("NJTservice")!=-1){
+            loaded[lyr].addTo(map);
+            $("#legend-NJTservice").show();
+        }
         else if (vizName.indexOf(temp) != -1) {
             loaded[lyr].addTo(map);
             $("#legend-" + temp).show();
@@ -325,10 +351,17 @@ var checkboxLayers = function(visibleLayers) {
                 loaded[lyr].removeFrom(map);
                 $("#legend-shuttleBus").hide();
             } 
-            if (map.hasLayer(loaded[lyr])) {
+            else if (temp.match(/trainAccess\d/)){
                 loaded[lyr].removeFrom(map);
-                $("#legend-" + temp).hide();
-                
+                $("#legend-trainAccess").hide();
+            }
+            else if (temp.match(/NJTservice\d/)){
+                loaded[lyr].removeFrom(map);
+                $("#legend-NJTservice").hide();
+            }
+            else{
+                loaded[lyr].removeFrom(map);
+                $("#legend-" + temp).hide();   
             }
         }
     }

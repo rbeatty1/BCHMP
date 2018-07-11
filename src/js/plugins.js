@@ -185,45 +185,116 @@ function createPopUps(feature, layer) {
     switch (name) {
         case "trafficSafety":
             if (props.CR_Num === 0){
-            popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Crash Count (2015): </span>{CrashCount}</p><p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>', props);
+                popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Crash Count (2015): </span>{CrashCount}</p>'+
+                    '<p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>', props
+                );
             }
             else{
-            popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Crash Count (2015): </span>{CrashCount}</p><p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>', props);
-        }
+                popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Crash Count (2015): </span>{CrashCount}</p>'+
+                    '<p><span class="popup-content-bold">Average Crash Rate by Functional Class:</span> ' + parseFloat(props.F2xCrash_1).toFixed(2) + '</p></div>', props
+                );
+            }
             break;
         case "trafficCongestion":
             if (props.CR_Num === 0){
-                popupContent = L.Util.template('<div class="popup-title"><p>2013 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
+                popupContent = L.Util.template('<div class="popup-title"><p>2013 Volume-to-Capacity Ratio</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props
+                );
             }
             else{
-                popupContent = L.Util.template('<div class="popup-title"><p>2013 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
+                popupContent = L.Util.template('<div class="popup-title"><p>2013 Volume-to-Capacity Ratio</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props
+            );
             }
             break;
         case "masterplanCongestion":
-        if (props.CR_Num === 0){
-            popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
-        }
-        else{
-            popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Volume-to-Capacity Ratio</p></div><div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p><p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p><p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props);
-        }
-        break;
-        case "NJTservice":
-            popupContent = L.Util.template('<div class="popup-title"><p>New Jersey Transit Bus Service</p></div><div class="popup-content"><p><span class="popup-content-bold">Number of Weekday Bus Routes:</span> {NJTBusServ}</p></div>', props);
+            if (props.CR_Num === 0){
+                popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Volume-to-Capacity Ratio</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props
+                );
+            }
+            else{
+                popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Volume-to-Capacity Ratio</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props
+            );
+            }
+            break;
+        case "trainAccess1":
+            popupContent = L.Util.template('<div class="popup-title"><p>NJT RiverLINE Light Rail Station</p></div>'+
+                '<div class="popup-content"><p><span class="popup-content-bold">Operator: </span>{OPERATOR}</p>'+
+                '<p><span class="popup-content-bold">Rail Type: </span>{TYPE}</p>'+
+                '<p><span class="popup-content-bold">Station Name: </span>{STATION}</p></div>', props
+            );
+            console.log(props)
+            break;
+        case "trainAccess2":
+            if (props.CR_Num === 0){
+                popupContent = L.Util.template('<div class="popup-title"><p>Road within One Mile of Train Station</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                );
+            }
+            else{
+                popupContent = L.Util.template('<div class="popup-title"><p>Road within One Mile of Train Station</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                );
+            }
+            break;
+        case "NJTservice1":
+            popupContent = L.Util.template('<div class="popup-title"><p>New Jersey Transit Bus Service</p></div>'+
+                '<div class="popup-content"><p><span class="popup-content-bold">Number of Weekday Bus Routes:</span> {NJTBusServ}</p></div>', props
+            );
             break;
         case "parkRideLots":
-            popupContent = L.Util.template('<div class="popup-title"><p>Park-and-Ride Lot</p></div><div class="popup-content"><p><span class="popup-content-bold">Lot Name:</span> {Name}</p><p><span class="popup-content-bold">Status:</span> {Stat}</p></div>', props);
+            popupContent = L.Util.template('<div class="popup-title"><p>Park-and-Ride Lot</p></div>'+
+                '<div class="popup-content"><p><span class="popup-content-bold">Lot Name:</span> {Name}</p>'+
+                '<p><span class="popup-content-bold">Status:</span> {Stat}</p></div>', props
+            );
             break;
         case "luCenters":
-            popupContent = L.Util.template('<div class="popup-title"><p>Land Use Center</p></div><div class="popup-content"><p><span class="popup-content-bold">Name:</span> {LABEL}</p><p><span class="popup-content-bold">Land Use Plan Type:</span> {LUP_TYPE}</p></div>', props);
+            popupContent = L.Util.template('<div class="popup-title"><p>Land Use Center</p></div>'+
+                '<div class="popup-content"><p><span class="popup-content-bold">Name:</span> {LABEL}</p>'+
+                '<p><span class="popup-content-bold">Land Use Plan Type:</span> {LUP_TYPE}</p></div>', props
+            );
             break;
         case "freightCenters":
-            popupContent = L.Util.template('<div class="popup-title"><p>Freight Center</p></div><div class="popup-content"><p><span class="popup-content-bold">Name:</span> {NAME}</p><p><span class="popup-content-bold">Type:</span> {CENTER_TYP}</p></div>', props);
+            popupContent = L.Util.template('<div class="popup-title"><p>Freight Center</p></div>'+
+                '<div class="popup-content"><p><span class="popup-content-bold">Name:</span> {NAME}</p>'+
+                '<p><span class="popup-content-bold">Type:</span> {CENTER_TYP}</p></div>', props
+            );
             break;
         case "bizCenters":
-            popupContent = L.Util.template('<div class="popup-title"><p>Business Center</p></div><div class="popup-content"><p><span class="popup-content-bold">Name:</span> {NAME}</p></div>', props);
+            popupContent = L.Util.template('<div class="popup-title"><p>Business Center</p></div>'+
+            '<div class="popup-content"><p><span class="popup-content-bold">Name:</span> {NAME}</p></div>', props
+        );
             break;
         case "planType":
-            popupContent = L.Util.template('<div class="popup-title"><p>2040 LRP Area Type</p></div><div class="popup-content"><p><span class="popup-content-bold">Plan Area Type:</span> {PA_2040}</p></div>', props);
+            popupContent = L.Util.template('<div class="popup-title"><p>2040 LRP Area Type</p></div>'+
+                '<div class="popup-content"><p><span class="popup-content-bold">Plan Area Type:</span> {PA_2040}</p></div>', props
+            );
             break;
         case "congestion-lrp":
             popupContent = congestStratPopUps(props);
@@ -256,17 +327,73 @@ function createPopUps(feature, layer) {
         case "cross":
             popupContent = crossSectionPopups(props);
             break;
-        case "expressDetour":
-            if (props.DetourRt == ' '){
-                popupContent = L.Util.template('<div class="popup-title"><p>Expressway Detour Route</p></div><div class="popup-content">'+
-            '<p>This route is not a designated Expressway Detour Route</p>')
+        case "NHS":
+            if (props.CR_Num === 0){
+                popupContent = L.Util.template('<div class="popup-title"><p>National Highway System</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                );
             }
             else{
-            popupContent = L.Util.template('<div class="popup-title"><p>Expressway Detour Route</p></div><div class="popup-content">' +
-            '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
-            '<p><span class="popup-content-bold">Detoured Route:</span> {ROUTE}</p>', props);
+                popupContent = L.Util.template('<div class="popup-title"><p>National Highway System</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
+                    '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                );
             }
             break;
+        case "hurricane":
+        if (props.CR_Num === 0){
+            popupContent = L.Util.template('<div class="popup-title"><p>Hurricane Evacuation Route</p></div><div class="popup-content">' +
+                '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
+                '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+            );
+        }
+        else{    
+            popupContent = L.Util.template('<div class="popup-title"><p>Hurricane Evacuation Route</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
+                    '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                );
+            }
+        break;
+        case "expressDetour":
+        if (props.CR_Num === 0){
+            popupContent = L.Util.template('<div class="popup-title"><p>Expressway Detour Route</p></div><div class="popup-content">' +
+                '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
+                '<p><span class="popup-content-bold">Detoured Route:</span> {ROUTE}</p>'+
+                '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+            );
+        }
+            popupContent = L.Util.template('<div class="popup-title"><p>Expressway Detour Route</p></div><div class="popup-content">' +
+                '<p><span class="popup-content-bold">County Route Number: </span>{CR_Num}</p>'+
+                '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
+                '<p><span class="popup-content-bold">Detoured Route:</span> {ROUTE}</p>'+
+                '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}'
+                , props
+            );
+            break;
+        case "scenicByway":
+        if (props.CR_Num === 0){
+            popupContent = L.Util.template('<div class="popup-title"><p>Designated Scenic Byway</p></div><div class="popup-content">' +
+                '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+            );
+        }
+        else{    
+            popupContent = L.Util.template('<div class="popup-title"><p>Designated Scenic Byway</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                );
+            }
+        break;
         default:
             return;
     }
