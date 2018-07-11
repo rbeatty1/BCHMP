@@ -224,7 +224,7 @@ var allLayers = [{
         strategies: [
             {
                 name: "congestion-lrp",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/5',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/0',
                 popup: true,
                 drawingPane: "line"
             }
@@ -240,7 +240,7 @@ var allLayers = [{
             {
                 name: "capacity",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_ROW/FeatureServer/1',
-                popup: false,
+                popup: true,
                 drawingPane: "line"
             },
             {

@@ -252,14 +252,14 @@ function createPopUps(feature, layer) {
                 popupContent = L.Util.template('<div class="popup-title"><p>Road within One Mile of Train Station</p></div><div class="popup-content">' +
                     '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
                     '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
                 );
             }
             else{
                 popupContent = L.Util.template('<div class="popup-title"><p>Road within One Mile of Train Station</p></div><div class="popup-content">' +
                     '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
                     '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
                 );
             }
             break;
@@ -300,8 +300,10 @@ function createPopUps(feature, layer) {
             popupContent = congestStratPopUps(props);
             break;
         case "row-recommend":
-            if (props.ROW != 0){
+            if (props.ROW != 0 && (props.CR_Num || props.CR_Num != 0)){
                 popupContent = L.Util.template('<div class="popup-title"><p>Minimum Recommended Right-of-Way</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">County Route Number: </span>{CR_Num}</p>'+
+                    '<p><span class="popup-content-bold">Roadway Jurisdiction: </span>{JURIS_Corr}</p>'+
                     '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {FHWA}</p>' +
                     '<p><span class="popup-content-bold">NJDOT Urban Area:</span> {LandUse}</p>' +
                     '<p><span class="popup-content-bold">Recommended ROW Width:</span> {ROW} ft</p>' +
@@ -312,27 +314,45 @@ function createPopUps(feature, layer) {
                     '<p><span class="popup-content-bold">Bike Lane Width (Shoulder):</span> {BicLan_Sho} ft</p>' +
                     '<p><span class="popup-content-bold">Parking Lane Width:</span> {PLane_Sho} ft</p>' +
                     '<p><span class="popup-content-bold">Sidewalk Buffer Width:</span> {Sidewa_Buf} ft</p>' +
-                    '<p><span class="popup-content-bold">Sidewalk Width:</span> {Sidewalk} ft</p>', props);
+                    '<p><span class="popup-content-bold">Sidewalk Width:</span> {Sidewalk} ft</p></div>', props);
             }
             else{
                 popupContent = L.Util.template('<div class="popup-title"><p>Minimum Recommended Right-of-Way</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">Roadway Jurisdiction: </span>{JURIS_Corr}</p>'+
                     '<p><span class="popup-content-bold">FHWA Highway Functional Class:</span> {FHWA}</p>' +
                     '<p><span class="popup-content-bold">NJDOT Urban Area:</span> {LandUse}</p>' +
                     '<p><span class="popup-content-bold">Recommended ROW Width:</span> Ramp</p>' +
                     '<p><span class="popup-content-bold">Number of Travel Lanes:</span> {TravelLanes}</p>' +
-                    '<p><span class="popup-content-bold">Capacity: </span>{Capacity}</p>', props);
+                    '<p><span class="popup-content-bold">Capacity: </span>{Capacity}</p></div>', props);
 
             }
             break;
         case "cross":
             popupContent = crossSectionPopups(props);
             break;
+        case "capacity":
+            if (props.CR_Num === 0){
+                popupContent = L.Util.template('<div class="popup-title"><p>Potential to Increase Roadway Capacity</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume-to-Capacity Ratio (2013): </span>' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props
+                );
+            }
+            else{
+                popupContent = L.Util.template('<div class="popup-title"><p>National Highway System</p></div><div class="popup-content">' +
+                    '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume-to-Capacity Ratio (2013): </span>' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props
+                );
+            }
+            break;
         case "NHS":
             if (props.CR_Num === 0){
                 popupContent = L.Util.template('<div class="popup-title"><p>National Highway System</p></div><div class="popup-content">' +
                     '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
                     '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
                 );
             }
             else{
@@ -340,7 +360,7 @@ function createPopUps(feature, layer) {
                     '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
                     '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
                     '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
                 );
             }
             break;
@@ -349,7 +369,7 @@ function createPopUps(feature, layer) {
             popupContent = L.Util.template('<div class="popup-title"><p>Hurricane Evacuation Route</p></div><div class="popup-content">' +
                 '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
                 '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
             );
         }
         else{    
@@ -357,7 +377,7 @@ function createPopUps(feature, layer) {
                     '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
                     '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
                     '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
                 );
             }
         break;
@@ -367,7 +387,7 @@ function createPopUps(feature, layer) {
                 '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
                 '<p><span class="popup-content-bold">Detoured Route:</span> {ROUTE}</p>'+
                 '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
             );
         }
             popupContent = L.Util.template('<div class="popup-title"><p>Expressway Detour Route</p></div><div class="popup-content">' +
@@ -375,7 +395,7 @@ function createPopUps(feature, layer) {
                 '<p><span class="popup-content-bold">NHS Type:</span> {NHS}</p>'+
                 '<p><span class="popup-content-bold">Detoured Route:</span> {ROUTE}</p>'+
                 '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}'
+                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>'
                 , props
             );
             break;
@@ -383,14 +403,14 @@ function createPopUps(feature, layer) {
         if (props.CR_Num === 0){
             popupContent = L.Util.template('<div class="popup-title"><p>Designated Scenic Byway</p></div><div class="popup-content">' +
                 '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
             );
         }
         else{    
             popupContent = L.Util.template('<div class="popup-title"><p>Designated Scenic Byway</p></div><div class="popup-content">' +
                     '<p><span class="popup-content-bold">Route:</span> {CR_Num}</p>' +
                     '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}', props
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p></div>', props
                 );
             }
         break;
