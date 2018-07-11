@@ -75,92 +75,94 @@ Strategies: BCHMP - Strategies (DVRPC // slawrence_dvrpcgis | https://services1.
 var lyrGroup = [];
 // array containing objects that define the necessary information to load the feature layers corresponding to each web map
 var allLayers = [{
-        conditions: [{
+        conditions: [
+            {
+                name: "functionalClass",
+                url: "https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/6",
+                popup: true,
+                drawingPane: "line"
+            },
+            {
                 name: "trafficSafety",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/0',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/0',
                 popup: true,
                 drawingPane: "line"
             },
             {
                 name: "trafficCongestion",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/1',
-                popup: true,
-                drawingPane: "line"
-            },
-            {
-                name: "LRPcongestion",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/2',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/1',
                 popup: true,
                 drawingPane: "line"
             },
             {
                 name: "masterplanCongestion",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/3',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/2',
                 popup: true,
                 drawingPane: "line"
             },
             {
                 name: "transitScore",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/4',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/4',
                 popup: false,
                 drawingPane: "polygon"
             },
             {
                 name: "cmpScore",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/5',
-                popup: false,
-                drawingPane: "line"
-            },
-            {
-                name: "connectIndex",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/6',
-                popup: false,
-                drawingPane: "polygon"
-            },
-            {
-                name: "roadAddition",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions/FeatureServer/7',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/5',
                 popup: false,
                 drawingPane: "line"
             }
         ]
     },
     {
-        resources: [{
-                name: "njCMPCorridors",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/0',
-                popup: true,
-                drawingPane: "polygon"
-            },
+        resources: [
             {
                 name: "NHS",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/1',
-                popup: false,
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/0',
+                popup: true,
                 drawingPane: "line"
             },
             {
                 name: "hurricane",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/2',
-                popup: false,
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/1',
+                popup: true,
                 drawingPane: "line"
             },
             {
                 name: "expressDetour",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/3',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/2',
                 popup: true,
                 drawingPane: "line"
             },
             {
-                name: "trainOneMile",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/4',
+                name: "trainAccess1",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/Resources_RiverLINE/FeatureServer/1',
+                popup: true,
+                drawingPane: "point"
+            },
+            {
+                name: "trainAccess2",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/Resources_RiverLINE/FeatureServer/2',
+                popup: true,
+                drawingPane: "line"
+            },
+            {
+                name: "trainAccess3",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/Resources_RiverLINE/FeatureServer/3',
                 popup: false,
+                drawingPane: "polygon"
+            },
+            {
+                name: "NJTservice1",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_NJTBus/FeatureServer/1',
+                popup: true,
                 drawingPane: "line"
             },
             {
-                name: "NJTservice",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/5',
+                name: "NJTservice2",
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_NJTBus/FeatureServer/2',
                 popup: true,
-                drawingPane: "line"
+                drawingPane: "polygon"
             },
             {
                 name: "shuttleBus1",
@@ -176,108 +178,60 @@ var allLayers = [{
             },
             {
                 name: "parkRideLots",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/6',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/3',
                 popup: true,
                 drawingPane: "point"
             },
             {
                 name: "bikeNetwork",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/7',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/4',
                 popup: false,
                 drawingPane: "line"
             },
             {
                 name: "luCenters",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/8',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/5',
                 qry: "COUNTY = 'Burlington'",
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "bizCenters",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/9',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/6',
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "freightCenters",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/10',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/7',
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "planType",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/11',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/8',
                 popup: true,
                 drawingPane: "polygon"
             },
             {
                 name: "scenicByway",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/12',
-                popup: false,
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/9',
+                popup: true,
                 drawingPane: "line"
-            },
-            // -------------- THIS LAYER ISN'T WORKING AND I DON'T KNOW WHY ----------------------------------//
-            // {
-            //     name: "flood",
-            //     url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/ArcGIS/rest/services/Resources/FeatureServer/8',
-            //     popup: false,
-            //     drawingPane: "polygon"
-            // },
-            {
-                name: "socialResources",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Resources/FeatureServer/14',
-                popup: false,
-                drawingPane: "point"
             },
             {
                 name: 'pinelands',
-                url: 'https://services1.arcgis.com/nCm6SZaiGMuGX35l/arcgis/rest/services/Pinelands_Area/FeatureServer/0',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/Resources_Redux/FeatureServer/10',
                 popup: false,
                 drawingPane: "polygon"
             }
         ]
     },
     {
-        strategies: [{
-                name: "tip-point",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/0',
-                popup: true,
-                drawingPane: "point"
-            },
-            {
-                name: "tip-roads",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/1',
-                popup: true,
-                drawingPane: "line"
-            },
-            {
-                name: "hsip-intersection",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/2',
-                popup: false,
-                drawingPane: "point"
-            },
-            {
-                name: "hsip-road",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/3',
-                popup: false,
-                drawingPane: "line"
-            },
-            {
-                name: "burCoPubWorks",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/4',
-                popup: true,
-                drawingPane: "point"
-            },
+        strategies: [
             {
                 name: "congestion-lrp",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/5',
-                popup: true,
-                drawingPane: "line"
-            },
-            {
-                name: "cmp-inventory",
-                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/6',
+                url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Strategies/FeatureServer/0',
                 popup: true,
                 drawingPane: "line"
             }
@@ -293,7 +247,7 @@ var allLayers = [{
             {
                 name: "capacity",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_ROW/FeatureServer/1',
-                popup: false,
+                popup: true,
                 drawingPane: "line"
             },
             {
@@ -387,6 +341,14 @@ var checkboxLayers = function(visibleLayers) {
             loaded[lyr].addTo(map);
             $("#legend-shuttleBus").show();
         }
+        else if (temp.match(/trainAccess\d/) && vizName.indexOf("trainAccess")!=-1){
+            loaded[lyr].addTo(map);
+            $("#legend-trainAccess").show();
+        }
+        else if (temp.match(/NJTservice\d/) && vizName.indexOf("NJTservice")!=-1){
+            loaded[lyr].addTo(map);
+            $("#legend-NJTservice").show();
+        }
         else if (vizName.indexOf(temp) != -1) {
             loaded[lyr].addTo(map);
             $("#legend-" + temp).show();
@@ -396,10 +358,17 @@ var checkboxLayers = function(visibleLayers) {
                 loaded[lyr].removeFrom(map);
                 $("#legend-shuttleBus").hide();
             } 
-            if (map.hasLayer(loaded[lyr])) {
+            else if (temp.match(/trainAccess\d/)){
                 loaded[lyr].removeFrom(map);
-                $("#legend-" + temp).hide();
-                
+                $("#legend-trainAccess").hide();
+            }
+            else if (temp.match(/NJTservice\d/)){
+                loaded[lyr].removeFrom(map);
+                $("#legend-NJTservice").hide();
+            }
+            else{
+                loaded[lyr].removeFrom(map);
+                $("#legend-" + temp).hide();   
             }
         }
     }
