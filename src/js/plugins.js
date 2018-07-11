@@ -183,6 +183,22 @@ function createPopUps(feature, layer) {
     var name = layer._eventParents[Object.keys(layer._eventParents)].options.id;
     // custom pop-ups for each layer
     switch (name) {
+        case "functionalClass":
+            if (props.CR_Num === 0){
+                popupContent = L.Util.template('<div class="popup-title"><p>FHWA Functional Class</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p></div>', props
+                );
+            }
+            else{
+                popupContent = L.Util.template('<div class="popup-title"><p>FHWA Functional Class</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p></div>', props
+                );
+            }
+            break;
         case "trafficSafety":
             if (props.CR_Num === 0){
                 popupContent = L.Util.template('<div class="popup-title"><p>Crash Data (2015)</p></div>'+

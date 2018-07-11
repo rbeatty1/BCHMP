@@ -75,7 +75,14 @@ Strategies: BCHMP - Strategies (DVRPC // slawrence_dvrpcgis | https://services1.
 var lyrGroup = [];
 // array containing objects that define the necessary information to load the feature layers corresponding to each web map
 var allLayers = [{
-        conditions: [{
+        conditions: [
+            {
+                name: "functionalClass",
+                url: "https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/6",
+                popup: true,
+                drawingPane: "line"
+            },
+            {
                 name: "trafficSafety",
                 url: 'https://services1.arcgis.com/LWtWv6q6BJyKidj8/arcgis/rest/services/BCHMP_Conditions_Redux/FeatureServer/0',
                 popup: true,
