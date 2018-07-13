@@ -69,7 +69,7 @@
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="cmpScore" z-index="6">
-                                <label for="cmpScore">Congestion Management Process Composite Score</label>
+                                <label for="cmpScore">Traffic Management Process Composite Score</label>
                             </li>
                         </ul>
                     </div>
@@ -119,7 +119,7 @@
                                         <p style="float: left; width: 33%;">1.00x - 1.99x</p>
                                         <p style="float: right; width: 33%;">2.00x and greater</p>
                                     </span>
-                                    <hr style="width: 33%; background-color: #00734C; float: left; height: 2px;">
+                                    <hr style="width: 33%; background-color: #00734c; float: left; height: 2px;">
                                     <hr style="width: 33%; background-color: #E6E600; float: left; height: 3.5px;">
                                     <hr style="width: 33%; background-color: #004DA8; float: left; height: 5px;">
                                 </div>
@@ -172,8 +172,8 @@
                             </li>
                             <li id="legend-cmpScore">
                                 <div>
-                                    <h4 class="legend-item-title">CMP Composite Score</h4>
-                                    <h5 class="legend-item-subtitle">Top CMP Score</h5>
+                                    <h4 class="legend-item-title">TMP Composite Score</h4>
+                                    <h5 class="legend-item-subtitle">Top TMP Score</h5>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">0 - 5 : Satisfactory</p>
                                         <p style="float: left; width: 50%;">More than 5 : Warrant Attention</p>
@@ -306,14 +306,12 @@
                             <li id="legend-hurricane">
                                 <div>
                                     <h4 class="legend-item-title">Hurricane Evacuation Route</h4>
-                                    <h5 class="legend-item-subtitle">Incident Management Network</h5>
                                     <hr style="width: 75%; background-color: #ED5151; height: 3.5px;">
                                 </div>
                             </li>
                             <li id="legend-expressDetour">
                                 <div>
                                     <h4 class="legend-item-title">Expressway Detour Route</h4>
-                                    <h5 class="legend-item-subtitle">Incident Management Network</h5>
                                     <hr style="width: 75%; background-color: #005B9C; height: 3.5px;">
                                 </div>
                             </li>
@@ -375,7 +373,7 @@
                             <li id="legend-bikeNetwork">
                                 <div>
                                     <h4 class="legend-item-title">On-Road Bike Network</h4>
-                                    <h5 class="legend-item-subtitle">CCTMA (2015)</h5>
+                                    <a href="http://www2.driveless.com/pdfs/BC%20Bike%20Report1.pdf" rel="noopener" target="_blank" class="legend-item-subtitle">Click Here to view the Burlington County Bicycle Master Plan (CCTMA 2015)</a>
                                     <span class="legend-item-label">
                                         <p style="float: left; width: 50%;">Existing Facility</p>
                                         <p style="float: left; width: 50%;">Proposed Facility</p>
@@ -500,7 +498,7 @@
                         <ul class="layer-items">
                             <li>
                                 <input type="checkbox" name="layer-control" id="congestion-lrp">
-                                <label for="congestion-lrp">Congestion Management Strategies for 2040 Long-Range Plan</label>
+                                <label for="congestion-lrp">Traffic Management Strategies for 2040 Long-Range Plan</label>
                             </li>
                         </ul>
                     </div>
@@ -519,8 +517,8 @@
                         <ul class="legend-items">
                             <li id="legend-congestion-lrp">
                                 <div>
-                                    <h4 class="legend-item-title">CMP Strategies - 2040 Long Range Plan</h4>
-                                    <h5 class="legend-item-subtitle">Congestion Management Strategies Key</h5>
+                                    <h4 class="legend-item-title">TMP Strategies - 2040 Long Range Plan</h4>
+                                    <h5 class="legend-item-subtitle">Traffic Management Strategies Key</h5>
                                     <div>
                                         <span class="legend-cmp-strat-row">
                                             <img class="legend-cmp-strat-icon" src="<%- require('./img/Congest-Icons/strat-1.svg') %>" alt="CMP Strategy: Operational Strategies"
@@ -823,8 +821,8 @@
                                 the NJ Transit RiverLINE, and serves as a scenic route network in the Pinelands.
                                 <br>
                                 <br> Performance indicators for the road network, as well as land use conditions, were assembled
-                                for current and forecasted conditions. The conditions were assessed using DVRPC's Congestion
-                                Management Process (CMP) to identify candidate improvement strategies for the County road
+                                for current and forecasted conditions. The conditions were assessed using DVRPC's Traffic
+                                Management Process (TMP) to identify candidate improvement strategies for the County road
                                 network.
                                 <br>
                                 <br> This webmap provides an interactive look at the information that informed the analysis and
@@ -1016,7 +1014,7 @@
                                 </tr>
                                 <tr class="metadata-row-even">
                                     <td>Technical Analysis Results</td>
-                                    <td>2013 Traffic Congestion</td>
+                                    <td>2013 Volume-to-Capacity Ratio</td>
                                     <td>Base Year Peak Hour V/C Ratio</td>
                                     <td>
                                         <div class="metadata-mc-item">0.0&ndash;0.84</div>
@@ -1026,8 +1024,8 @@
                                 </tr>
                                 <tr class="metadata-row-odd">
                                     <td>Technical Analysis Results</td>
-                                    <td>2040 Highway Master Plan Traffic Congestion</td>
-                                    <td>Forecasted V/C Ratio</td>
+                                    <td>Forecasted 2040 Volume-to-Capacity Ratio</td>
+                                    <td>Forecasted Peak Hour V/C Ratio</td>
                                     <td>
                                         <div class="metadata-mc-item">0.0&ndash;0.99x</div>
                                         <div class="metadata-mc-item">1.00&ndash;1.99x</div>
@@ -1123,21 +1121,25 @@
                                         Other Principal Arterials, Strategic Highway Network (STRAHNET), Major Stategic Highway
                                         Network Connectors, and Intermodal Connectors.
                                     </td>
+                                    <td></td>
                                 </tr>
                                 <tr class="metadata-row-even">
                                     <td>Highway Planning Structures</td>
                                     <td>Incident Management Network</td>
                                     <td>Hurricane evacuation routes.</td>
+                                    <td></td>
                                 </tr>
                                 <tr class="metadata-row-odd">
                                     <td>Highway Planning Structures</td>
                                     <td>Incident Management Network</td>
                                     <td>Expressway detour routes.</td>
+                                    <td></td>
                                 </tr>
                                 <tr class="metadata-row-even">
                                     <td>Alternate Modes</td>
                                     <td>Train Station within 1 Mile</td>
                                     <td>Rail service within 1 mile of CR segment.</td>
+                                    <td></td>
                                 </tr>
                                 <tr class="metadata-row-odd">
                                     <td>Alternate Modes</td>
@@ -1205,6 +1207,7 @@
                                     <td>Designated Scenic Byway</td>
                                     <td>Roads that have been identified as having achaeological, cultural, historic, natural,
                                         recreational, or scenic significance.</td>
+                                    <td></td>
                                 </tr>
                                 <tr class="metadata-row-even">
                                     <td>Community Planning Elements</td>
@@ -1251,7 +1254,7 @@
                                 <p>
                                     DVRPC conducts a continuing, comprehensive and cooperative process for transportation planning, programming, and decision-making.
                                     Two important outcomes of this process are the Long-Range Plan (LRP) and Transportation
-                                    Improvement Program (TIP). The Congestion Management Process (CMP) provides medium-term
+                                    Improvement Program (TIP). The Traffic Management Process (TMP) provides medium-term
                                     planning to strengthen the connection between the Long-Range Plan (LRP) and the regional
                                     Transportation Improvement Program (TIP).
                                 </p>
@@ -1281,8 +1284,8 @@
                                     </tr>
                                     <tr class="metadata-row-odd">
                                         <td>2040 Highway Master Plan Improvement Strategies</td>
-                                        <td>CMP Inventory of Appropriate Strategies</td>
-                                        <td>CMP Strategy options are the result of the 2013 and 2040 MP Scenario model output.</td>
+                                        <td>TMP Inventory of Appropriate Strategies</td>
+                                        <td>TMP Strategy options are the result of the 2013 and 2040 MP Scenario model output.</td>
                                         <td>
                                             <div class="metadata-mc-item">Operational Strategies</div>
                                             <div class="metadata-mc-item">Transportation Demand Management Strategies</div>

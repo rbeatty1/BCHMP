@@ -45,7 +45,7 @@ function congestStratPopUps(props) {
         // create pop ups based on number of strategies
         case 1:
             popupContent = L.Util.template('<div class="popup-title">' +
-                '<p>Congestion Management Strategies</p></div>' +
+                '<p>Traffic Management Strategies</p></div>' +
                 '<div class="popup-content-bold"><h4 style="text-align: center;">Hover over icon for strategy title</h4></div>' +
                 '<div class="popup-content-congest">' +
                 '<img class="cmp-pop-img" width="20%" src="' + info[0]['value'] + '" title="' + info[0]['attr'] + '"/>' +
@@ -53,7 +53,7 @@ function congestStratPopUps(props) {
             break;
         case 2:
             popupContent = L.Util.template('<div class="popup-title">' +
-                '<p>Congestion Management Strategies</p></div>' +
+                '<p>Traffic Management Strategies</p></div>' +
                 '<div class="popup-content-bold"><h4 style="text-align: center;">Hover over icon for strategy title</h4></div>' +
                 '<div class="popup-content-congest">' +
                 '<img class="cmp-pop-img" width="20%" src="' + info[0]['value'] + '" title="' + info[0]['attr'] + '"/>' +
@@ -62,7 +62,7 @@ function congestStratPopUps(props) {
             break;
         case 3:
             popupContent = L.Util.template('<div class="popup-title">' +
-                '<p>Congestion Management Strategies</p></div>' +
+                '<p>Traffic Management Strategies</p></div>' +
                 '<div class="popup-content-bold"><h4 style="text-align: center;">Hover over icon for strategy title</h4></div>' +
                 '<div class="popup-content-congest">' +
                 '<img class="cmp-pop-img" width="20%" src="' + info[0]['value'] + '" title="' + info[0]['attr'] + '"/>' +
@@ -72,7 +72,7 @@ function congestStratPopUps(props) {
             break;
         case 4:
             popupContent = L.Util.template('<div class="popup-title">' +
-                '<p>Congestion Management Strategies</p></div>' +
+                '<p>Traffic Management Strategies</p></div>' +
                 '<div class="popup-content-bold"><h4 style="text-align: center;">Hover over icon for strategy title</h4></div>' +
                 '<div class="popup-content-congest">' +
                 '<img class="cmp-pop-img" width="20%" src="' + info[0]['value'] + '" title="' + info[0]['attr'] + '"/>' +
@@ -83,7 +83,7 @@ function congestStratPopUps(props) {
             break;
         case 5:
             popupContent = L.Util.template('<div class="popup-title">' +
-                '<p>Congestion Management Strategies</p></div>' +
+                '<p>Traffic Management Strategies</p></div>' +
                 '<div class="popup-content-bold"><h4 style="text-align: center;">Hover over icon for strategy title</h4></div>' +
                 '<div class="popup-content-congest">' +
                 '<img class="cmp-pop-img" width="20%" src="' + info[0]['value'] + '" title="' + info[0]['attr'] + '"/>' +
@@ -95,9 +95,9 @@ function congestStratPopUps(props) {
             break;
         default:
             popupContent = L.Util.template('<div class="popup-title">' +
-                '<p>Congestion Management Strategies</p></div>' +
+                '<p>Traffic Management Strategies</p></div>' +
                 '<div class="popup-content-congest">' +
-                '<div style="width: 100%; font-size: 1.5em">No Recommended Congestion Management Strategies</div>' +
+                '<div style="width: 100%; font-size: 1.5em">No Recommended Traffic Management Strategies</div>' +
                 '</div>');
             break;
     }
@@ -256,7 +256,7 @@ function createPopUps(feature, layer) {
             }
             break;
         case "trainAccess1":
-            popupContent = L.Util.template('<div class="popup-title"><p>NJT RiverLINE Light Rail Station</p></div>'+
+            popupContent = L.Util.template('<div class="popup-title"><p>NJ Transit RiverLINE Light Rail Station</p></div>'+
                 '<div class="popup-content"><p><span class="popup-content-bold">Operator: </span>{OPERATOR}</p>'+
                 '<p><span class="popup-content-bold">Rail Type: </span>{TYPE}</p>'+
                 '<p><span class="popup-content-bold">Station Name: </span>{STATION}</p></div>', props
