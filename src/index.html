@@ -64,6 +64,10 @@
                                 <label for="masterplanCongestion">Forecasted 2040 Volume-to-Capacity Ratio</label>
                             </li>
                             <li>
+                                <input type="checkbox" name="layer-control" id="congestionChange" z-index="4">
+                                <label for="congestionChange">Volume-to-Capacity Ratio Change (2013-2040)</label>
+                            </li>
+                            <li>
                                 <input type="checkbox" name="layer-control" id="transitScore" z-index="5">
                                 <label for="transitScore">2010 Transit Score</label>
                             </li>
@@ -152,6 +156,20 @@
                                     <hr style="width: 33%; background-color: #08306B; float: left; height: 5px;">
                                 </div>
                             </li>
+                        </li>
+                        <li id="legend-congestionChange">
+                            <div>
+                                <h4 class="legend-item-title">Change in Volume/Capacity Ratio</h4>
+                                <h5 class="legend-item-subtitle">Forecasted Peak Hour V/C Ratio Change</h5>
+                                <h5 class="legend-item-subtitle">Only Segments with V/C > 0.85 in Either Scenario</h5>
+                                <span class="legend-item-cmp">
+                                    <p style="float: left; width: 50%;">Decrease in V/C Ratio</p>
+                                    <p style="float: left; width: 50%;">Increase in V/C Ratio</p>
+                                </span>
+                                <hr style="width: 50%; background-color: #70A800; float: left; height: 3.5px;">
+                                <hr style="width: 50%; background-color: #E69800; float: left; height: 3.5px;">
+                            </div>
+                        </li>
                             <li id="legend-transitScore">
                                 <div>
                                     <h4 class="legend-item-title">2010 Transit Score</h4>
@@ -179,7 +197,7 @@
                                         <p style="float: left; width: 50%;">More than 5 : Warrant Attention</p>
                                     </span>
                                     <hr style="width: 50%; background-color: #9C9C9C; float: left; height: 2px;">
-                                    <hr style="width: 50%; background-color: #E6E600; float: left; height: 3.5px;">
+                                    <hr style="width: 50%; background-color: #FFD23F; float: left; height: 3.5px;">
                                 </div>
                             </li>
                         </ul>
@@ -593,7 +611,7 @@
                         <ul class="layer-items">
                             <li>
                                 <input type="checkbox" name="layer-control" id="row-recommend">
-                                <label for="row-recommend">Proposed Right-of-Way (ROW)</label>
+                                <label for="row-recommend">Desired Ultimate Right-of-Way (ROW)</label>
                             </li>
                             <li>
                                 <input type="checkbox" name="layer-control" id="capacity">
@@ -1034,6 +1052,15 @@
                                 </tr>
                                 <tr class="metadata-row-even">
                                     <td>Technical Analysis Results</td>
+                                    <td>Forecasted Change in Volume-to-Capacity Ratio</td>
+                                    <td>Forecast Year 2040 and Base Year 2013</td>
+                                    <td>
+                                        <div class="metadata-mc-item">Increase in V/C Ratio</div>
+                                        <div class="metadata-mc-item">Decrease in V/C Ratio</div>
+                                    </td>
+                                </tr>
+                                <tr class="metadata-row-odd">
+                                    <td>Technical Analysis Results</td>
                                     <td>2010 Transit Score</td>
                                     <td>DVRPC's assessment of an area's population and employment to indicate appropriateness
                                         of transit service and level of transit investment</td>
@@ -1051,7 +1078,7 @@
                                         <br>
                                     </td>
                                 </tr>
-                                <tr class="metadata-row-odd">
+                                <tr class="metadata-row-even">
                                     <td>Technical Analysis Results</td>
                                     <td>CMP Composite Score</td>
                                     <td>DVRPC's evaluation of a highway segments's transportation and land use characteristics
@@ -1172,7 +1199,8 @@
                                     <td>Cross County Transportation Management Association (CCTMA) (2015).</td>
                                     <td>
                                         <div class="metadata-mc-item">Existing</div>
-                                        <div class="metadata-mc-item">Proposed</td>
+                                        <div class="metadata-mc-item">Proposed</div>
+                                    </td>
                                 </tr>
                                 <tr class="metadata-row-odd">
                                     <td>Activity Centers</td>
@@ -1369,8 +1397,8 @@
                                     </tr>
                                     <tr class="metadata-row-odd">
                                         <td>Planning and Development Review Tools</td>
-                                        <td>Proposed Right-of-Way (ROW)</td>
-                                        <td>Proposed ROW in feet assigned to each CR segment based on assigned functional classification
+                                        <td>Desired Ultimate Right-of-Way (ROW)</td>
+                                        <td>Width of desired ultimate ROW in feet assigned to each CR segment based on assigned functional classification
                                             and urban/rural area boundaries (USDOT Federal Highway Administration's Highway
                                             Functional Classification System).
                                         </td>
@@ -1405,7 +1433,7 @@
                                                 <br>Ramps
                                             </div>
                                             <div class="metadata-mc-item">
-                                                <span class="metadata-mc-item-emphasis">Maintain</span>
+                                                <span class="metadata-mc-item-emphasis">Multimodal</span>
                                                 <br> Local
                                                 <br> Major Collector
                                                 <br> Minor Arterial

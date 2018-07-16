@@ -243,7 +243,7 @@ function createPopUps(feature, layer) {
                     '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p>'+
                     '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
                     '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio (Master Plan):</span> ' + parseFloat(props.MPlan_VC).toFixed(2) + '</p></div>', props
                 );
             }
             else{
@@ -251,7 +251,29 @@ function createPopUps(feature, layer) {
                     '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p>'+
                     '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
                     '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
-                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio:</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p></div>', props
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio (Master Plan):</span> ' + parseFloat(props.MPlan_VC).toFixed(2) + '</p></div>', props
+            );
+            }
+            break;
+        case "congestionChange":
+            if (props.CR_Num === 0){
+                popupContent = L.Util.template('<div class="popup-title"><p>Forecasted Change in V/C Ratio</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> No County Route Number</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio (Base Year):</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio (Master Plan):</span> '+parseFloat(props.MPlan_VC).toFixed(2)+'</p>'+
+                    '<p><span class="popup-content-bold">Change in Peak Hour Volume/Capacity Ratio: </span> '+parseFloat(props.VC_Diff).toFixed(2)+'</p></div>', props
+                );
+            }
+            else{
+                popupContent = L.Util.template('<div class="popup-title"><p>Forecasted 2040 Volume-to-Capacity Ratio</p></div>'+
+                    '<div class="popup-content"><p><span class="popup-content-bold">Route Number:</span> {CR_Num}</p>'+
+                    '<p><span class="popup-content-bold">Road Jurisdiction:</span> {JURIS_Corr}</p>'+
+                    '<p><span class="popup-content-bold">NJDOT Functional Class: </span>{NJDOT_FC}</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio (Base Year):</span> ' + parseFloat(props.Base_VC).toFixed(2) + '</p>'+
+                    '<p><span class="popup-content-bold">Peak Hour Volume/Capacity Ratio (Master Plan):</span> '+parseFloat(props.MPlan_VC).toFixed(2)+'</p>'+
+                    '<p><span class="popup-content-bold">Change in Peak Hour Volume/Capacity Ratio: </span> '+parseFloat(props.VC_Diff).toFixed(2)+'</p></div>', props
             );
             }
             break;
