@@ -362,7 +362,6 @@ function createPopUps(feature, layer) {
                     '<p><span class="popup-content-bold">Recommended ROW Width:</span> Ramp</p>' +
                     '<p><span class="popup-content-bold">Number of Travel Lanes:</span> {TravelLanes}</p>' +
                     '<p><span class="popup-content-bold">Capacity: </span>{Capacity}</p></div>', props);
-
             }
             break;
         case "cross":
