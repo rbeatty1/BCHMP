@@ -55,19 +55,21 @@ $(document).ready(function() {
             $("#" + clickTarget).toggleClass('panel-inactive panel-active');
             $(".panel-active").attr("class", "panel-active col-lg-9 col-md-8 col-sm-9");
             $(".panel-inactive").attr("class", "panel-inactive col-lg-1 col-md-1 col-sm-1");
-            $("#" + clickTarget).children(".legend-box").addClass("in");
-            $("#" + clickTarget).children(".layer-box").addClass("in");
+            $("#" + clickTarget).children('.panel-container').children(".legend-box").addClass("in");
+            $("#" + clickTarget).children('.panel-container').children(".layer-box").addClass("in");
+            $("#" + clickTarget).children('.panel-container').children(".notes-box").addClass("in");
         }
 
-        $('.panel-active').children(".panel-heading").show();
+        $('.panel-active').children('.panel-container').children(".panel-heading").show();
         $('.panel-active').children(".panel-title-logo").attr("style", "display: inline-block");
         $('.panel-active').children(".panel-title").children(".panel-title-block").children(".panel-title-link").children(".panel-title-info").show();
         $('.panel-active').children(".pane-logo-stakeholders").show();
         $('.panel-inactive').children(".panel-title-logo").hide();
         $('.panel-inactive').children(".panel-title").children(".panel-title-block").children(".panel-title-link").children(".panel-title-info").hide();
-        $('.panel-inactive').children(".panel-heading").hide();
-        $('.panel-inactive').children(".layer-box").removeClass("in");
-        $('.panel-inactive').children(".legend-box").removeClass("in");
+        $('.panel-inactive').children('.panel-container').children(".panel-heading").hide();
+        $('.panel-inactive').children('.panel-container').children(".layer-box").removeClass("in");
+        $('.panel-inactive').children('.panel-container').children(".legend-box").removeClass("in");
+        $('.panel-inactive').children('.panel-container').children(".notes-box").removeClass("in");
         $('.panel-inactive').children(".pane-logo-stakeholders").hide();
     });
 
@@ -92,6 +94,12 @@ $(document).ready(function() {
                     });
                 };
             };
+        }
+        if (id == 'cross' || id == 'row-recommend'){
+            let noteElements = $("[data-layer='"+id+"']")
+            for (let el of noteElements){
+                el.classList.toggle('active')
+            }
         }
         lyrOrder = sortBy(checked, 'z-index');
         mapper.checkboxLayers(lyrOrder);
