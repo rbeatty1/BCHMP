@@ -1,7 +1,7 @@
 const path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
-    ExtractTextPlugin = require("extract-text-webpack-plugin")
+    ExtractTextPlugin = require("mini-css-extract-plugin")
 
 var extractPlugin = new ExtractTextPlugin({
    filename: './bundle.styles.css'
@@ -29,9 +29,9 @@ const config = {
             },
             {
                test: /\.scss$/,
-                  use: extractPlugin.extract({
-                    use: ['css-loader', 'sass-loader']
-                })
+                  use: [
+                      ExtractTextPlugin.loader, 'css-loader', 'sass-loader'
+                  ]
             },
             {
                 test: /\.(png|jpg)$/, 
@@ -60,7 +60,6 @@ const config = {
           template: 'index.html',
           hash: true
         }),
-        new webpack.optimize.CommonsChunkPlugin('vendor'),
         extractPlugin,
         //make jquery global
         new webpack.ProvidePlugin({
