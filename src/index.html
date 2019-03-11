@@ -617,12 +617,12 @@
                         <div id="row-layers" class="layer-box panel-collapse collapse">
                             <ul class="layer-items">
                                 <li>
-                                    <input type="checkbox" name="layer-control" id="row-recommend">
-                                    <label for="row-recommend">Desired Ultimate Right-of-Way (ROW)</label>
-                                </li>
-                                <li>
                                     <input type="checkbox" name="layer-control" id="capacity">
                                     <label for="capacity">Capacity Assessment</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="layer-control" id="row-recommend">
+                                    <label for="row-recommend">Ultimate Right-of-Way (ROW)</label>
                                 </li>
                                 <li>
                                     <input type="checkbox" name="layer-control" id="cross">
@@ -647,9 +647,23 @@
                         </div>
                         <div class="legend-box panel-collapse collapse" id="row-legend">
                             <ul class="legend-items">
+                                <li id="legend-capacity">
+                                    <div>
+                                        <h4 class="legend-item-title">Capacity Assessment</h4>
+                                        <h5 class="legend-item-subtitle">Potential Need to Increase Capacity</h5>
+                                        <span class="legend-item-cmp">
+                                            <p style="float: left; width: 50%;">No</p>
+                                            <p style="float: left; width: 50%;">Yes (V/C Ratio &#8805; 0.85) </p>
+                                        </span>
+                                        <div class="legend-item-cmp">
+                                            <hr style="width: 50%; background-color: #4C54A4; float: left; height: 1.5px;">
+                                            <hr style="width: 50%; background-color: #E32028; float: left; height: 3px;">
+                                        </div>
+                                    </div>
+                                </li>
                                 <li id="legend-row-recommend">
                                     <div>
-                                        <h4 class="legend-item-title">Desired Ultimate Right-of-Way (ROW)</h4>
+                                        <h4 class="legend-item-title">Ultimate Right-of-Way (ROW)</h4>
                                         <h5 class="legend-item-subtitle">ROW Width (Feet)</h5>
                                         <span class="legend-item-cmp">
                                             <p style="float: left; width: 20%;">62</p>
@@ -664,20 +678,6 @@
                                             <hr style="width: 20%; background-color: #DF65B0; float: left; height: 2.5px;">
                                             <hr style="width: 20%; background-color: #CE1256; float: left; height: 3px;">
                                             <hr style="width: 20%; background-color: #67001F; float: left; height: 4px;">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li id="legend-capacity">
-                                    <div>
-                                        <h4 class="legend-item-title">Capacity Assessment</h4>
-                                        <h5 class="legend-item-subtitle">Potential Need to Increase Capacity</h5>
-                                        <span class="legend-item-cmp">
-                                            <p style="float: left; width: 50%;">No</p>
-                                            <p style="float: left; width: 50%;">Yes (V/C Ratio &#8805; 0.85) </p>
-                                        </span>
-                                        <div class="legend-item-cmp">
-                                            <hr style="width: 50%; background-color: #4C54A4; float: left; height: 1.5px;">
-                                            <hr style="width: 50%; background-color: #E32028; float: left; height: 3px;">
                                         </div>
                                     </div>
                                 </li>
@@ -758,19 +758,16 @@
                         <div class="notes-box row-notes panel-collapse collapse" id="row-notes">
                             <h3 data-layer="row-recommend" class="layer-notes">Desired Ultimate Right-of-Way Note</h3>
                             <p data-layer='row-recommend' class="layer-notes">
-                                The "Desired Ultiamte Right-of-Way (ROW)
-                                layer was created to help engineers and planners determine what ROW the county 
-                                should work toward in the future. This layer can be used to evaluate land development applications for currently
-                                undeveloped or vacant parcels
+                                The Ultimate Right-of-Way (ROW)
+                                layer defines width of indiviual roadway design elements in feet for each CR segment based on assigned functional
+                                classification and urban/rural area boundaries. This layer should be used as a reference for CR segments with a V/C
+                                ratio of 0.85 or greater.
                             </p>
                             <h3 data-layer="cross" class="layer-notes">Desired Typical Cross Sections Note</h3>
                             <p data-layer="cross" class="layer-notes">
-                                The "Desired Typical Cross Sections" layer was created to help palnners and engineers identify multimodal roadway improvement
-                                areas. These cross section sections servce as a <em>guide</em> for implementing multimodal facilities on CR
-                                segments. They do not identify the exact facilities that should be implemented on every CR segment of a
-                                specific functional class. The final design would need to be determined on a case by case basis depending on context and available 
-                                ROW. For this reason, the "Desired Ultimate Right-of-Way" and "Desired Typical Cross Sections" 
-                                do not have the same width.
+                                The Desired Typical Cross Sections layer are for CRs within NJDOT Urban Areas. Design element characteristics
+                                are based on functional classification, urban/rural area boundaries, and the potential need to increase roadway capacity. This layer should be used
+                                as a reference for roadways with a V/C ratio of less than 0.85.
                             </p>
 
                         </div>
@@ -1497,4 +1494,5 @@
                         </div>
                     </div>
                 </div>
+    <script src="https://unpkg.com/esri-leaflet-renderers@2.0.6"></script>
 </body>

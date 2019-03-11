@@ -7,16 +7,15 @@
     "src": "src",
     "dist": "dist"
   },
-  "dependencies": {
-    "bootstrap": "3.3.7",
-    "esri-leaflet": "2.1.1",
-    "esri-leaflet-renderers": "2.0.6",
-    "jquery": "3.3.1"
-  },
   "devDependencies": {
+    "bootstrap": "3.3.7",
     "css-loader": "^0.28.11",
+    "esri-leaflet": "^2.2.3",
+    "esri-leaflet-renderers": "^2.0.6",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "jquery": "3.3.1",
+    "leaflet": "^1.4.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^6.0.7",
@@ -55,5 +54,6 @@
   "bugs": {
     "url": "https://github.com/rbeatty1/BCHMP/issues"
   },
-  "homepage": "https://github.com/rbeatty1/BCHMP#readme"
+  "homepage": "https://github.com/rbeatty1/BCHMP#readme",
+  "dependencies": {}
 }
