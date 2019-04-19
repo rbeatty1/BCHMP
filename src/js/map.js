@@ -1,4 +1,6 @@
 var esri = require('esri-leaflet');
+require('esri-leaflet-renderers');
+
 var plugins = require('./plugins.js');
 
 
